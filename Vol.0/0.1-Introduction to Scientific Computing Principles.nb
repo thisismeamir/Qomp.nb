@@ -1,0 +1,641 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     25164,        633]
+NotebookOptionsPosition[     18384,        518]
+NotebookOutlinePosition[     18784,        534]
+CellTagsIndexPosition[     18741,        531]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Computational Journey of Quantum Mechanics | Amir H. Ebrahimnezhad | Advisor: \
+Prf. Ebrahim | University of Tehran\
+\>", "Abstract",
+ CellChangeTimes->{{3.948969098320861*^9, 
+  3.9489691324978848`*^9}},ExpressionUUID->"257be0f1-6eeb-430b-ac16-\
+0e1da00bf769"],
+
+Cell[TextData[{
+ "This series is an extended content of ",
+ StyleBox["Quantum Mechanics II",
+  FontWeight->"Bold"],
+ ", held in ",
+ StyleBox["Spring 2025",
+  FontSlant->"Italic"],
+ " by ",
+ StyleBox["Professor H. Ebrahim",
+  FontSlant->"Italic"],
+ " at the ",
+ StyleBox["University of Tehran, Department of Physics",
+  FontSlant->"Italic"],
+ ". Authored by ",
+ StyleBox["Amir Hossein Ebrahimnezhad",
+  FontSlant->"Italic"],
+ " (*thisismeamir@outlook.com*), this work provides a meticulously structured \
+set of documents aimed at transforming your theoretical understanding of \
+quantum mechanics into ",
+ StyleBox["practical computational skills",
+  FontSlant->"Italic"],
+ ".  \n\nBy bridging the gap between abstract quantum theory and concrete \
+numerical and symbolic implementations, this series equips you with the \
+necessary tools to ",
+ StyleBox["simulate and visualize quantum phenomena",
+  FontSlant->"Italic"],
+ " across multiple domains. It is designed for students, researchers, and \
+enthusiasts who wish to ",
+ StyleBox["go beyond the formalism",
+  FontSlant->"Italic"],
+ " and develop a ",
+ StyleBox["computational intuition",
+  FontSlant->"Italic"],
+ " for quantum mechanics.  \n\nFor discussions and updates, you can reach the \
+author via:  \n\|01f4e1 ",
+ StyleBox["Telegram:",
+  FontWeight->"Bold"],
+ " [t.me/thisismeamir](https://t.me/thisismeamir)  \n\|01f4bb ",
+ StyleBox["GitHub Repository:",
+  FontWeight->"Bold"],
+ " https://github.com/thisismeamir/comp-quant"
+}], "Text",
+ CellChangeTimes->{{3.948969136469294*^9, 3.9489692603754807`*^9}, {
+  3.9489694299598007`*^9, 3.948969570000731*^9}, {3.949203644311843*^9, 
+  3.949203648391162*^9}},ExpressionUUID->"d6396b1a-1850-4a25-ba02-\
+a3463c56d50a"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Introduction to 
+Scientific Computing Principles\
+\>", "Title",
+ CellChangeTimes->{{3.948968992140868*^9, 
+  3.948969009504171*^9}},ExpressionUUID->"743e1f8e-03fe-411e-a69c-\
+2ed8330aa764"],
+
+Cell["Computational Journey of Quantum Mechanics ", "Subtitle",
+ CellChangeTimes->{{3.94896901276366*^9, 
+  3.948969088578977*^9}},ExpressionUUID->"5073b95b-2a8f-47d9-934c-\
+5488a9ad1b86"],
+
+Cell[CellGroupData[{
+
+Cell["Overview", "Chapter",
+ CellChangeTimes->{{3.949202510322524*^9, 
+  3.949202515234233*^9}},ExpressionUUID->"a430617f-a5d5-47f3-b048-\
+5608e5d484fd"],
+
+Cell["\<\
+Scientific computing is the backbone of modern physics, engineering, and \
+data-driven sciences. From simulating black hole mergers in numerical \
+relativity to modeling quantum systems and solving complex differential \
+equations, computational methods allow us to explore problems that are \
+otherwise intractable with pure analytical techniques. However, to leverage \
+the full power of scientific computing, one must build a strong foundation in \
+numerical methods, algorithm design, data structures, and visualization \
+techniques.  
+
+This notebook,  serves as a structured guide to these fundamental concepts, \
+providing both the mathematical underpinnings and practical implementation \
+strategies necessary for advanced scientific simulations. The focus is not \
+only on learning how to write code but also on understanding the mathematical \
+structures that govern computational accuracy, efficiency, and reliability.  \
+\
+\>", "Text",
+ CellChangeTimes->{{3.9492023265932913`*^9, 
+  3.949202352755514*^9}},ExpressionUUID->"6ab1a650-0774-45cc-a4d1-\
+b8325d364fca"],
+
+Cell[CellGroupData[{
+
+Cell["What This Notebook Covers   ", "Section",
+ CellChangeTimes->{{3.949202355413733*^9, 
+  3.949202388644092*^9}},ExpressionUUID->"74156be7-62a9-4418-825b-\
+053ecfd9d39f"],
+
+Cell[TextData[{
+ "We begin with an exploration of  ",
+ StyleBox["floating - point arithmetic and computational errors",
+  FontSlant->"Italic"],
+ ", highlighting the limitations of digital computation and methods to \
+mitigate precision loss . This naturally leads into the discussion of  ",
+ StyleBox["algorithm design",
+  FontSlant->"Italic"],
+ ", where we develop structured approaches to solving scientific problems, \
+analyze computational complexity, and implement best practices for writing \
+maintainable code .  \n  \nOnce we have a solid algorithmic foundation, we \
+introduce ",
+ StyleBox["data structures specifically tailored for scientific applications",
+  
+  FontSlant->"Italic"],
+ ", such as matrices, tensors, sparse representations, and graph - based \
+models . These data structures enable efficient simulations and large - scale \
+computations in physics and engineering . Finally, we explore ",
+ StyleBox["visualization techniques",
+  FontSlant->"Italic"],
+ ", which are crucial for interpreting computational results . From plotting \
+scientific data to animating time - evolving systems, visualization enhances \
+our ability to analyze and communicate complex phenomena effectively .  "
+}], "Text",
+ CellChangeTimes->{{3.9492023910139723`*^9, 3.9492023972677183`*^9}, {
+  3.949202458977272*^9, 
+  3.949202489210515*^9}},ExpressionUUID->"1713a228-e2ac-49df-9c4d-\
+8c3bdef81167"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Who This Notebook Is For", "Section",
+ CellChangeTimes->{{3.9492023993410587`*^9, 
+  3.9492024279621773`*^9}},ExpressionUUID->"3fb27a95-0267-42eb-933b-\
+09620cbfbec2"],
+
+Cell["\<\
+This notebook is designed for students, researchers, and professionals who \
+want to deepen their understanding of scientific computing . Whether you are \
+a physicist solving partial differential equations, an engineer optimizing \
+computational models, or a data scientist working with high - dimensional \
+datasets, the principles covered here will be indispensable .  \
+\>", "Text",
+ CellChangeTimes->{{3.9492024083701353`*^9, 
+  3.949202456801715*^9}},ExpressionUUID->"ba97c5a5-8a0f-4c8e-95c1-\
+4ee53ff95d24"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["How to Use This Notebook", "Section",
+ CellChangeTimes->{{3.949202417443571*^9, 
+  3.949202433419746*^9}},ExpressionUUID->"02f512b3-7e5e-4f39-9274-\
+1bafbc0efa76"],
+
+Cell["\<\
+Each chapter introduces core concepts through a mix of theory, code examples, \
+and hands - on exercises . The goal is to ensure that theoretical knowledge \
+is immediately reinforced with practical implementation. You are encouraged \
+to experiment with the provided examples, modify them to test edge cases, and \
+explore additional applications beyond the structured content .   By the end \
+of this notebook, you will have a strong grasp of the essential principles of \
+scientific computing, enabling you to confidently build numerical \
+simulations, optimize computational performance, and visualize scientific \
+data with clarity and precision .\
+\>", "Text",
+ CellChangeTimes->{{3.949202440747115*^9, 
+  3.9492024507860203`*^9}},ExpressionUUID->"ea6b8740-ae62-436c-a0fb-\
+ea36b4cebee8"]
+}, Closed]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Scientific Computing Fundamentals", "Chapter",
+ CellChangeTimes->{{3.948970025995818*^9, 
+  3.9489700384111423`*^9}},ExpressionUUID->"bd8132c7-0e5e-46e5-a8e7-\
+65e04896b155"],
+
+Cell[CellGroupData[{
+
+Cell["Floating Point Arithmetic", "Section",
+ CellChangeTimes->{{3.948970040160989*^9, 
+  3.9489700457269173`*^9}},ExpressionUUID->"dee97074-d0b3-4759-952c-\
+cdb90925dc9e"],
+
+Cell[CellGroupData[{
+
+Cell["Introduction to Floating Point Representation", "Subsection",
+ CellChangeTimes->{{3.9492025458185377`*^9, 
+  3.949202552929751*^9}},ExpressionUUID->"e962b777-8bf4-4cd7-b075-\
+ee94120a752d"],
+
+Cell[TextData[{
+ "How does numbers represented inside a computer? We all know that computers \
+work on binary representation, where a string of 1s and 0es form a number. \
+But an obvious fact is that using these we can only represent integers. \
+Therefore, one can righteously ask \[OpenCurlyDoubleQuote]",
+ StyleBox["How computers represent floating point numbers?",
+  FontSlant->"Italic"],
+ "\[CloseCurlyDoubleQuote]. ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{"2", ",", "3921", ",", "4188", ","}], TraditionalForm], 
+     "errors" -> {}, "input" -> "2, 3921, 4188,", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "002d3070-1642-4f4d-87cd-d210282384af"],
+ " are fine! How can I represent ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|
+    "boxes" -> FormBox["3.31882", TraditionalForm], "errors" -> {}, "input" -> 
+     "3.31882", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "19cdcd78-ba99-416f-98f4-931b77f1a514"],
+ "?\n\nComputers use binary (0s, and 1s) to represent anything! from \
+applications, games, images, videos, directories, to numbers themselves. \
+These are just passive information! Computers even assign types (video, \
+directory, number, real number, fraction, plus, minus etc) using the same 0s \
+and 1s. Long story short, we use numbers to say what the following numbers \
+are...\n\n"
+}], "Text",
+ CellChangeTimes->{{3.949231496633086*^9, 3.949231692249694*^9}, {
+  3.9492321114152184`*^9, 3.949232191734107*^9}, {3.949232246519902*^9, 
+  3.9492323172924633`*^9}},ExpressionUUID->"6f77b0c2-2714-49ec-96a1-\
+21f8edebed85"]
+}, Open  ]],
+
+Cell["Limitations and Pitfalls", "Subsection",
+ CellChangeTimes->{{3.949202560778516*^9, 
+  3.9492025648588448`*^9}},ExpressionUUID->"df9a49a6-a1ad-4e32-954a-\
+6dedfaa80382"],
+
+Cell["Best Practices", "Subsection",
+ CellChangeTimes->{{3.949202570035594*^9, 
+  3.9492025809627953`*^9}},ExpressionUUID->"1a49b197-ae51-4389-bb7e-\
+350398fc8b56"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Computational Errors", "Section",
+ CellChangeTimes->{{3.948970051697424*^9, 
+  3.9489700548470707`*^9}},ExpressionUUID->"6a258f50-6f7a-43c6-a8e1-\
+3475f9860b44"],
+
+Cell["Roundoff and Truncation Errors", "Subsection",
+ CellChangeTimes->{{3.948970187180142*^9, 
+  3.948970195709861*^9}},ExpressionUUID->"892412bd-6639-4a87-a413-\
+8212d84bd500"],
+
+Cell["Error Propagation and Stability Analysis", "Subsection",
+ CellChangeTimes->{{3.948970200273645*^9, 
+  3.948970211916644*^9}},ExpressionUUID->"738b2203-cd24-4e76-a68c-\
+5b3a8aa3f8e3"],
+
+Cell["Condition Numbers and Numerical Stability", "Subsection",
+ CellChangeTimes->{{3.948970215948221*^9, 
+  3.948970224009684*^9}},ExpressionUUID->"784f8adb-4987-4b2e-9e6e-\
+3033f0eca63d"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Scientific Notation and Unit Handling in Computation", "Section",
+ CellChangeTimes->{{3.948970061162631*^9, 
+  3.948970081664688*^9}},ExpressionUUID->"61c00950-8768-42ba-9a23-\
+f64c1fe11a9f"],
+
+Cell["Scientific Notation Essentials", "Subsection",
+ CellChangeTimes->{{3.94920260029142*^9, 
+  3.94920260546671*^9}},ExpressionUUID->"ac573cac-bad0-4172-96c1-\
+201ca7defcd0"],
+
+Cell["Dimensional Consistency in Calculations", "Subsection",
+ CellChangeTimes->{{3.948970230343211*^9, 
+  3.948970241297925*^9}},ExpressionUUID->"f890eae4-adcc-499e-b19d-\
+cc633c5d6c07"],
+
+Cell["Real-world Applications", "Subsection",
+ CellChangeTimes->{{3.948970245091761*^9, 3.948970249659999*^9}, {
+  3.9492026206116867`*^9, 
+  3.949202625339032*^9}},ExpressionUUID->"ede13768-c2c8-4a08-a28d-\
+cdfbbe1f1d19"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Basic Algorithm Design", "Chapter",
+ CellChangeTimes->{{3.949202661004157*^9, 
+  3.949202665500288*^9}},ExpressionUUID->"8467aed9-eb38-4f5e-91bc-\
+dd841fdb557e"],
+
+Cell[CellGroupData[{
+
+Cell["Developing Pseudocode for Scientific Problems", "Section",
+ CellChangeTimes->{{3.949202669973702*^9, 
+  3.949202678644969*^9}},ExpressionUUID->"fcd1501c-589e-44a4-a9ac-\
+6e79dbe4bf89"],
+
+Cell["Writing Clear and Concise Pseudocode", "Subsection",
+ CellChangeTimes->{{3.949202681548999*^9, 
+  3.949202691765774*^9}},ExpressionUUID->"310ad2b3-a4fc-4003-a185-\
+25c58627d3be"],
+
+Cell["Case Studies", "Subsection",
+ CellChangeTimes->{{3.949202694406375*^9, 
+  3.9492026972774763`*^9}},ExpressionUUID->"53b76a15-a51c-4703-b00d-\
+78489865b7cc"],
+
+Cell["Common Pitfalls", "Subsection",
+ CellChangeTimes->{{3.949202699790278*^9, 
+  3.94920270342979*^9}},ExpressionUUID->"445c5c2b-8204-43da-87a0-\
+4771db3c9b9e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Analyzing Algorithm Complexity and Efficiency", "Section",
+ CellChangeTimes->{{3.949202706390169*^9, 
+  3.9492027159020367`*^9}},ExpressionUUID->"d9dcfc6c-cb3e-4ffd-859a-\
+11b8c4c2b178"],
+
+Cell["Introduction to Computational Complexity", "Subsection",
+ CellChangeTimes->{{3.949202720046982*^9, 
+  3.949202725557838*^9}},ExpressionUUID->"4c0c17a8-87a3-47d5-bbd6-\
+5b9823f19c10"],
+
+Cell["Efficiency Considerations", "Subsection",
+ CellChangeTimes->{{3.949202728111103*^9, 
+  3.949202732190484*^9}},ExpressionUUID->"569a4a25-f213-4364-ad14-\
+fa1aba968257"],
+
+Cell["Optimization Techniques", "Subsection",
+ CellChangeTimes->{{3.949202734624385*^9, 
+  3.949202738871138*^9}},ExpressionUUID->"abbb1425-3d14-4bd0-b688-\
+5904f24ed894"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Implementing Structured Programming Practices", "Section",
+ CellChangeTimes->{{3.949202742872065*^9, 
+  3.949202751455114*^9}},ExpressionUUID->"2806c9d6-fc14-4cd8-9263-\
+349c82ce2a5d"],
+
+Cell["Principles of Structured Programming", "Subsection",
+ CellChangeTimes->{{3.9492027536558847`*^9, 
+  3.949202760343287*^9}},ExpressionUUID->"7596d7a4-0ef4-495c-996b-\
+fd9000ea8b45"],
+
+Cell["Error Handling and Debugging", "Subsection",
+ CellChangeTimes->{{3.9492027630797853`*^9, 
+  3.949202767838879*^9}},ExpressionUUID->"3fd1dd6e-68c2-46bf-b107-\
+268d7733866a"],
+
+Cell["Case Examples", "Subsection",
+ CellChangeTimes->{{3.9492027709042177`*^9, 
+  3.949202773128056*^9}},ExpressionUUID->"1bdf7fad-0e96-4272-b039-\
+677150a27119"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Data Structures for Scientific Computing", "Chapter",
+ CellChangeTimes->{{3.949202782720273*^9, 
+  3.949202788872319*^9}},ExpressionUUID->"bbb22d7f-af45-4b25-8cfb-\
+9348b6c24e83"],
+
+Cell[CellGroupData[{
+
+Cell["Arrays, Matrices and Tensors for Physical Quantities", "Section",
+ CellChangeTimes->{{3.949202791624908*^9, 
+  3.949202809529838*^9}},ExpressionUUID->"ef662fb8-cf55-436b-ae54-\
+294af00f0eb5"],
+
+Cell["Fundamental Data Structures", "Subsection",
+ CellChangeTimes->{{3.949202813809602*^9, 
+  3.949202817681175*^9}},ExpressionUUID->"0a18817b-043b-49e9-8023-\
+c8b28c71e82e"],
+
+Cell["Practical Examples", "Subsection",
+ CellChangeTimes->{{3.949202819794016*^9, 
+  3.949202822705955*^9}},ExpressionUUID->"3cc25b01-49c6-43e3-81fe-\
+bfb6ea137c58"],
+
+Cell["Implementation Considerations", "Subsection",
+ CellChangeTimes->{{3.9492028246819353`*^9, 
+  3.949202830370028*^9}},ExpressionUUID->"ab34eafd-38e9-46fd-8670-\
+910254b3a6eb"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Sparse Data Structures for Efficiency", "Section",
+ CellChangeTimes->{{3.949202837610587*^9, 
+  3.949202844538282*^9}},ExpressionUUID->"c8d0a3f0-70ed-41dc-a783-\
+d5e9f72c7425"],
+
+Cell["Need for Sparsity", "Subsection",
+ CellChangeTimes->{{3.949202847482972*^9, 
+  3.949202850594359*^9}},ExpressionUUID->"c40d2050-63af-41c1-93c6-\
+c8b20986a8ca"],
+
+Cell["Types of Sparse Representations", "Subsection",
+ CellChangeTimes->{{3.949202852371538*^9, 
+  3.949202857915032*^9}},ExpressionUUID->"457e633d-c961-49c6-b5dd-\
+8f3ba23814b3"],
+
+Cell["Applications in Physics", "Subsection",
+ CellChangeTimes->{{3.949202860826663*^9, 
+  3.949202863651507*^9}},ExpressionUUID->"0c62b4de-fe72-4156-811e-\
+72192371c015"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Trees and Graphs in Physical System Modeling", "Section",
+ CellChangeTimes->{{3.949202869571661*^9, 
+  3.94920288678797*^9}},ExpressionUUID->"a130abcf-ae3f-4ec5-9757-\
+6c3c02b5cdd7"],
+
+Cell[" Introduction to Trees", "Subsection",
+ CellChangeTimes->{{3.9492028886599197`*^9, 
+  3.949202892588406*^9}},ExpressionUUID->"a2ab74da-1194-4137-b0c0-\
+88d4d76d5635"],
+
+Cell[" Graph Theory Fundamentals", "Subsection",
+ CellChangeTimes->{{3.949202894108622*^9, 
+  3.949202901477247*^9}},ExpressionUUID->"1e50d966-3b6e-4ba9-acc7-\
+00c2f793c2f0"],
+
+Cell["Algorithms on Graphs", "Subsection",
+ CellChangeTimes->{{3.949202903221402*^9, 
+  3.949202908244896*^9}},ExpressionUUID->"e2078141-3441-45f7-9fde-\
+590a8d37dc26"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Visualization Fundamentals", "Chapter",
+ CellChangeTimes->{{3.9492029136215067`*^9, 
+  3.949202921941092*^9}},ExpressionUUID->"3b99792d-bd9d-4fa0-a96a-\
+37515176f0ce"],
+
+Cell[CellGroupData[{
+
+Cell["Crafting Meaningful Scientific Plots", "Section",
+ CellChangeTimes->{{3.949202924629637*^9, 
+  3.949202930525218*^9}},ExpressionUUID->"b7fa9382-dfe5-4fb1-afa7-\
+a490d1c22a9b"],
+
+Cell["Essential Plot Components", "Subsection",
+ CellChangeTimes->{{3.949202933029891*^9, 
+  3.94920293833401*^9}},ExpressionUUID->"5444fc82-be51-4003-bfa1-\
+cc41b553ad44"],
+
+Cell["Visualization Best Practices", "Subsection",
+ CellChangeTimes->{{3.9492029401984043`*^9, 
+  3.9492029465186167`*^9}},ExpressionUUID->"d185091f-0464-4dfa-a581-\
+79869e187b5f"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Developing Animations for Time-Evolving Systems", "Section",
+ CellChangeTimes->{{3.949202972968129*^9, 
+  3.949202981968219*^9}},ExpressionUUID->"a5f9a7a9-74e2-479a-b67d-\
+3d91583d6035"],
+
+Cell["Dynamic Visualization Techniques", "Subsection",
+ CellChangeTimes->{{3.949202990047721*^9, 
+  3.9492029957197638`*^9}},ExpressionUUID->"2fe06aed-559d-4667-908c-\
+78f3559883b0"],
+
+Cell["Tools and Libraries", "Subsection",
+ CellChangeTimes->{{3.949202998240646*^9, 
+  3.949203001289332*^9}},ExpressionUUID->"23732ff5-9eaa-4247-a5f6-\
+582e540ca514"],
+
+Cell["Mathematica", "Subsection",
+ CellChangeTimes->{{3.949203004209303*^9, 
+  3.9492030052971487`*^9}},ExpressionUUID->"6ae288b7-4d42-4d92-ae9b-\
+f38a2d94311a"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{720., 758.25},
+WindowMargins->{{Automatic, -1440}, {Automatic, 0}},
+FrontEndVersion->"13.2 for Linux x86 (64-bit) (November 18, 2022)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"3db8fdef-5496-443f-848b-c6b1f0fc288c"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 271, 6, 62, "Abstract",ExpressionUUID->"257be0f1-6eeb-430b-ac16-0e1da00bf769"],
+Cell[832, 28, 1724, 45, 219, "Text",ExpressionUUID->"d6396b1a-1850-4a25-ba02-a3463c56d50a"],
+Cell[CellGroupData[{
+Cell[2581, 77, 199, 6, 160, "Title",ExpressionUUID->"743e1f8e-03fe-411e-a69c-2ed8330aa764"],
+Cell[2783, 85, 188, 3, 53, "Subtitle",ExpressionUUID->"5073b95b-2a8f-47d9-934c-5488a9ad1b86"],
+Cell[CellGroupData[{
+Cell[2996, 92, 153, 3, 69, "Chapter",ExpressionUUID->"a430617f-a5d5-47f3-b048-5608e5d484fd"],
+Cell[3152, 97, 1084, 19, 288, "Text",ExpressionUUID->"6ab1a650-0774-45cc-a4d1-b8325d364fca"],
+Cell[CellGroupData[{
+Cell[4261, 120, 173, 3, 68, "Section",ExpressionUUID->"74156be7-62a9-4418-825b-053ecfd9d39f"],
+Cell[4437, 125, 1399, 27, 150, "Text",ExpressionUUID->"1713a228-e2ac-49df-9c4d-8c3bdef81167"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[5873, 157, 173, 3, 54, "Section",ExpressionUUID->"3fb27a95-0267-42eb-933b-09620cbfbec2"],
+Cell[6049, 162, 524, 9, 58, "Text",ExpressionUUID->"ba97c5a5-8a0f-4c8e-95c1-4ee53ff95d24"]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[6610, 176, 169, 3, 54, "Section",ExpressionUUID->"02f512b3-7e5e-4f39-9274-1bafbc0efa76"],
+Cell[6782, 181, 804, 13, 104, "Text",ExpressionUUID->"ea6b8740-ae62-436c-a0fb-ea36b4cebee8"]
+}, Closed]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7635, 200, 180, 3, 69, "Chapter",ExpressionUUID->"bd8132c7-0e5e-46e5-a8e7-65e04896b155"],
+Cell[CellGroupData[{
+Cell[7840, 207, 172, 3, 68, "Section",ExpressionUUID->"dee97074-d0b3-4759-952c-cdb90925dc9e"],
+Cell[CellGroupData[{
+Cell[8037, 214, 195, 3, 54, "Subsection",ExpressionUUID->"e962b777-8bf4-4cd7-b075-ee94120a752d"],
+Cell[8235, 219, 1666, 33, 290, "Text",ExpressionUUID->"6f77b0c2-2714-49ec-96a1-21f8edebed85"]
+}, Open  ]],
+Cell[9916, 255, 174, 3, 54, "Subsection",ExpressionUUID->"df9a49a6-a1ad-4e32-954a-6dedfaa80382"],
+Cell[10093, 260, 164, 3, 38, "Subsection",ExpressionUUID->"1a49b197-ae51-4389-bb7e-350398fc8b56"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[10294, 268, 167, 3, 68, "Section",ExpressionUUID->"6a258f50-6f7a-43c6-a8e1-3475f9860b44"],
+Cell[10464, 273, 178, 3, 54, "Subsection",ExpressionUUID->"892412bd-6639-4a87-a413-8212d84bd500"],
+Cell[10645, 278, 188, 3, 38, "Subsection",ExpressionUUID->"738b2203-cd24-4e76-a68c-5b3a8aa3f8e3"],
+Cell[10836, 283, 189, 3, 38, "Subsection",ExpressionUUID->"784f8adb-4987-4b2e-9e6e-3033f0eca63d"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11062, 291, 197, 3, 68, "Section",ExpressionUUID->"61c00950-8768-42ba-9a23-f64c1fe11a9f"],
+Cell[11262, 296, 176, 3, 54, "Subsection",ExpressionUUID->"ac573cac-bad0-4172-96c1-201ca7defcd0"],
+Cell[11441, 301, 187, 3, 38, "Subsection",ExpressionUUID->"f890eae4-adcc-499e-b19d-cc633c5d6c07"],
+Cell[11631, 306, 222, 4, 38, "Subsection",ExpressionUUID->"ede13768-c2c8-4a08-a28d-cdfbbe1f1d19"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[11902, 316, 167, 3, 69, "Chapter",ExpressionUUID->"8467aed9-eb38-4f5e-91bc-dd841fdb557e"],
+Cell[CellGroupData[{
+Cell[12094, 323, 190, 3, 68, "Section",ExpressionUUID->"fcd1501c-589e-44a4-a9ac-6e79dbe4bf89"],
+Cell[12287, 328, 184, 3, 54, "Subsection",ExpressionUUID->"310ad2b3-a4fc-4003-a185-25c58627d3be"],
+Cell[12474, 333, 162, 3, 38, "Subsection",ExpressionUUID->"53b76a15-a51c-4703-b00d-78489865b7cc"],
+Cell[12639, 338, 162, 3, 38, "Subsection",ExpressionUUID->"445c5c2b-8204-43da-87a0-4771db3c9b9e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12838, 346, 192, 3, 68, "Section",ExpressionUUID->"d9dcfc6c-cb3e-4ffd-859a-11b8c4c2b178"],
+Cell[13033, 351, 188, 3, 54, "Subsection",ExpressionUUID->"4c0c17a8-87a3-47d5-bbd6-5b9823f19c10"],
+Cell[13224, 356, 173, 3, 38, "Subsection",ExpressionUUID->"569a4a25-f213-4364-ad14-fa1aba968257"],
+Cell[13400, 361, 171, 3, 38, "Subsection",ExpressionUUID->"abbb1425-3d14-4bd0-b688-5904f24ed894"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[13608, 369, 190, 3, 68, "Section",ExpressionUUID->"2806c9d6-fc14-4cd8-9263-349c82ce2a5d"],
+Cell[13801, 374, 186, 3, 54, "Subsection",ExpressionUUID->"7596d7a4-0ef4-495c-996b-fd9000ea8b45"],
+Cell[13990, 379, 178, 3, 38, "Subsection",ExpressionUUID->"3fd1dd6e-68c2-46bf-b107-268d7733866a"],
+Cell[14171, 384, 163, 3, 38, "Subsection",ExpressionUUID->"1bdf7fad-0e96-4272-b039-677150a27119"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[14383, 393, 185, 3, 69, "Chapter",ExpressionUUID->"bbb22d7f-af45-4b25-8cfb-9348b6c24e83"],
+Cell[CellGroupData[{
+Cell[14593, 400, 197, 3, 68, "Section",ExpressionUUID->"ef662fb8-cf55-436b-ae54-294af00f0eb5"],
+Cell[14793, 405, 175, 3, 54, "Subsection",ExpressionUUID->"0a18817b-043b-49e9-8023-c8b28c71e82e"],
+Cell[14971, 410, 166, 3, 38, "Subsection",ExpressionUUID->"3cc25b01-49c6-43e3-81fe-bfb6ea137c58"],
+Cell[15140, 415, 179, 3, 38, "Subsection",ExpressionUUID->"ab34eafd-38e9-46fd-8670-910254b3a6eb"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[15356, 423, 182, 3, 68, "Section",ExpressionUUID->"c8d0a3f0-70ed-41dc-a783-d5e9f72c7425"],
+Cell[15541, 428, 165, 3, 54, "Subsection",ExpressionUUID->"c40d2050-63af-41c1-93c6-c8b20986a8ca"],
+Cell[15709, 433, 179, 3, 38, "Subsection",ExpressionUUID->"457e633d-c961-49c6-b5dd-8f3ba23814b3"],
+Cell[15891, 438, 171, 3, 38, "Subsection",ExpressionUUID->"0c62b4de-fe72-4156-811e-72192371c015"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16099, 446, 188, 3, 68, "Section",ExpressionUUID->"a130abcf-ae3f-4ec5-9757-6c3c02b5cdd7"],
+Cell[16290, 451, 172, 3, 54, "Subsection",ExpressionUUID->"a2ab74da-1194-4137-b0c0-88d4d76d5635"],
+Cell[16465, 456, 174, 3, 38, "Subsection",ExpressionUUID->"1e50d966-3b6e-4ba9-acc7-00c2f793c2f0"],
+Cell[16642, 461, 168, 3, 38, "Subsection",ExpressionUUID->"e2078141-3441-45f7-9fde-590a8d37dc26"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[16859, 470, 173, 3, 69, "Chapter",ExpressionUUID->"3b99792d-bd9d-4fa0-a96a-37515176f0ce"],
+Cell[CellGroupData[{
+Cell[17057, 477, 181, 3, 68, "Section",ExpressionUUID->"b7fa9382-dfe5-4fb1-afa7-a490d1c22a9b"],
+Cell[17241, 482, 172, 3, 54, "Subsection",ExpressionUUID->"5444fc82-be51-4003-bfa1-cc41b553ad44"],
+Cell[17416, 487, 180, 3, 38, "Subsection",ExpressionUUID->"d185091f-0464-4dfa-a581-79869e187b5f"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[17633, 495, 192, 3, 68, "Section",ExpressionUUID->"a5f9a7a9-74e2-479a-b67d-3d91583d6035"],
+Cell[17828, 500, 182, 3, 54, "Subsection",ExpressionUUID->"2fe06aed-559d-4667-908c-78f3559883b0"],
+Cell[18013, 505, 167, 3, 38, "Subsection",ExpressionUUID->"23732ff5-9eaa-4247-a5f6-582e540ca514"],
+Cell[18183, 510, 161, 3, 38, "Subsection",ExpressionUUID->"6ae288b7-4d42-4d92-ae9b-f38a2d94311a"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+
