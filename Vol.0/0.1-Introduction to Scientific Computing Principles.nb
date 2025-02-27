@@ -1,19 +1,12 @@
-(* Content-type: application/vnd.wolfram.mathematica *)
-
-(*** Wolfram Notebook File ***)
-(* http://www.wolfram.com/nb *)
-
-(* CreatedBy='Mathematica 13.2' *)
-
 (*CacheID: 234*)
 (* Internal cache information:
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
-NotebookDataPosition[       158,          7]
-NotebookDataLength[     37698,        948]
-NotebookOptionsPosition[     29123,        806]
-NotebookOutlinePosition[     29519,        822]
-CellTagsIndexPosition[     29476,        819]
+NotebookDataPosition[         0,          0]
+NotebookDataLength[     87323,       1981]
+NotebookOptionsPosition[     78659,       1827]
+NotebookOutlinePosition[     79229,       1848]
+CellTagsIndexPosition[     79186,       1845]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,62 +19,16 @@ Prf. Ebrahim | University of Tehran\
   3.9489691324978848`*^9}},ExpressionUUID->"257be0f1-6eeb-430b-ac16-\
 0e1da00bf769"],
 
-Cell[TextData[{
- "This series is an extended content of ",
- StyleBox["Quantum Mechanics II",
-  FontWeight->"Bold"],
- ", held in ",
- StyleBox["Spring 2025",
-  FontSlant->"Italic"],
- " by ",
- StyleBox["Professor H. Ebrahim",
-  FontSlant->"Italic"],
- " at the ",
- StyleBox["University of Tehran, Department of Physics",
-  FontSlant->"Italic"],
- ". Authored by ",
- StyleBox["Amir Hossein Ebrahimnezhad",
-  FontSlant->"Italic"],
- " (*thisismeamir@outlook.com*), this work provides a meticulously structured \
-set of documents aimed at transforming your theoretical understanding of \
-quantum mechanics into ",
- StyleBox["practical computational skills",
-  FontSlant->"Italic"],
- ".  \n\nBy bridging the gap between abstract quantum theory and concrete \
-numerical and symbolic implementations, this series equips you with the \
-necessary tools to ",
- StyleBox["simulate and visualize quantum phenomena",
-  FontSlant->"Italic"],
- " across multiple domains. It is designed for students, researchers, and \
-enthusiasts who wish to ",
- StyleBox["go beyond the formalism",
-  FontSlant->"Italic"],
- " and develop a ",
- StyleBox["computational intuition",
-  FontSlant->"Italic"],
- " for quantum mechanics.  \n\nFor discussions and updates, you can reach the \
-author via:  \n\|01f4e1 ",
- StyleBox["Telegram:",
-  FontWeight->"Bold"],
- " https://t.me/thisismeamir\n\|01f4bb ",
- StyleBox["GitHub Repository:",
-  FontWeight->"Bold"],
- " https://github.com/thisismeamir/comp-quant"
-}], "Text",
- CellChangeTimes->{{3.948969136469294*^9, 3.9489692603754807`*^9}, {
-  3.9489694299598007`*^9, 3.948969570000731*^9}, {3.949203644311843*^9, 
-  3.949203648391162*^9}, {3.949314437409585*^9, 
-  3.949314446113858*^9}},ExpressionUUID->"d6396b1a-1850-4a25-ba02-\
-a3463c56d50a"],
-
 Cell[CellGroupData[{
 
 Cell["\<\
-Introduction to 
-Scientific Computing Principles\
+Scientific 
+Computing
+Fundamentals\
 \>", "Title",
- CellChangeTimes->{{3.948968992140868*^9, 
-  3.948969009504171*^9}},ExpressionUUID->"743e1f8e-03fe-411e-a69c-\
+ CellChangeTimes->{{3.948968992140868*^9, 3.948969009504171*^9}, {
+  3.949431303578237*^9, 3.949431308820221*^9}, {3.9494314833492813`*^9, 
+  3.9494314920295267`*^9}},ExpressionUUID->"743e1f8e-03fe-411e-a69c-\
 2ed8330aa764"],
 
 Cell["Computational Journey of Quantum Mechanics ", "Subtitle",
@@ -92,723 +39,1802 @@ Cell["Computational Journey of Quantum Mechanics ", "Subtitle",
 Cell[CellGroupData[{
 
 Cell["Overview", "Chapter",
- CellChangeTimes->{{3.949202510322524*^9, 
-  3.949202515234233*^9}},ExpressionUUID->"a430617f-a5d5-47f3-b048-\
+ CellChangeTimes->{{3.949202510322524*^9, 3.949202515234233*^9}, {
+  3.94943131811635*^9, 3.9494313335006742`*^9}, {3.949431497518067*^9, 
+  3.949431498372946*^9}},ExpressionUUID->"a430617f-a5d5-47f3-b048-\
 5608e5d484fd"],
 
-Cell["\<\
-Scientific computing is the backbone of modern physics, engineering, and \
-data-driven sciences. From simulating black hole mergers in numerical \
-relativity to modeling quantum systems and solving complex differential \
-equations, computational methods allow us to explore problems that are \
-otherwise intractable with pure analytical techniques. However, to leverage \
-the full power of scientific computing, one must build a strong foundation in \
-numerical methods, algorithm design, data structures, and visualization \
-techniques.  
-
-This notebook,  serves as a structured guide to these fundamental concepts, \
-providing both the mathematical underpinnings and practical implementation \
-strategies necessary for advanced scientific simulations. The focus is not \
-only on learning how to write code but also on understanding the mathematical \
-structures that govern computational accuracy, efficiency, and reliability.  \
-\
-\>", "Text",
- CellChangeTimes->{{3.9492023265932913`*^9, 
-  3.949202352755514*^9}},ExpressionUUID->"6ab1a650-0774-45cc-a4d1-\
-b8325d364fca"],
-
-Cell[CellGroupData[{
-
-Cell["What This Notebook Covers   ", "Section",
- CellChangeTimes->{{3.949202355413733*^9, 
-  3.949202388644092*^9}},ExpressionUUID->"74156be7-62a9-4418-825b-\
-053ecfd9d39f"],
-
 Cell[TextData[{
- "We begin with an exploration of  ",
- StyleBox["floating - point arithmetic and computational errors",
-  FontSlant->"Italic"],
- ", highlighting the limitations of digital computation and methods to \
-mitigate precision loss . This naturally leads into the discussion of  ",
- StyleBox["algorithm design",
-  FontSlant->"Italic"],
- ", where we develop structured approaches to solving scientific problems, \
-analyze computational complexity, and implement best practices for writing \
-maintainable code .  \n  \nOnce we have a solid algorithmic foundation, we \
-introduce ",
- StyleBox["data structures specifically tailored for scientific applications",
-  
-  FontSlant->"Italic"],
- ", such as matrices, tensors, sparse representations, and graph - based \
-models . These data structures enable efficient simulations and large - scale \
-computations in physics and engineering . Finally, we explore ",
- StyleBox["visualization techniques",
-  FontSlant->"Italic"],
- ", which are crucial for interpreting computational results . From plotting \
-scientific data to animating time - evolving systems, visualization enhances \
-our ability to analyze and communicate complex phenomena effectively .  "
+ "An important part of scientific computing is to understand that our goal is \
+to ",
+ StyleBox["understand",
+  FontWeight->"Bold"],
+ ", not to ",
+ StyleBox[" generate numbers",
+  FontWeight->"Bold"],
+ "! But to understand, one requires to know the potentials, pitfalls, and \
+systematic mistakes that could happen while working on  a simulation, \
+approximation or a visualization. In this notebook we investigate some bare \
+concepts of how computers work, how they give out errors and how to avoid \
+these routes. \n\nWe would start by understanding machine numbers, and \
+rounding errors and we move on to talks about different algorithm designs, \
+data structures, and some visualization tips. These are easy, yet fundamental \
+aspects of our goals in this series. But don\[CloseCurlyQuote]t fear, you can \
+always check this content again and gain more insight about the topics \
+discussed here.\n\nI would also leave a list of resources for the enthusiasts \
+wanting to learn it to core."
 }], "Text",
- CellChangeTimes->{{3.9492023910139723`*^9, 3.9492023972677183`*^9}, {
-  3.949202458977272*^9, 
-  3.949202489210515*^9}},ExpressionUUID->"1713a228-e2ac-49df-9c4d-\
-8c3bdef81167"]
-}, Open  ]],
+ CellChangeTimes->{{3.9492023265932913`*^9, 3.949202352755514*^9}, {
+  3.9494316132314796`*^9, 3.94943165679858*^9}, {3.949431894594577*^9, 
+  3.9494320078913918`*^9}, {3.9494320401072598`*^9, 3.94943206655506*^9}, {
+  3.949432100397773*^9, 
+  3.949432184236978*^9}},ExpressionUUID->"6ab1a650-0774-45cc-a4d1-\
+b8325d364fca"]
+}, Closed]],
 
 Cell[CellGroupData[{
 
-Cell["Who This Notebook Is For", "Section",
- CellChangeTimes->{{3.9492023993410587`*^9, 
-  3.9492024279621773`*^9}},ExpressionUUID->"3fb27a95-0267-42eb-933b-\
-09620cbfbec2"],
+Cell["Numbers and Errors", "Chapter",
+ CellChangeTimes->{{3.949432187652749*^9, 
+  3.949432198260871*^9}},ExpressionUUID->"0fca6162-8775-45cd-8cb5-\
+8643a8fdb658"],
+
+Cell[CellGroupData[{
+
+Cell["Human vs Computer", "Section",
+ CellChangeTimes->{{3.9495767391293173`*^9, 
+  3.949576743641213*^9}},ExpressionUUID->"c28ce0ba-b7d1-47b8-8457-\
+204a06d40982"],
 
 Cell["\<\
-This notebook is designed for students, researchers, and professionals who \
-want to deepen their understanding of scientific computing . Whether you are \
-a physicist solving partial differential equations, an engineer optimizing \
-computational models, or a data scientist working with high - dimensional \
-datasets, the principles covered here will be indispensable .  \
+We\[CloseCurlyQuote]re all familiar with numbers from an early age in school. \
+We count them, add and subtract them, and as we dive deeper into our \
+exploration of the universe\[LongDash]or even the complexities of social and \
+individual phenomena\[LongDash]we develop more sophisticated ways of using \
+them. But the numbers we use daily are a product of human perception and \
+convenience. Our mathematical notation, specifically the decimal system (base \
+10), is deeply tied to the way we evolved to understand the world, likely \
+influenced by the fact that we have ten fingers. However, this way of \
+representing numbers is just one possibility among many, and it isn\
+\[CloseCurlyQuote]t necessarily the most efficient for every application. \
+When we step into the realm of computers, the way numbers are handled shifts \
+dramatically, driven not by human convenience but by the physical constraints \
+and architecture of digital systems.
+
+Computers don\[CloseCurlyQuote]t \[OpenCurlyDoubleQuote]think\
+\[CloseCurlyDoubleQuote] in base 10; instead, they operate using a binary \
+system (base 2), where numbers are represented using only two symbols: 0 and \
+1. This fundamental shift is due to the nature of electronic circuits, which \
+rely on switches that are either on or off, corresponding naturally to the \
+binary states of 1 and 0. Every number we see on a screen, every calculation \
+performed by a processor, and every piece of digital information is encoded \
+in this binary language. But binary isn\[CloseCurlyQuote]t the only \
+alternative\[LongDash]other bases like octal (base 8) and hexadecimal (base \
+16) are frequently used in computing because they allow for more compact \
+representations of binary data. Understanding how numbers are stored and \
+manipulated in different bases is crucial for fields ranging from low-level \
+programming and computer engineering to cryptography and data science. The \
+way numbers are represented in computers is a perfect example of how \
+mathematics adapts to fit the constraints and capabilities of the medium in \
+which it operates.\
 \>", "Text",
- CellChangeTimes->{{3.9492024083701353`*^9, 
-  3.949202456801715*^9}},ExpressionUUID->"ba97c5a5-8a0f-4c8e-95c1-\
-4ee53ff95d24"]
-}, Open  ]],
+ CellChangeTimes->{
+  3.949574822378747*^9},ExpressionUUID->"e9e70f81-bfab-4de2-a42f-\
+5287875587b9"]
+}, Closed]],
 
 Cell[CellGroupData[{
 
-Cell["How to Use This Notebook", "Section",
- CellChangeTimes->{{3.949202417443571*^9, 
-  3.949202433419746*^9}},ExpressionUUID->"02f512b3-7e5e-4f39-9274-\
-1bafbc0efa76"],
-
-Cell["\<\
-Each chapter introduces core concepts through a mix of theory, code examples, \
-and hands - on exercises . The goal is to ensure that theoretical knowledge \
-is immediately reinforced with practical implementation. You are encouraged \
-to experiment with the provided examples, modify them to test edge cases, and \
-explore additional applications beyond the structured content .   By the end \
-of this notebook, you will have a strong grasp of the essential principles of \
-scientific computing, enabling you to confidently build numerical \
-simulations, optimize computational performance, and visualize scientific \
-data with clarity and precision .\
-\>", "Text",
- CellChangeTimes->{{3.949202440747115*^9, 
-  3.9492024507860203`*^9}},ExpressionUUID->"ea6b8740-ae62-436c-a0fb-\
-ea36b4cebee8"]
-}, Open  ]]
-}, Open  ]],
+Cell["Representing Numbers", "Section",
+ CellChangeTimes->{{3.9494322017268248`*^9, 3.9494322102459993`*^9}, {
+  3.949578013528314*^9, 
+  3.949578016784543*^9}},ExpressionUUID->"1850cb1e-c931-4422-b738-\
+88ca527a5a0a"],
 
 Cell[CellGroupData[{
 
-Cell["Scientific Computing Fundamentals", "Chapter",
- CellChangeTimes->{{3.948970025995818*^9, 
-  3.9489700384111423`*^9}},ExpressionUUID->"bd8132c7-0e5e-46e5-a8e7-\
-65e04896b155"],
-
-Cell[CellGroupData[{
-
-Cell["Floating Point Arithmetic", "Section",
- CellChangeTimes->{{3.948970040160989*^9, 
-  3.9489700457269173`*^9}},ExpressionUUID->"dee97074-d0b3-4759-952c-\
-cdb90925dc9e"],
-
-Cell[CellGroupData[{
-
-Cell["Introduction to Floating Point Representation", "Subsection",
- CellChangeTimes->{{3.9492025458185377`*^9, 
-  3.949202552929751*^9}},ExpressionUUID->"e962b777-8bf4-4cd7-b075-\
-ee94120a752d"],
+Cell["Binary to Decimal", "Subsection",
+ CellChangeTimes->{{3.9495748314176617`*^9, 
+  3.9495748355907593`*^9}},ExpressionUUID->"b2db6897-be82-4f1a-8b1f-\
+b41697b59756"],
 
 Cell[TextData[{
- "Computers fundamentally operate using binary. Sequences of 0s and 1s. At \
-first glance, binary seems perfectly suited for representing integers (whole \
-numbers). However, when it comes to representing non-integer values (what we \
-call \[OpenCurlyDoubleQuote]floating point numbers\[CloseCurlyDoubleQuote]), \
-the story becomes a bit more complex. Consider the number ",
+ "You should be quite familiar with base-",
  Cell[BoxData[
   FormBox[
    TemplateBox[<|
-    "boxes" -> FormBox["3.31882", TraditionalForm], "errors" -> {}, "input" -> 
-     "3.31882", "state" -> "Boxes"|>,
+    "boxes" -> FormBox["10", TraditionalForm], "errors" -> {}, "input" -> 
+     "10", "state" -> "Boxes"|>,
     "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "f2d97c3d-b7c0-4a18-b8a1-dd4df8144e53"],
- ": \n\nhow can this be faithfully represented in a binary world where even \
-simple decimal fractions like 0.1 do not have an exact binary equivalent?"
-}], "Text",
- CellChangeTimes->{{3.949231496633086*^9, 3.949231692249694*^9}, {
-  3.9492321114152184`*^9, 3.949232191734107*^9}, {3.949232246519902*^9, 
-  3.9492323172924633`*^9}, {3.9493152807819843`*^9, 
-  3.949315403423152*^9}},ExpressionUUID->"6f77b0c2-2714-49ec-96a1-\
-21f8edebed85"],
-
-Cell[CellGroupData[{
-
-Cell["Integers in binary", "Subsubsection",
- CellChangeTimes->{{3.9493154105990067`*^9, 3.949315418174041*^9}, {
-  3.949316260926044*^9, 
-  3.949316261613264*^9}},ExpressionUUID->"667b31b7-4cb7-4c2c-b9ce-\
-7c88800db3d9"],
-
-Cell[TextData[{
- "Before tackling floating point numbers, it\[CloseCurlyQuote]s useful to \
-understand how integers are represented. Every integer is encoded as a sum of \
-powers of two:\n",
- Cell[BoxData[
-  FormBox[
-   TemplateBox[<|"boxes" -> FormBox[
-       RowBox[{
-         StyleBox["N", "TI"], "\[LongEqual]", 
-         UnderoverscriptBox["\[Sum]", 
-          RowBox[{
-            StyleBox["i", "TI"], "\[LongEqual]", "0"}], 
-          RowBox[{
-            StyleBox["n", "TI"], "-", "1"}], LimitsPositioning -> True], 
-         SubscriptBox[
-          StyleBox["b", "TI"], 
-          StyleBox["i", "TI"]], 
-         SuperscriptBox["2", 
-          StyleBox["i", "TI"]]}], TraditionalForm], "errors" -> {}, "input" -> 
-     "N = \\sum_{i=0}^{n-1} b_i 2^i", "state" -> "Boxes"|>,
-    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "9ff1bf9b-4c56-4c7f-ba78-e0b4fa18e60c"],
- ",\nwhere each ",
- Cell[BoxData[
-  FormBox[
-   TemplateBox[<|"boxes" -> FormBox[
-       SubscriptBox[
-        StyleBox["b", "TI"], 
-        StyleBox["i", "TI"]], TraditionalForm], "errors" -> {}, "input" -> 
-     "b_i", "state" -> "Boxes"|>,
-    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "315b39da-a970-4186-a35d-f9bd703ac561"],
- " is either ",
- Cell[BoxData[
-  FormBox[
-   TemplateBox[<|
-    "boxes" -> FormBox["0", TraditionalForm], "errors" -> {}, "input" -> "0", 
-     "state" -> "Boxes"|>,
-    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "0e1da8d3-3757-4c75-902d-39a603c93005"],
- " or ",
- Cell[BoxData[
-  FormBox[
-   TemplateBox[<|
-    "boxes" -> FormBox["1", TraditionalForm], "errors" -> {}, "input" -> "1", 
-     "state" -> "Boxes"|>,
-    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "dfc1cde8-2b4f-4dbc-8a25-50d90ebd794e"],
- ". This method works perfectly for whole numbers but falls short when \
-representing fractions. But let\[CloseCurlyQuote]s implement it to learn by \
-practice:"
-}], "Text",
- CellChangeTimes->{{3.949315421278984*^9, 3.949315555967969*^9}, {
-  3.9493155941608677`*^9, 
-  3.949315596872796*^9}},ExpressionUUID->"571aade8-4584-4245-ae00-\
-e9e624394241"],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"(*", 
-   RowBox[{"Base", " ", "case"}], "*)"}], "\[IndentingNewLine]", 
-  RowBox[{
-   RowBox[{
-    RowBox[{
-     RowBox[{"binaryString", "[", "0", "]"}], "=", "\"\<0\>\""}], ";"}], 
-   "\[IndentingNewLine]", "\[IndentingNewLine]", 
-   RowBox[{"(*", 
-    RowBox[{
-    "Recursive", " ", "definition", " ", "for", " ", "positive", " ", 
-     "integers"}], "*)"}], "\n", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"binaryString", "[", 
-      RowBox[{"n_Integer", "?", "Positive"}], "]"}], ":=", 
-     RowBox[{"Module", "[", 
-      RowBox[{
-       RowBox[{"{", 
-        RowBox[{"q", ",", "r"}], "}"}], ",", "\[IndentingNewLine]", 
-       RowBox[{"(*", 
-        RowBox[{
-        "We", " ", "must", " ", "know", " ", "first", " ", "of", " ", "all", 
-         " ", "if", " ", "the", " ", "number", " ", "is", " ", "odd", " ", 
-         "or", " ", 
-         RowBox[{"even", "."}]}], "*)"}], "\[IndentingNewLine]", 
-       RowBox[{
-        RowBox[{"q", "=", 
-         RowBox[{"Quotient", "[", 
-          RowBox[{"n", ",", "2"}], "]"}]}], ";", "\[IndentingNewLine]", 
-        RowBox[{"(*", 
-         RowBox[{"Now", " ", "we", " ", "see", " ", "how"}], " ", "*)"}], 
-        "\[IndentingNewLine]", 
-        RowBox[{"r", "=", 
-         RowBox[{"Mod", "[", 
-          RowBox[{"n", ",", "2"}], "]"}]}], ";", "\[IndentingNewLine]", 
-        RowBox[{"If", "[", 
-         RowBox[{
-          RowBox[{"q", "==", "0"}], ",", 
-          RowBox[{"ToString", "[", "r", "]"}], ",", 
-          RowBox[{
-           RowBox[{"binaryString", "[", "q", "]"}], "<>", 
-           RowBox[{"ToString", "[", "r", "]"}]}]}], "]"}]}]}], "]"}]}], ";"}],
-    "\[IndentingNewLine]", "\n", 
-   RowBox[{"(*", 
-    RowBox[{"Handle", " ", "negative", " ", "numbers"}], "*)"}], 
-   "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{
-     RowBox[{"binaryString", "[", 
-      RowBox[{"n_Integer", "?", "Negative"}], "]"}], ":=", 
-     RowBox[{"\"\<-\>\"", "<>", 
-      RowBox[{"binaryString", "[", 
-       RowBox[{"-", "n"}], "]"}]}]}], ";"}]}]}]], "Input",
- CellChangeTimes->{{3.9493155992510033`*^9, 3.949315614917625*^9}, {
-  3.94931573141833*^9, 3.949315735144595*^9}, {3.949315767827105*^9, 
-  3.949315786378417*^9}, {3.9493159253667994`*^9, 3.949315974380816*^9}, {
-  3.949316162497559*^9, 3.949316188303525*^9}},
- CellLabel->"In[16]:=",ExpressionUUID->"c0e39a27-a764-4543-a52b-e7a65dc2635d"],
-
-Cell["Let\[CloseCurlyQuote]s test it!", "Text",
- CellChangeTimes->{{3.9493157764252043`*^9, 
-  3.949315778873559*^9}},ExpressionUUID->"22077d74-df36-4f6c-846b-\
-d48db0f789a0"],
-
-Cell[CellGroupData[{
-
-Cell[BoxData[{
- RowBox[{"binaryString", "[", "10", "]"}], "\[IndentingNewLine]", 
- RowBox[{"binaryString", "[", "301", "]"}], "\[IndentingNewLine]", 
- RowBox[{"binaryString", "[", "1", "]"}], "\[IndentingNewLine]", 
- RowBox[{"binaryString", "[", "2", "]"}]}], "Input",
- CellChangeTimes->{{3.9493157604021378`*^9, 3.949315762217533*^9}, {
-  3.949315894288537*^9, 3.949315907959132*^9}},
- CellLabel->"In[19]:=",ExpressionUUID->"1b4322a5-90f3-4199-bf42-f3acb97fb618"],
-
-Cell[BoxData["\<\"1010\"\>"], "Output",
- CellChangeTimes->{
-  3.949315762986331*^9, 3.949315908557288*^9, {3.949316173548538*^9, 
-   3.949316190851779*^9}},
- CellLabel->"Out[19]=",ExpressionUUID->"2414ad52-53cf-4ec4-9afe-5edfb088fa20"],
-
-Cell[BoxData["\<\"100101101\"\>"], "Output",
- CellChangeTimes->{
-  3.949315762986331*^9, 3.949315908557288*^9, {3.949316173548538*^9, 
-   3.94931619085277*^9}},
- CellLabel->"Out[20]=",ExpressionUUID->"0517ad36-c75f-4e50-800b-393a6b4dedd1"],
-
-Cell[BoxData["\<\"1\"\>"], "Output",
- CellChangeTimes->{
-  3.949315762986331*^9, 3.949315908557288*^9, {3.949316173548538*^9, 
-   3.9493161908536997`*^9}},
- CellLabel->"Out[21]=",ExpressionUUID->"7d35293d-5895-42d2-afb2-488a8c9c2794"],
-
-Cell[BoxData["\<\"10\"\>"], "Output",
- CellChangeTimes->{
-  3.949315762986331*^9, 3.949315908557288*^9, {3.949316173548538*^9, 
-   3.949316190854686*^9}},
- CellLabel->"Out[22]=",ExpressionUUID->"13b4201f-be87-46fd-8981-08c611a11a97"]
-}, Open  ]],
-
-Cell["\<\
-Don\[CloseCurlyQuote]t mind the code! Just play with some numbers and get \
-some results! If you need to understand it completely... There\
-\[CloseCurlyQuote]s always me to ask (or more intelligent people).\
-\>", "Text",
- CellChangeTimes->{{3.9493158054415083`*^9, 
-  3.949315847953639*^9}},ExpressionUUID->"941c6cb9-2374-4052-b003-\
-a56aabdaeb81"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell["What\[CloseCurlyQuote]s the deal with fractions?", "Subsubsection",
- CellChangeTimes->{{3.9493162475668707`*^9, 
-  3.949316253949991*^9}},ExpressionUUID->"9f2b5900-8f22-4be6-b128-\
-8112dcf26dbe"],
-
-Cell[TextData[{
- "When it comes to fractions, binary representation involves negative powers \
-of ",
+  "4f1fe045-1735-44ec-9789-f58ffef10e72"],
+ " arithmetic; digital computers, on the other hand, use base-",
  Cell[BoxData[
   FormBox[
    TemplateBox[<|
     "boxes" -> FormBox["2", TraditionalForm], "errors" -> {}, "input" -> "2", 
      "state" -> "Boxes"|>,
     "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "9272d45e-f431-48b5-824d-2fd155eed290"],
- ". For instance, the fractions ",
+  "daf26f10-2de3-4294-8bf1-6e1bc7e1578b"],
+ " or binary representation for arithmetic . Like base-",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|
+    "boxes" -> FormBox["10", TraditionalForm], "errors" -> {}, "input" -> 
+     "10", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "8c44aa82-4d69-411a-9e8a-eec278e7c6e8"],
+ ", binary is also written using positional notation, however restricted to \
+only allowing the digits ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|
+    "boxes" -> FormBox["0", TraditionalForm], "errors" -> {}, "input" -> "0", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "f6c7be2f-a516-4509-a9cc-fe6626e947de"],
+ " and ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|
+    "boxes" -> FormBox["1", TraditionalForm], "errors" -> {}, "input" -> "1", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "cee85454-620c-4382-a399-fe4acf3b6801"],
+ ". For example, the binary number ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       SubscriptBox["10110.1", "2"], TraditionalForm], "errors" -> {}, 
+     "input" -> "10110.1_2", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "5734a104-5052-4f29-bbb5-a8682327a7dd"],
+ " is converted to base-",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|
+    "boxes" -> FormBox["10", TraditionalForm], "errors" -> {}, "input" -> 
+     "10", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "8ec14146-6f82-406c-83a9-f2448f5c4629"],
+ " as follows :\n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         SubscriptBox["10110.1", "2"], "\[LongEqual]", "1", "\[Cross]", 
+         SuperscriptBox["2", "4"], "+", "0", "\[Cross]", 
+         SuperscriptBox["2", "3"], "+", "1", "\[Cross]", 
+         SuperscriptBox["2", "2"], "+", "1", "\[Cross]", 
+         SuperscriptBox["2", "1"], "+", "0", "\[Cross]", 
+         SuperscriptBox["2", "0"], "+", "1", "\[Cross]", 
+         SuperscriptBox["2", "-1"], "\[LongEqual]", "22.5"}], 
+       TraditionalForm], "errors" -> {}, "input" -> 
+     "10110.1_2 = 1\\times 2^4 + 0\\times 2^3 + 1\\times 2^2 + 1\\times 2^1 + \
+0 \\times 2^0 + 1\\times 2^{-1} = 22.5", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "5e58b12e-d7d8-4153-b602-98cd0b6d22f8"],
+ "\n\nLet\[CloseCurlyQuote]s implement this algorithm in Mathematica. It\
+\[CloseCurlyQuote]s simple but we should be careful about some cases that the \
+user might give us wrong numbers or notation:"
+}], "Text",
+ CellChangeTimes->{{3.949574853438508*^9, 3.9495749505075207`*^9}, {
+  3.949575012201201*^9, 
+  3.949575060881671*^9}},ExpressionUUID->"8f5f30e2-9962-4e79-80ea-\
+98ac37f7710e"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ToDecimal", "[", "binary_String", "]"}], " ", ":=", " ", 
+  RowBox[{"Module", "[", "\n", "  ", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "digits", ",", " ", "values", ",", " ", "lengthOfIntegers", ",", " ", 
+      "lengthOfFractions", ",", " ", "decimalValue"}], "}"}], ",", "\n", "\n",
+     "  ", 
+    RowBox[{"(*", " ", 
+     RowBox[{
+     "Split", " ", "the", " ", "string", " ", "at", " ", "the", " ", 
+      "decimal", " ", "point"}], " ", "*)"}], "\n", "  ", 
+    RowBox[{
+     RowBox[{"digits", " ", "=", " ", 
+      RowBox[{"StringSplit", "[", 
+       RowBox[{"binary", ",", " ", "\"\<.\>\""}], "]"}]}], ";", "\n", "\n", 
+     "  ", 
+     RowBox[{"(*", " ", 
+      RowBox[{
+      "Ensure", " ", "there", " ", "are", " ", "at", " ", "most", " ", "one", 
+       " ", "or", " ", "zero", " ", "decimal", " ", "points"}], " ", "*)"}], 
+     "\n", "  ", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Length", "[", "digits", "]"}], " ", ">", " ", "2"}], ",", 
+       " ", 
+       RowBox[{"Return", "[", "$Failed", "]"}]}], "]"}], ";", "\n", "\n", 
+     "  ", 
+     RowBox[{"(*", " ", 
+      RowBox[{
+      "Convert", " ", "characters", " ", "to", " ", "numbers", " ", "and", 
+       " ", "validate"}], " ", "*)"}], "\n", "  ", 
+     RowBox[{"values", " ", "=", " ", 
+      RowBox[{"ToExpression", " ", "/@", " ", 
+       RowBox[{"(", 
+        RowBox[{"Characters", " ", "/@", " ", "digits"}], ")"}]}]}], ";", 
+     "\n", "  ", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"!", 
+        RowBox[{"AllTrue", "[", 
+         RowBox[{
+          RowBox[{"Flatten", "[", "values", "]"}], ",", " ", 
+          RowBox[{
+           RowBox[{"(", 
+            RowBox[{
+             RowBox[{"#", " ", "===", " ", "0"}], " ", "||", " ", 
+             RowBox[{"#", " ", "===", " ", "1"}]}], ")"}], " ", "&"}]}], 
+         "]"}]}], ",", " ", 
+       RowBox[{"Return", "[", "$Failed", "]"}]}], "]"}], ";", "\n", "\n", 
+     "  ", 
+     RowBox[{"(*", " ", 
+      RowBox[{
+      "Compute", " ", "decimal", " ", "value", " ", "for", " ", "integer", 
+       " ", "part"}], " ", "*)"}], "\n", "  ", 
+     RowBox[{"lengthOfIntegers", " ", "=", " ", 
+      RowBox[{"Length", "[", 
+       RowBox[{"values", "[", 
+        RowBox[{"[", "1", "]"}], "]"}], "]"}]}], ";", "\n", "  ", 
+     RowBox[{"decimalValue", " ", "=", " ", 
+      RowBox[{"Sum", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{
+          RowBox[{"values", "[", 
+           RowBox[{"[", "1", "]"}], "]"}], "[", 
+          RowBox[{"[", "i", "]"}], "]"}], " ", "*", " ", 
+         RowBox[{"2", "^", 
+          RowBox[{"(", 
+           RowBox[{"lengthOfIntegers", " ", "-", " ", "i"}], ")"}]}]}], ",", 
+        " ", 
+        RowBox[{"{", 
+         RowBox[{"i", ",", " ", "1", ",", " ", "lengthOfIntegers"}], "}"}]}], 
+       "]"}]}], ";", "\n", "\n", "  ", 
+     RowBox[{"(*", " ", 
+      RowBox[{
+      "Compute", " ", "fractional", " ", "part", " ", "if", " ", "it", " ", 
+       "exists"}], " ", "*)"}], "\n", "  ", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"Length", "[", "digits", "]"}], " ", "==", " ", "2"}], ",", 
+       "\n", "    ", 
+       RowBox[{
+        RowBox[{"lengthOfFractions", " ", "=", " ", 
+         RowBox[{"Length", "[", 
+          RowBox[{"values", "[", 
+           RowBox[{"[", "2", "]"}], "]"}], "]"}]}], ";", "\n", "    ", 
+        RowBox[{"decimalValue", " ", "+=", " ", 
+         RowBox[{"Sum", "[", 
+          RowBox[{
+           RowBox[{
+            RowBox[{
+             RowBox[{"values", "[", 
+              RowBox[{"[", "2", "]"}], "]"}], "[", 
+             RowBox[{"[", "i", "]"}], "]"}], " ", "*", " ", 
+            RowBox[{"2", "^", 
+             RowBox[{"-", "i"}]}]}], ",", " ", 
+           RowBox[{"{", 
+            RowBox[{"i", ",", " ", "1", ",", " ", "lengthOfFractions"}], 
+            "}"}]}], "]"}]}]}]}], "\n", "  ", "]"}], ";", "\n", "\n", "  ", 
+     RowBox[{"(*", " ", 
+      RowBox[{
+      "Return", " ", "the", " ", "final", " ", "computed", " ", "decimal", 
+       " ", "value"}], " ", "*)"}], "\n", "  ", "decimalValue"}]}], "\n", 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.949575071851927*^9, 3.949575081425832*^9}},
+ CellLabel->"In[1]:=",ExpressionUUID->"535d9d81-66ba-45ee-80ef-3db310c15258"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"ToDecimal", "[", "\"\<10110.1\>\"", "]"}], " ", "//", 
+  "N"}]], "Input",
+ CellChangeTimes->{{3.949575083929861*^9, 3.949575110986739*^9}},
+ CellLabel->"In[2]:=",ExpressionUUID->"978370a4-5ab1-44e9-89cf-c524b5f15305"],
+
+Cell[BoxData["22.5`"], "Output",
+ CellChangeTimes->{{3.949575094152812*^9, 3.9495751113537903`*^9}, 
+   3.9496341735199957`*^9},
+ CellLabel->"Out[2]=",ExpressionUUID->"3f27c93d-cf8a-4bb5-a625-8fd4a871165c"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Decimal to Binary", "Subsection",
+ CellChangeTimes->{{3.9495751291865797`*^9, 
+  3.949575132505801*^9}},ExpressionUUID->"1603247e-cc95-4926-928a-\
+fa3c1694019f"],
+
+Cell[TextData[{
+ "Converting from base-",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|
+    "boxes" -> FormBox["10", TraditionalForm], "errors" -> {}, "input" -> 
+     "10", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "4ce1c828-ba4f-4a06-b76d-676f21dff2dc"],
+ " to binary is a little more involved, but still quite elementary. For \
+example, let\[CloseCurlyQuote]s convert ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|
+    "boxes" -> FormBox["23.625", TraditionalForm], "errors" -> {}, "input" -> 
+     "23.625", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "f7edf414-2f3f-4615-bc1b-e5548bbea64e"],
+ " to binary, we start with the integer component, and continuously divide by \
+",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|
+    "boxes" -> FormBox["2", TraditionalForm], "errors" -> {}, "input" -> "2", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "28e38264-ef60-4a38-a952-f3762ef13b23"],
+ ", storing each remainder until we get a result of ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|
+    "boxes" -> FormBox["0", TraditionalForm], "errors" -> {}, "input" -> "0", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "58bb936f-2053-413b-accd-4cf5a8ed48af"],
+ "\n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+        "23", "/", "2", "\[LongEqual]", "11", "remainder ", "1", 
+         "\\[NewLine]", "\[DoubleRightArrow]", "11", "/", "2", "\[LongEqual]",
+          "5", "remainder ", "1", "\\[NewLine]", "\[DoubleRightArrow]", "5", 
+         "/", "2", "\[LongEqual]", "2", "remainder ", "1", "\\[NewLine]", 
+         "\[DoubleRightArrow]", "2", "/", "2", "\[LongEqual]", "1", 
+         "remainder ", "0", "\\[NewLine]", "\[DoubleRightArrow]", "1", "/", 
+         "2", "\[LongEqual]", "0", "remainder ", "1"}], TraditionalForm], 
+     "errors" -> {}, "input" -> 
+     "23/2= 11\\text{remainder } 1\\\\ \\Rightarrow 11/2 = 5 \\text{remainder \
+}1 \\\\ \\Rightarrow 5/2 =2 \\text{remainder } 1 \\\\ \\Rightarrow 2/2 =1 \
+\\text{remainder } 0 \\\\ \\Rightarrow 1/2 = 0 \\text{remainder } 1", "state" -> 
+     "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "3a27a914-0662-4672-8ae1-be3f82a26e1e"],
+ "\nThe remainder of the first division gives us the ",
+ StyleBox["least significant digit",
+  FontWeight->"Bold"],
+ ", and the remainder of the final division gives us the ",
+ StyleBox["most significant digit",
+  FontWeight->"Bold"],
+ ". Therefore we have:\n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{"23", "-", 
+         SubscriptBox["10111", "2"]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "23 - 10111_2", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "0d352f9e-cc65-4019-9bec-9cdf3eb8b02c"],
+ ".\n\nTo convert the fractional part ",
  Cell[BoxData[
   FormBox[
    TemplateBox[<|
     "boxes" -> FormBox["0.625", TraditionalForm], "errors" -> {}, "input" -> 
      "0.625", "state" -> "Boxes"|>,
     "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "8783783d-7567-46ef-bb03-00e65ff85fa6"],
- " in decimal can be exactly represented in binary as:\n\n",
+  "6588c5d8-807d-4d22-823b-8defde2623fc"],
+ ", we instead multiply the fractional part by ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|
+    "boxes" -> FormBox["2", TraditionalForm], "errors" -> {}, "input" -> "2", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "11719ee8-457d-4159-b4ce-ec085017ff70"],
+ " each time, sorting each integer until we have a fractional part of zero:\n\
+\n",
  Cell[BoxData[
   FormBox[
    TemplateBox[<|"boxes" -> FormBox[
-       RowBox[{"1", "\[CenterDot]", 
-         SuperscriptBox["2", "-1"], "+", "0", "\[CenterDot]", 
-         SuperscriptBox["2", "-2"], "+", "1", "\[CenterDot]", 
-         SuperscriptBox["2", "-3"], "\[LongEqual]", 
-         SubscriptBox["0.101", "2"]}], TraditionalForm], "errors" -> {}, 
-     "input" -> "1\\cdot 2^{-1} + 0\\cdot 2^{-2} + 1\\cdot 2^{-3} = 0.101_2", 
-     "state" -> "Boxes"|>,
+       RowBox[{
+        "0.625", "\[Cross]", "2", "\[LongEqual]", "1.25", "\n", 
+         "\[DoubleRightArrow]", "0.25", "\[Cross]", "0.5", "\\[NewLine]", 
+         "\[DoubleRightArrow]", "0.5", "\[Cross]", "2", "\[LongEqual]", 
+         "1.0"}], TraditionalForm], "errors" -> {}, "input" -> 
+     "0.625 \\times 2 = 1.25\\\\ \\Rightarrow 0.25 \\times 0.5 \\\\ \
+\\Rightarrow 0.5 \\times 2 = 1.0", "state" -> "Boxes"|>,
     "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "6e2834b7-4a7a-489d-afac-2f5e16ab0435"],
- ".\nLet\[CloseCurlyQuote]s check this:"
+  "077482a4-138b-41c5-8915-ef0d6ec477a4"],
+ "\n\nThe first multiplication gives us the ",
+ StyleBox["most significant digit",
+  FontWeight->"Bold"],
+ ", and the final multiplication gives us the ",
+ StyleBox["least significant digit",
+  FontWeight->"Bold"],
+ ". So, reading from top to bottom:\n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{"0.625", "\[LongEqual]", 
+         SubscriptBox["0.101", "2"]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "0.625 = 0.101_2", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "15e61f90-413c-4873-a67d-30bbd7083225"],
+ "\n\nPutting them together: \n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{"23.625", "\[LongEqual]", 
+         SubscriptBox["10111.101", "2"]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "23.625 = 10111.101_2", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "3f1010e0-d501-4ae4-9f82-02a0c57ea58a"],
+ "\n\nHere\[CloseCurlyQuote]s the implementation of this process in \
+Mathematica:"
 }], "Text",
- CellChangeTimes->{{3.949316267117556*^9, 3.9493163216411123`*^9}, {
-  3.949316381003584*^9, 
-  3.9493163844676037`*^9}},ExpressionUUID->"3800f190-f95d-439d-a332-\
-2cef2e6d3651"],
+ CellChangeTimes->{{3.949575144426732*^9, 3.9495752146533422`*^9}, {
+  3.949576138743493*^9, 3.949576284649355*^9}, {3.949576325177071*^9, 
+  3.949576456814652*^9}},ExpressionUUID->"dce090ec-1162-473c-9f32-\
+6ce766e65f60"],
+
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{
+   RowBox[{"ToBinary", "[", "number_Real", "]"}], ":=", 
+   RowBox[{"Module", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+      "integerPart", ",", "fractionalPart", ",", "intBinary", ",", 
+       "fracBinary", ",", "frac", ",", "count"}], "}"}], ",", 
+     RowBox[{"(*", 
+      RowBox[{
+      "Extract", " ", "integer", " ", "and", " ", "fractional", " ", 
+       "parts"}], "*)"}], 
+     RowBox[{
+      RowBox[{"integerPart", "=", 
+       RowBox[{"Floor", "[", "number", "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"fractionalPart", "=", 
+       RowBox[{"number", "-", "integerPart"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{
+       "Convert", " ", "integer", " ", "part", " ", "to", " ", "binary"}], 
+       "*)"}], 
+      RowBox[{"intBinary", "=", "\"\<\>\""}], ";", "\[IndentingNewLine]", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"integerPart", "==", "0"}], ",", 
+        RowBox[{"intBinary", "=", "\"\<0\>\""}], ",", 
+        RowBox[{
+         RowBox[{"While", "[", 
+          RowBox[{
+           RowBox[{"integerPart", ">", "0"}], ",", 
+           RowBox[{
+            RowBox[{"intBinary", "=", 
+             RowBox[{
+              RowBox[{"ToString", "[", 
+               RowBox[{"Mod", "[", 
+                RowBox[{"integerPart", ",", "2"}], "]"}], "]"}], "<>", 
+              "intBinary"}]}], ";", "\[IndentingNewLine]", 
+            RowBox[{"integerPart", "=", 
+             RowBox[{"Quotient", "[", 
+              RowBox[{"integerPart", ",", "2"}], "]"}]}], ";"}]}], "]"}], 
+         ";"}]}], "]"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"(*", 
+       RowBox[{
+       "Convert", " ", "fractional", " ", "part", " ", "to", " ", "binary"}], 
+       "*)"}], 
+      RowBox[{"fracBinary", "=", "\"\<\>\""}], ";", "\[IndentingNewLine]", 
+      RowBox[{"frac", "=", "fractionalPart"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"count", "=", "0"}], ";", "\[IndentingNewLine]", 
+      RowBox[{"While", "[", 
+       RowBox[{
+        RowBox[{
+         RowBox[{"frac", ">", "0"}], "&&", 
+         RowBox[{"count", "<", "10"}]}], ",", 
+        RowBox[{"(*", 
+         RowBox[{
+         "Limit", " ", "to", " ", "10", " ", "decimal", " ", "places", " ", 
+          "to", " ", "prevent", " ", "infinite", " ", "loops"}], "*)"}], 
+        RowBox[{
+         RowBox[{"frac", "*=", "2"}], ";", "\[IndentingNewLine]", 
+         RowBox[{"fracBinary", "=", 
+          RowBox[{"fracBinary", "<>", 
+           RowBox[{"ToString", "[", 
+            RowBox[{"Floor", "[", "frac", "]"}], "]"}]}]}], ";", 
+         "\[IndentingNewLine]", 
+         RowBox[{"frac", "-=", 
+          RowBox[{"Floor", "[", "frac", "]"}]}], ";", "\[IndentingNewLine]", 
+         RowBox[{"count", "++"}], ";"}]}], "]"}], ";", "\[IndentingNewLine]", 
+      
+      RowBox[{"(*", 
+       RowBox[{"Return", " ", "final", " ", "binary", " ", "representation"}],
+        "*)"}], 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"fractionalPart", "==", "0"}], ",", "intBinary", ",", 
+        RowBox[{"intBinary", "<>", "\"\<.\>\"", "<>", "fracBinary"}]}], 
+       "]"}]}]}], "]"}]}], "\[IndentingNewLine]"}], "\n", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"ToBinary", "[", "number_Integer", "]"}], ":=", 
+   RowBox[{"ToBinary", "[", 
+    RowBox[{"N", "[", "number", "]"}], "]"}]}], " ", 
+  RowBox[{"(*", 
+   RowBox[{
+   "Overload", " ", "to", " ", "handle", " ", "pure", " ", "integers"}], 
+   "*)"}]}], "\n"}], "Input",
+ CellChangeTimes->{{3.9495764768934193`*^9, 3.949576476893652*^9}},
+ CellLabel->"In[3]:=",ExpressionUUID->"23a9493a-9886-4b21-b777-5e8f48c33362"],
 
 Cell[CellGroupData[{
 
 Cell[BoxData[
- RowBox[{"0.625", " ", "==", " ", 
-  RowBox[{
-   SuperscriptBox["2", 
-    RowBox[{"-", "1"}]], "+", " ", 
-   SuperscriptBox["2", 
-    RowBox[{"-", "3"}]]}]}]], "Input",
- CellChangeTimes->{{3.949316386160784*^9, 3.949316409979146*^9}},
- CellLabel->"In[23]:=",ExpressionUUID->"93ceb00a-5948-4c3f-8dba-6a950fbfac8a"],
+ RowBox[{"ToBinary", "[", "23.625", "]"}]], "Input",
+ CellChangeTimes->{{3.9495764803813133`*^9, 3.949576485732584*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"83ea396c-13a2-46e2-9d60-486bd7b6e6e0"],
 
-Cell[BoxData["True"], "Output",
- CellChangeTimes->{3.949316410854231*^9},
- CellLabel->"Out[23]=",ExpressionUUID->"47d9046f-4f26-4d4a-9d89-f4fa5473106b"]
-}, Open  ]],
-
-Cell[TextData[{
- "Here\[CloseCurlyQuote]s the catch! Not all decimal numbers are able to be \
-finitely written as sums of ",
- Cell[BoxData[
-  FormBox[
-   TemplateBox[<|"boxes" -> FormBox[
-       SuperscriptBox["2", 
-        RowBox[{"-", 
-          StyleBox["i", "TI"]}]], TraditionalForm], "errors" -> {}, "input" -> 
-     "2^{-i}", "state" -> "Boxes"|>,
-    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "a1f08e23-361b-4861-9d73-4ca4637bb8aa"],
- ". which leads us to approximate representations."
-}], "Text",
- CellChangeTimes->{{3.949316414810977*^9, 
-  3.949316460026782*^9}},ExpressionUUID->"06892f19-b8aa-421c-9629-\
-8bd7e0f8e42d"]
-}, Open  ]],
+Cell[BoxData["\<\"10111.101\"\>"], "Output",
+ CellChangeTimes->{3.949576486466929*^9, 3.94963417353397*^9},
+ CellLabel->"Out[5]=",ExpressionUUID->"f7ad94b8-91df-42c7-9092-11f61d41be58"]
+}, Open  ]]
+}, Closed]],
 
 Cell[CellGroupData[{
 
-Cell["The need for a new representation", "Subsubsection",
- CellChangeTimes->{{3.9493164670999117`*^9, 
-  3.949316475314687*^9}},ExpressionUUID->"5afa303e-4ea8-42e1-9892-\
-7a8b6e4d4ece"],
+Cell["\<\
+Memory Limitation and 
+Fixed-Point Representation\
+\>", "Subsection",
+ CellChangeTimes->{{3.9495765102056417`*^9, 
+  3.94957653138792*^9}},ExpressionUUID->"84a89b64-c51b-45b4-94ff-\
+0550440e67b8"],
 
 Cell[TextData[{
- "The quest to represent real numbers (both very large and very small) \
-efficiently and with reasonable precision led to the development of a \
-standardized format: the floating point representation. This method breaks a \
-number into three distinct parts:\n\n1. ",
- StyleBox["Sign bit (S): ",
+ "Computers have limited amount of memory to store numbers. Therefore, we \
+must work intelligently and choose a finite set of bits to represent our \
+real-valued numbers, split between the integer parts and the fractional parts \
+of the number. This is referred to as ",
+ StyleBox["fixed-point representation",
   FontWeight->"Bold"],
- "Determines if the number is positive or negative.\n2. ",
- StyleBox["Exponent (E): ",
+ ".\n\nThis means that we for example choose a 16-bit fixed-point \
+representation. And then choose to have 4 of the total bits for the integer \
+parts and the rest for fractional parts. This strategy helps us manage the \
+amount of memory, but lacks something important."
+}], "Text",
+ CellChangeTimes->{{3.949576538380247*^9, 3.949576700665311*^9}, {
+  3.949576773368228*^9, 
+  3.949576804968733*^9}},ExpressionUUID->"a26b5d2a-666b-4102-b30f-\
+151b2b9747ff"],
+
+Cell[CellGroupData[{
+
+Cell["Errors", "Subsubsection",
+ CellChangeTimes->{{3.94957680912073*^9, 
+  3.949576811008194*^9}},ExpressionUUID->"7dfd3598-182c-4aee-a7af-\
+9b2ffb164c0a"],
+
+Cell["\<\
+Suppose I want to work with the strategy above. I want to have a \
+representation of the number 0.625:\
+\>", "Text",
+ CellChangeTimes->{{3.949576814479823*^9, 
+  3.949576858223742*^9}},ExpressionUUID->"24b73aee-e8fb-4536-bf41-\
+9847954d6b29"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ToBinary", "[", "0.625", "]"}]], "Input",
+ CellChangeTimes->{{3.949576859568254*^9, 3.949576864703381*^9}},
+ CellLabel->"In[6]:=",ExpressionUUID->"2a79262e-344c-4dd8-ad5e-086829a4da51"],
+
+Cell[BoxData["\<\"0.101\"\>"], "Output",
+ CellChangeTimes->{3.9495768667619953`*^9, 3.9496341735543747`*^9},
+ CellLabel->"Out[6]=",ExpressionUUID->"ffaff99a-c268-4de7-89bd-8576ac530c1a"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Everything seems fine now ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|
+    "boxes" -> FormBox["0.6250000001", TraditionalForm], "errors" -> {}, 
+     "input" -> "0.6250000001", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "6f3ef29b-de33-43ed-8c5c-6f5118350f28"],
+ ":"
+}], "Text",
+ CellChangeTimes->{{3.949576869319166*^9, 
+  3.949576916943263*^9}},ExpressionUUID->"b5478632-6690-4ffa-b596-\
+a06f2144713b"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ToBinary", "[", "0.6250000001", "]"}]], "Input",
+ CellChangeTimes->{{3.949576918287827*^9, 3.949576944952252*^9}},
+ CellLabel->"In[7]:=",ExpressionUUID->"7d746656-69d2-47d5-bd3c-2423d961c43e"],
+
+Cell[BoxData["\<\"0.1010000000\"\>"], "Output",
+ CellChangeTimes->{{3.949576921734749*^9, 3.949576945558875*^9}, 
+   3.9496341735678387`*^9},
+ CellLabel->"Out[7]=",ExpressionUUID->"23b1b8e9-3ea7-4f93-9bcb-65c98b7d08f5"]
+}, Open  ]],
+
+Cell[TextData[{
+ "See the difference? Exactly! There\[CloseCurlyQuote]s none! My \
+representation holds these to numbers as the same representation. It\
+\[CloseCurlyQuote]s not one-to-one. Something even worse can happen when I \
+would try to have ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|
+    "boxes" -> FormBox["23", TraditionalForm], "errors" -> {}, "input" -> 
+     "23", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "9225b16d-08b0-4c3b-9027-d5e2f5de2b8b"],
+ ". Remember I only have 4 bits on my integer part:"
+}], "Text",
+ CellChangeTimes->{{3.9495769478152857`*^9, 
+  3.9495770158140173`*^9}},ExpressionUUID->"83f4a8a9-5819-43f2-9f8a-\
+882928615f60"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ToBinary", "[", "23", "]"}]], "Input",
+ CellChangeTimes->{{3.9495770175432243`*^9, 3.949577020533546*^9}},
+ CellLabel->"In[8]:=",ExpressionUUID->"f8d80028-b2a4-49f5-8ff9-382bfbbc1667"],
+
+Cell[BoxData["\<\"10111\"\>"], "Output",
+ CellChangeTimes->{3.949577020973755*^9, 3.9496341735809298`*^9},
+ CellLabel->"Out[8]=",ExpressionUUID->"0791a542-efdd-48a3-bce3-72b367f6f3cc"]
+}, Open  ]],
+
+Cell["\<\
+This is even worse! I cannot represent numbers greater than 15! There must be \
+a more accurate and free way.\
+\>", "Text",
+ CellChangeTimes->{{3.949577027558453*^9, 
+  3.949577061333503*^9}},ExpressionUUID->"7bb87e64-887a-4e1f-850a-\
+b4dc618fe8d9"]
+}, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Floating-Point Representation", "Subsection",
+ CellChangeTimes->{{3.949577065492395*^9, 
+  3.9495770712616167`*^9}},ExpressionUUID->"678ef242-9099-4dd4-b560-\
+88b1b3ae117f"],
+
+Cell[TextData[{
+ "Commonly, computers don\[CloseCurlyQuote]t use fixed-point representation \
+(thanks to intelligent people who saw this coming). Not being able to control \
+where the decimal point goes is inconvenient and stupid (in most cases). \n\n\
+The solution is to use ",
+ StyleBox["floating-point representation",
   FontWeight->"Bold"],
- "Encodes the scale of the number.\n3. ",
- StyleBox["Mantissa (or Signifcand, M): ",
-  FontWeight->"Bold"],
- "Encodes the precision bits of the number.\n\nA floating point number is \
-typically represented as:\n",
+ ", which works in a similar manner to scientific notation. We ensure that \
+all numbers, regardless of their size, are represented using the same number \
+of significant figures. As an example we write the following numbers in \
+scientific notation:\n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         RowBox[{"(", 
+           StyleBox["a", "TI"], ")"}], "10", "\[LongEqual]", 
+         SubscriptBox["1010", "2"], "\[LongEqual]", 
+         SubscriptBox["1.0100000", "2"], "\[Cross]", 
+         SuperscriptBox["2", "3"], "\n", 
+         RowBox[{"(", 
+           StyleBox["b", "TI"], ")"}], "-", "0.8125", "\[LongEqual]", 
+         SubscriptBox["-0.1101", "2"], "\[LongEqual]", 
+         SubscriptBox["-1.1010000", "2"], "\[Cross]", 
+         SuperscriptBox["2", "-1"], "\\[NewLine]", 
+         RowBox[{"(", 
+           StyleBox["c", "TI"], ")"}], "9.2", "\[LongEqual]", 
+         SubscriptBox["1001.0011001100110011...", "2"], "\[TildeTilde]", 
+         SubscriptBox["1.001001", "2"], "\[Cross]", 
+         SuperscriptBox["2", "3"]}], TraditionalForm], "errors" -> {}, 
+     "input" -> 
+     "(a) 10 = 1010_2 = 1.0100000_2\\times 2^3 \\\\ (b) -0.8125 = -0.1101_2 = \
+-1.1010000_2 \\times 2^{-1} \\\\ (c) 9.2 = 1001.0011001100110011..._2 \
+\\approx 1.001001_2 \\times 2^3", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "c28780f9-7480-4145-8863-bb9152afbfe8"],
+ " \n\nUnlike the usual base-10, we use exponents of ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|
+    "boxes" -> FormBox["2", TraditionalForm], "errors" -> {}, "input" -> "2", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "efa3b004-996b-4da2-b578-b9d3af8c3e22"],
+ " in our base-2 scientific notation. Even more importantly, as we are \
+restricting the number of significant figures of our base-2 scientific \
+notation, there is still truncation error in our representation of ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|
+    "boxes" -> FormBox["9.2", TraditionalForm], "errors" -> {}, "input" -> 
+     "9.2", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "d375e909-af7f-4519-acd7-fead85a79cef"],
+ "."
+}], "Text",
+ CellChangeTimes->{{3.949577084347817*^9, 3.949577193884041*^9}, {
+  3.949577339635375*^9, 3.949577361299553*^9}, {3.949577411875413*^9, 
+  3.9495774319018927`*^9}, {3.949577552818549*^9, 
+  3.949577668506503*^9}},ExpressionUUID->"9bac529d-7287-4424-8452-\
+30ce47e5f253"],
+
+Cell[CellGroupData[{
+
+Cell["Representation", "Subsubsection",
+ CellChangeTimes->{{3.9495776734834213`*^9, 
+  3.9495776764104967`*^9}},ExpressionUUID->"7a446a07-3b3e-49f3-91f1-\
+7df9a88bf6fb"],
+
+Cell[TextData[{
+ "Floating-point representation as used by digital computers in written in \
+the following normalised form:\n\n",
  Cell[BoxData[
   FormBox[
    TemplateBox[<|"boxes" -> FormBox[
        RowBox[{
          SuperscriptBox[
           RowBox[{"(", "-1", ")"}], 
-          StyleBox["s", "TI"]], "\[Cross]", "1.", 
-         StyleBox["M", "TI"], "\[Cross]", 
+          StyleBox["S", "TI"]], "\[Cross]", 
+         RowBox[{"(", 
+           RowBox[{"1", "+", 
+             UnderscriptBox["\[Sum]", 
+              StyleBox["i", "TI"], LimitsPositioning -> True], 
+             SubscriptBox[
+              StyleBox["M", "TI"], 
+              StyleBox["i", "TI"]], 
+             SuperscriptBox["2", 
+              RowBox[{"-", 
+                StyleBox["i", "TI"]}]]}], ")"}], "\[Cross]", 
          SuperscriptBox["2", 
-          RowBox[{
-            StyleBox["E", "TI"], "-", "bias"}]]}], TraditionalForm], 
-     "errors" -> {}, "input" -> 
-     "(-1)^s \\times 1.M\\times 2^{E-\\text{bias}}", "state" -> "Boxes"|>,
+          StyleBox["E", "TI"]], ",", 
+         StyleBox["E", "TI"], "\[LongEqual]", 
+         StyleBox["e", "TI"], "-", 
+         StyleBox["d", "TI"]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "(-1)^S \\times \\left(1+ \\sum_i M_i 2^{-i}\\right) \\times 2^E, E = \
+e-d", "state" -> "Boxes"|>,
     "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
-  "5dfbbd33-affc-4e23-a10d-2d293632b7d0"]
+  "38d8e3d9-b165-4d41-b371-e4a4b26fb16f"],
+ ",\nwhere:"
 }], "Text",
- CellChangeTimes->{{3.949316490548374*^9, 
-  3.9493165864264*^9}},ExpressionUUID->"291e1668-8f5a-494e-ac64-16ee1fae9d50"]
+ CellChangeTimes->{{3.949577678618084*^9, 3.9495777028292017`*^9}, {
+  3.949577739921761*^9, 
+  3.949577745977618*^9}},ExpressionUUID->"e9815b5e-6fef-4a37-98af-\
+19aaeac04658"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       StyleBox["S", "TI"], TraditionalForm], "errors" -> {}, "input" -> "S", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "155e0f2d-9306-4cab-95c2-bae999e59fe9"],
+ " is the sign bit: 0 for positive numbers and 1 for negative numbers"
+}], "Item",
+ CellChangeTimes->{{3.949577754606429*^9, 
+  3.9495777908734913`*^9}},ExpressionUUID->"662cfdc6-43d1-4f5a-8d78-\
+802272b3ccd9"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       StyleBox["M", "TI"], TraditionalForm], "errors" -> {}, "input" -> "M", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "039ecf5f-8b14-4f14-94e7-c9e8d5604220"],
+ " is the mantissa: bits that encode the fractional significant figures (the \
+significant figures to the right of the decimal point -- the leading 1 is \
+implied),"
+}], "Item",
+ CellChangeTimes->{{3.949577754606429*^9, 
+  3.949577832458106*^9}},ExpressionUUID->"a20326b0-af1f-4cba-9bec-\
+4f421427b8e3"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       StyleBox["E", "TI"], TraditionalForm], "errors" -> {}, "input" -> "E", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "71eba66f-b8b4-41ee-99a8-3126255fcbf1"],
+ " is the exponents of the number to be encoded,"
+}], "Item",
+ CellChangeTimes->{{3.949577754606429*^9, 
+  3.949577845666436*^9}},ExpressionUUID->"99624034-4626-4402-b5c7-\
+6865aa76a321"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       StyleBox["d", "TI"], TraditionalForm], "errors" -> {}, "input" -> "d", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "54911112-dd82-448c-be6f-19b2aef1a66c"],
+ " is the offset of excess: The excess allows the representation of negative \
+exponents, and is determined by the floating point standard used."
+}], "Item",
+ CellChangeTimes->{{3.949577754606429*^9, 
+  3.949577887267061*^9}},ExpressionUUID->"3d25fbb3-073c-4459-b3a7-\
+5906d3430a6e"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       StyleBox["e", "TI"], TraditionalForm], "errors" -> {}, "input" -> "e", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "d9d4007c-1004-4c09-8e66-5795b16c2ff5"],
+ ": bits that encode the exponent after being shifted by the excess."
+}], "Item",
+ CellChangeTimes->{{3.949577754606429*^9, 
+  3.949577909896974*^9}},ExpressionUUID->"9c1055ec-6632-4e49-9e3b-\
+09e52ca37a94"],
+
+Cell[TextData[{
+ "The most common standard for floating-point representation is ",
+ StyleBox["IEEE754",
+  FontWeight->"Bold"],
+ StyleBox["; ",
+  FontSlant->"Italic"],
+ "in fact, this standard is so universal that it will be very unlikely for \
+you to encounter a computer that doesn\[CloseCurlyQuote]t use it (unless you \
+happen to find yourself using a mainframe or a very specialised supercomputer)"
+}], "Text",
+ CellChangeTimes->{{3.949577913393271*^9, 3.949577988673132*^9}, {
+  3.949578389871831*^9, 
+  3.949578394663784*^9}},ExpressionUUID->"4afb9e4d-d0e1-4b1b-95e6-\
+f440c598c752"]
 }, Open  ]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["IEEE754 32-Bit Single Precision", "Subsection",
+ CellChangeTimes->{{3.94957803012955*^9, 
+  3.949578042569065*^9}},ExpressionUUID->"ae81c94e-6d87-4914-9435-\
+0b47e8f195d5"],
+
+Cell[TextData[Cell[BoxData[
+ GraphicsBox[
+  TagBox[RasterBox[CompressedData["
+1:eJzt3Xe0FPX9//GcXznn9+fvfL90BJVyMSooHaUoxkQRuyJYQcSOSlMBQ1Es
+IWIJSlMSBYwQUYoYSxCCEWkxgiIgqFSJIE1KkCJ8fnmNv9nMzM7uzu5nZ3fv
+vc/HOe9ovDszn7t7793PvuZTTu5535W3/Y+f/exn/f/Pv//nypsf7Niv382D
+rvq///4/Xe7tf+ft997aq9O9A269/dZ+bXr+z3//x9f+Xaf875/97H/9+58G
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACqo48ePmz179pR0bdy4
+0axbt85s2bLFbNu2jaIoqlLW559/blauXGm+/fbboreFoiiKoiiKoiiKqti1
+Y8eOguWTP/zwg/nvKv9NURRFURRFURRFURRFURTl1OmNTy9KPlm/Qf2SrKrV
+qjrtq3VCLdOgYQOKoqhKWe7f6nr16xW9LRRFURRFURRFUVTFLH3mLFY+Wa16
+tYJdM1s/P/XnThsfGvJQsZsCAEXzX1X+y/lb+M9//rPYTQEAAAAAVFBaZ5F8
+Mhn5JACQTwIAAAAA4kc+GY58EgDIJwEAAAAA8SOfDEc+CQDkkwAAAACA+JFP
+hiOfBADySQAAAABA/Mgnw5FPAgD5JAAAAAAgfuST4cgnAYB8EgAAAAAQP/LJ
+cOSTAEA+CQAAAACIH/lkOPJJACCfBAAAAADEj3wyHPkkAJBPAgAAAADiRz4Z
+jnwSiG7V6lVm7vtz83a+/fv3m08//dTMnz/fOe+SpUvMjh078nZ+REc+CQAA
+AACIG/lkOPJJpDPhhQnOz0e+atGiRcX+lnKyZ88eM2jQIOd3uXWb1jmf59Ch
+Q2bu3LmmX/9+pmWrlqZK1Sqhz1PzFs3Nk6OedPLLKAYOHJiX1+eJJ57I+Xsr
+78gnAcRBf/Mz/e2dMWOG9XXuu+++tNfo269vHr6byuH3v/+983y5NXnK5GI3
+qcJ4/fXXM/4+vD/vfevr9OjRI+01hj88PA/fDQAAuSGfDEc+iXT27dtnprwy
+xTQ6pZGvX6dcrVnzZimr7ol1K0Q+efz4cTNt2jTf99++ffusz7Np8yanL9yw
+rKHv+WhyRhPTpUsX07NnT9PxvI5Jz1fTpk3NunXrMp7/rrvvyks++c477+Ty
+NFUI5JMA4qD7TMq7WrRskfJvb9duXa2vkep9t/YJtc1jjz1m1q9fn6fvqOK7
+/obrfc9hr1t7FbtJFYbu946fMN6cceYZKX8fbrv9NqtrfPfdd6ZGzRqh5z7p
+5JOc+79btmzJ03cEAED2yCfDkU8iinfffTfp804mn332melwToe855P/+te/
+zPbt2506cOCA9flS0bzrCztdmNS3VY6YreB9/LKyMicLVP7ptWLFCiffDWaU
++p7TCX6WyqX02fnYsWNZf28VBfkkgDjt2rXLyUbC/v5Wr1Hdam2Pl19+OeXf
+9pmzZubxu6gcyCfjt3XrVlOzVs3Qn9k6detY9e9+97vfpfx90Ho6AAAUG/lk
+OPJJRPH9999nnU/Kt99+6xvTkY980tvvfPTRR63PF7R79+7EXO6wvu0FF16Q
+9Tm9+WSt2rWcdSZT0d8qPb/ea44ZMybt+S+59JLEYzUmU+MpNV7z4UceTluX
+XX5Z4rgXXnwh6++rIiGfBBC37j26p8xNtJ5Krs77xXmh51T+c/jw4Tx+B+XD
+V1995dzvU23ctDHr48knC+PyKy5P+fuguSu50H3fVGOVGzRsUKnvwwIASgf5
+ZDjySUTx448/+tZKjJpPyohHR5SLfFLfo+bg1W9Q/6cxjo3KzB133mHatmvr
+6992vrhz1uf25pN6PjIZcP+ArK7pjlPVeE+tcRnVpZdd6hx3cr2TI691WVGR
+TwKIW/8B/RN/17WWsffv/Pm/PD+nc2qsf6qM55Sfn5Ln76B8aNe+XeI5uP2O
+27M+XvOL1RdwS2t7Iv+U+7qvU6vWrXw/u1ddfVVO5/zb3/6W8vfBZv1wAADy
+iXwyHPkkovLOw8kmn9ywYUMi2yzVfFLjS35x/i8S4xu1NtHBgwedr61Zs8bX
+v9X9/my5+aTWQ4qSf7311lu+a2r9y3TcdZyy2Vv8448/Tpx/6LChkY+rqMgn
+AcRt2PBhib+72ickOL/1yy+/zPqc3szz2Wef9Z1P48gqG42P0/u4TT6JwujT
+t0/iddI6BFWrVU38f3120hycbHkzz+Dvg/p5AACUAvLJcOSTiCrXfFL0OWzS
+pElm27Zt1u2Ia/yk9tS+8qorzddff+3778G57bnkk9lavny575on1Dkh7ePP
+OfccZ7xINvP43PlrWvds8+bNtk0u98gnAcRN71nu3/U5c+aYm7rf5Ptb/8QT
+T2R1Pq1N7K5p2axZM7Ns2TLf+c5ue3ZM30np0nxu73NAPlm67n/g/sTrpHGP
+7pwOt8aMTb+2TZDWeHX7qh06dDDz5s/zna9Tp04xfScAAGSHfDIc+SSisskn
+8ymufDLVvOhi5JPBz5jNWzTP6/nXrl2bGKegvcNBPgkgft588k9/+lPSWPkz
+m56ZtG9aOlNemZI49ulnnjYLFiyo9Pnka6+9Rj5ZTnjzSe3D+MofX/G9dud2
+PDer82mtbvdYrdcz+83Z5JMAgJJEPhmOfDKZxiPMmDnDDBw40BnbcO1115re
+vXub0aNH5zT3qqKo6PlkKsXIJ9944w3fNbt27ZrX8+vzmnvupcuW5vXc5RX5
+JIC4efPJl156yRnzXlZW5vt7n27/tKBfXfCrxDh4zYX985//XOnzyW7XdiOf
+LCe8+eSMGTPMvn37nPki3tdv9erVkc+nn3e3j6q+26tTXyWfBACUJPLJcOST
+/6E1i3Tv1d0fRaVMTv1+b/9Ga9vs2LGj2M0tuGzySeW4GsfxzTff5L0dlSGf
+vOeee3zX1HiQfNHcN/dnmrWY/oN8EkDcvPmk+hvizWhUWk8yis9XfZ44RvuC
+S3DsoE0++cUXX5jxE8Y7awTqPq3WP+nVq5f59a9/7czF1Z5ymcyaPctZ20Xf
+q967H37k4UQF5yzovVaZrfalu+aaa5y+1qinRjl7cUf1zjvv+NYwVHXu3Nlp
+R6ravn27c6yuM3nyZPOHP/zBaetvn/xtoq3z58/P6rlbt26dmThxorNujNaf
+1nOn51DPn17vsePGOueM2kdS/1Trvug+ufbqufGmG51z3nDjDc5ePoMGDXLa
+vXDhQrNz186s2qp1d5TjDR48OHFe/VNtV2aoe/Zx8f7sayyw3Hrbrb7XT89/
+FIsXL04cc++99zr/7YUXXyCfBACUJPLJcOSTP9FeKF26dEn0YdQ/U19Qjhw5
+Yj788ENz1tlnJb6uf7fNKNX319yTuEv70+RDNvmku9eMPtvkW0XPJ/fu3esb
+P6D5fu5ePfng/TygcZr4CfkkgLh580nNx5a///3vvveYBg0bRFpL+MGBDyaO
+eX/e+85/mzxlslU+qXuLmjvStGlT33nCSvuNb9q8Ke353L3bgqU9844ePeo8
+Rv9U7nbiSSeGPlZ96MceeyztvPcPPvjA9O3XN+l+cpRy95Wb8MKElI+Jui6o
+7sv+8le/zOr6ev1TUS6pzLlZ82ZZnTNTn0HrNOrnr+N5HRP7F6YqfU5QHzgO
+3v6I5mOLXg/v9Zuc0cR5HjJRrh18Tp977jnySQBASSpP+aT6asqV+vTp46zv
+fNrpp5l69es5c4DUR7mw04XO17RutL4vG+STxunz6l6x23/RPe6wcQFbtmxx
+Xgf3cbrHa2PkyJFZ96NzKd3Dz4eo+aT2l3H7u+ST2Rv+8HDf9dzPnfmgTF2v
+nfu3UNk7fkI+CSBu3nzyyVFPJv576zatfX/3NU87HfUv3bkeygDdPovG0HnP
+EzWf1JxyjcXzjj3UXiW/+c1vnDGN+qd73zF4/nRZqsbevf3220l558n1Tna+
+rpzsiiuviNSX0V7MqXjnvWRbbj4pGpOq/nXwMVHySW8Wpj6Q9qDT975mzRpn
+POV7771nbrnllsj5pDI571yKGjVrOGNZNe5S59N5tRbRxZdcHDmf1GcG5dp1
+6tZJPFY/e+p3KB9UZnnd9dc5n1u851O/IZtxrFF580mNdRR9BnI/m7ilcaHp
+qJ/m3tfV5yaXvh/ySQBAKSov+eRHH31kWrVulXgvVXuVh1x19VXOvwf7IC+/
+/LJVG8knjbNGvft81j2xbmKuT5hgdqQ+Yq7Kcz5Zq3Yt53cqWIsWLXLux7uP
+I5/Mjj6neD8XPPDgA3k9/yMjHkmcW88j/oN8EkDcvPmk+gAuzSX2vs9oTnA6
+U6dOTTz2qaefSvz34HzWKPnktGnTfMfoPUi5Vxjv/iNuvfjiixmvEdynRHml
++lpt27V1sjytEak545rvoXm6GsMZzMiUP+3evTv0/Hqf3rNnj1Mai+k9TnvA
+uV8Lq+B9Ot2z1l7o2eSTyiG9j9dYzFT0fEXJJ/W6uo9RbqyxmWHUXq0JkCmf
+1HMbfE4feuih0PuU+iyi/nA2P5O58OaTmvPu0hoC3mtrTns66muG9XmDv1fk
+kwCAUlEe8snFSxYn7v8pC5o+fbpvToP6IK+//npi/BP5pD09v955M7pXnY7G
+GHj7Oo8//njO19brrfEAcdenn36acxu9vPlk1CKfjE7jTNqc1cZ3nXyOb9S6
+8+74X/2d0bgV/Af5JIC4efNJzVl2bd682TfPVu+3qbI4ueiii5zHufviuJTx
+ZJtPanyk9xit+ZiO3pu8j4+yf9vWrVt9x5x08klO30vj+LRmZJjgWFDVH1/9
+Y8ZrBTPaXPbHCa6BmCmf7HBOh8RjNecp0x7sGquaLp/cv3+/b76O1hxKR2NY
+vWsQheWTa9eu9X1PGveQbt60xvcGX7N8z7nw5pMaf+r67LPPkq6tz1SpuM+/
+Ph8pc3Zp3C/5JACgFJV6Pqm+zLkdz028h3rvqwd575uTT9rR/Xpv32XmrJlp
+H6/X1Hv/WfOfKgtvPql7+eove+uSSy9JWmuKfDIazc3TXDD3Gsop850fPvPM
+M4nzD7h/QF7PXRGQTwKImzefDO770fnizr73Gu3VEkbzNtws090XxxVcby/b
+fFJj5nQvKx3dJ/deo2FZw4zX0P23YNaobFV9sFT0vqj1l73HKM/KJB/5pN4j
+o+aTwT6C9lTPROubK59VrVy5Munrun/tPWem8YOi18U9Z1iWF8wn0z33otw7
++JqtWr0qYzuy4c0ng/P327dv77u29jIKs3TZ0sRj3H1xXN7fN/JJAEApKfV8
+Uuu6eN9DU83jEGWZ6nOST9obNnyY73nX2omZnHraqYnH6/52ZRFl/Un9bA4Z
+OiTrfLLRKY2ctZWilDcfVk4a9bhMe/qkUoh8Uvtmuudv3KSxM5Ymn7RPqvtz
+q8+1+pwCP/JJAHHz5iVDhw31fU15pPe9RusKhtGcXPcxwfWJvfehouaTGtuo
+PqdqxYoVGR+vfpL3GnpPzrR/icb3BbOuIUOGZLxWcC1IzdXOJB/5pOaXR80n
+vfuoq9Sfcff+yZXmT0X5WciGMmL3ddZ+QpnGeEpwXSnN+84nbz4ZHLcbnKev
+e7hhevfunXhMcCxqcE0m8kkAQKko9Xxy3vx5vvfQQu2rW9nzSa0D7n3etWbQ
+pEmT0lawv5bPvZVLWdT9cfR8uGuvR80nvfOY4qps96lyxZ1P6mfKPbf2wLJZ
+0zQVrcfkXqNrt8xz8Soj8kkAcfPmk8oZvTRu0bt+j+4lbdzk3wNROV9ZozLn
+6959cVzBObnZ7t8dhd7jg++v3jm1YdTO4DGaw5tJMKOK8v6bj3wyuP5hunxy
+27ZtSd+b1um0oT1wvOfTz4I+JxRacC/yTPs2ZcubTwbnjWn8pvd+tO4z79y1
+0/eYvXv3Jvqb3n1xXN775eSTAIBSUur55CeffOJ7Dz3n3HPMgQMHYm9jZc8n
+w/ajzLa8az9VZFHzSdFa7Zpj9OrUVyOdW2tpaS5PlPLu66hxClGP0/oJuYgz
+n9R+nm7/W+sr5WutUC+N4/DunfrXv/4179eoCMgnAcTNm09qH+Wg4P7O2n/Y
+yzu32rsvjmvkb/377sWRT4rmZnuvk25fQQnLJ6OsYaJ79d5jtP9eJoXOJzUO
+MTgXWXmisjH1H3Kh3O3Ek070nVP7Euqeb7r90vMtuLd6qn2TcuXNJ73rsbqu
+7nK17/raY9xL/9/9WthekN6xxuSTAIBSUur5pNac1rxO7/tou/btnHuocars
++WSTM5oknm/1BTONnQwr9SMrg2zyyThVlPUnteaUuz+mxgXElRt696fXXqlR
+5nRVRuSTAOLmzScfePCBpK/rnpX3/UZ7nnhpzWv99+C+OC6NQStEPumOWbPJ
+J6P0nd56662ke/eZFDqfFO3x493fyK2T653s7KOYy3rSwbn6bulzjOb6pNsv
+Jl+6XdutqPmkt/+iurDThb6vu+v2B/fFcZFPAgBKVannk6J+WFj/Rmtt/+Uv
+f4klV6js+aR3Pxf1twtJn0P69usbe+VrvSDyyfzlk5oP5mbj+p3Xnldx0N8M
+3edw2z55Svh+CyCfBBC/TPmkxruf8vNTfO857pqQGzZsSPQRb+p+U+j548gn
+1Satkf7hhx86+ZTGrHn7A3Hmk3Pfn1su8knR2EbvfGRv6V6kxlNm8/6i92/N
+RQk7n0o/J9pTJp/3yL/55huzePFiZx63+gvaq6+Y+aTWzHTv47qln0Xxzju7
+5557Qs9PPgkAKFXlIZ8UvfcH34vd6nBOB2duT6Z1yLNR2fNJb3aj0jjWQgl+
+joirwua85IJ8Mj/5pNbucu/5q4JrwufT22+/nbiO1iwrxHiL8op8EkDcMuWT
+MmjQIN97jrIy8e7nF9wXx5WPfFJ51+w3Zzv3NzVvOZhFhlVc+aT2mC4v+aQs
+XLgwsX9lWOm51Oubab1OL40h9O7LGCyN0VS/KNt53+rv6vnVPvIXXHiBs8ZM
+pte50Pmk3HX3Xb42aA0D6dP3P3snBffFcZFPAgBKVXnJJ0Wfj3UvUHM+w/oH
+WjNR+wXmQ2XPJ6+55hrfc/vll18W7NqVKZ/UOlnad3Pu3LnW7Sjv+eR9992X
+OJf+PU7qi2f7+aqyIp8EELco+eTy5ct97zlaZ1n3tfRP/f+wfXFcNvnkli1b
+nDYF75Grn3jZ5Zc5+yRrz3HlSIUaP1ne8knReFOtvR28/+0tjX1ctGhR5HNq
+Pfrnn38+aR0ob2n9Fu2tnonGJGrcZXCvR73umj992+23Obmecstij58U7Tfu
+bUOLli3M/v37E+tzKkNPhXwSAFCqylM+6dI8C723Btf5Uem/qd9mq7Lnk97P
+Cqqo+7nkg+b4at5W3LVz587MjYkg13xS9/TdfmQ+5heX53zSu9a/xlBGGe+g
+11DrnK5fvz6ra2kunnstvXb6eUNq5JMA4hYln5TgGDzds3b/Pd2Y+1zzSY3R
+846f03h7nSvVPdtCrT+Zj3xSeVu2bPJJl+Znv/vuu84aTWF5ot6XlyxdktU5
+1WeY8soUJ6MLO6cy7M2bN6c8XnOiW7ZqmXi8xkFoHOKyZcucXDWo2OtPiuaM
+BXNZ7+/Diy++mPL85JMAgFJVHvNJl/KlEY+OSJp70aBhg6zmiISp7Plk8L6s
+1p6PSvegKxPveN5s8kmtneoeN3PWTOt2FDqf3Llrp+9npHPnzjmdR3sZuL/D
+ev6++OKLSMdpb3Mdo/WgsuHd91Lzo5Ae+SSAuEXNJ1PtjaJ9cdL9jcoln9S6
+Qd61z3UPTu976ZSnfPKGG2/IeExQPvJJL+1/553P4FazZs1SjoVNR8fodWvV
+ulXSObt26xp6zNq1a029+vUSj9PnoVWrV6W9Tinkk6KxnGG/D6n2xXGRTwIA
+SlV5zidduieqvRy977W2c3crez6p+7JNmzb1Padasy8T5Wyan7Py85UFaGXx
+HTp0KKlPGNW1112bOC7VmlnZKHQ+qflS2X7eC3PrbbcmzqG9N6PwjrfUeMio
+tDe49/Om5gsiPfJJAHGLmk/q71DYXiup9sVxZZtPKiP03vtuWNYwUm54Qp0T
+yk0+mcuch3znk6LnYODAgUnPw/z583M+p+6TB9cp0nt/2N7uF19yse9xi5cs
+znh+ZZ2lkE/qfm5YPplqXxwX+SQAoFRVhHxS/vGPf/jeawfcP8DqfJU9n5TX
+XnstKXubM2dO6GN3797tPOdVq1V16o+v/rHArS0OffbIJZ9UHunNyZYuW2rd
+lkLnk5pb7f3eNScrrO+fjvbD9B6v+VSp9lvv06eP8xlU+2F5r/vpp59Gvt7N
+N9+cOO6SSy/J9luulMgnAcQtaj4pytWCeYz2s04n23wy+P6m/aIzCa55osq0
+fkgh88mXXnrJd4zWbM9WHPmk6HkIjnlMNz85CvVLg3nxRx995HuM5ul7v966
+TetI59bz7csnZxQnn5SO53VM+hnSvPR0yCcBAKWq1PPJl19+2Zm/8PHHH2d8
+rLIh971W+wDaIJ/8yR133pHU71E+pP1Lnhz1pNNX7dq1a2INRv1T6zVVFlo3
+0vvc1Kpdy/mdSlXqM2qMoPaV9B63evVq67YUIp/UulHaK0CfG9y1M72ltSOV
+vUb5fCVXXX1V6L3/bErPaxQbNmzwjbvJdl54ZUU+CSBu3nmqmbLAqVOn+t4D
+zmx6pjPnI53HH388qxwqmMOlW9vSpb5P8P0p099NrZsYPEa5WibBNXg6dOiQ
+dftOO/20jMcEBfdQ1xpLqWgc4qzZsyLff9Xrnimf1Lo4OueaNWsinVPrzqTL
+J9UP8H49ypjSjZs2OusJeI/TnPJ86te/X+Lcj4x4JO1jx08Y72tLun1xXA8O
+fNB3jNYCBQCgFJR6PunOu1COkY7uvXr3KdE8Fhvkkz/R8zpkyJCkvlhYqU+k
+cayVge65K6NNtZd8tqXMz1ac+eQFF17gzNvX2Ngo34/Ghmo+XPMWzVN+rtMa
+APl47jKtB+bS+Ev3mGbNc1vbqjIinwQQN28ek2ldYM3d9e6lHSU71JhM7/tG
+kzOapH28d/yaSv8/HY2d1PtK8P0p3Z4sonXUg8dEuec2+83ZvmO0t0sm2hc7
+eK1169ZlPM7r7t53+45PN1fJnQOtNeG1z3omwTF9YfcQ9brpa+f/8vxI7b3y
+qit959R9Si+tSeT9eqZxtbpH271H96TnUZl5PvXq1Stx7kzjLXbs2OHri0YZ
+d6q927PNNAEAKITykk8q70i3/uE777yTeJ9VTqk9vm2QT/qpD6vxBG3btXXG
+CLrPtTKo62+43rmfHbbHYUWlfrP6vfmq/fv3W7cpznzyxptuzPl7GzN2TOg5
+NaYiH89dlL2+RXPD9flRpXHZiIZ8EkDcvOsQR9m3RXs1a8ylKtMcagnmMVpb
+UllTKmPGjPE9Xvt2pxrXqIxRfVXdv1MW5z1O+0KnE1zHWbVixYqM309w7ob6
+rJloXkPwnqqytuDzoP+ve/xh90312niP73Vrr5TX867RGCUz8451VD9z3759
+SY9x80nVwoUL057vyJEjpqysLPF4zR8P0hrUwec/1fqTOp877tB7XtXzzz+f
+8fvLhuYluedWJpyJ1tx3fx+UlWcS3N/njDPPyEezAQCwVl7ySZX2RVTWceDA
+Ad+5Xp36qq9POHr0aOs2kk+mp9cgai6EwtAcH80bV0UZTwJEQT4JIE4ay67x
+f4kssKwsr/0Lzf0O7qGoSrc/mu5xB/fh0Rzqd99918kjNYZT67I8/czTTn9R
+98U1Fi+4z4tyznSC61yq1KfNJJi3qtavX5/xOO++fG4pR9Q91yVLlzjjAN39
+tDWGz0uvSTCXa9e+Xcqc15tParxrcG61l9Ys95536LChoY/z5pP6d+W7YdQm
+zf3xnnPatGmhj9Ncf+/jdN9dr4t+BvQ663OSnhd3zUndq9c9ee8xel7zRc+z
++xlEpb0q8znfQ2MJGjdpnPRzEBxbCgBAMZR6Phm2Pp3GUqq9zZo1883prle/
+nvW+3S7ySQAgnwQQH2Vq3rGTicysa1ezcuVK6/NrfrXmiwfPr2rRsoWzXnKq
+7Ce4p06qUn/xww8/dI7xriPi5nLK3oLzm3VNZZ2NTmmUdD6N1XxzzpvOeL0g
+zbXQffqwNXeUnykDTDcudNXqVb5+c6rSOozecXgaSxn2Oqn0PYftjRfc41p9
+fp1j8uTJ5q9//auzP7f+/bLLL/PtF6jX/tChQ6Ht9+aTKu1/oznmyg81nlLr
+U44dNzZpH710c6Q/+OCDSGsY6XkbN36cc0xw/0i1X+tEZtqvPRPtx605ScFr
+a28/fc2W8lzvPoHe0hxv7buUaS1XAADiVOr5pPpZWutP63prbRr1ba7ucrWz
+X915vzjP6UNpb199PcqchqjIJwGAfBJAPIJ7vISV1lnMVdh6i2GVar9w5TTP
+PvtsyjxP/139zz179iSOCRvXqAqulzhk6JCM7Qqb564MKdNxWuslnXnz54Xm
+oirNe1cG581slT1mWntaXw+OZXzmmWecsYne7DFdnXraqc48kHRrBSkLDWaU
+6UrjZjWuNRPlmt4xi8Hs8Yorr/Ct1alcNeyx+lwTNi89iuCaomGl35lcedfB
+SleZ9gsHACBOpZ5PFgv5JACQTwKIh/Y2U96SrmzGo2m9yEznV61duzZ9O3fu
+NC+99JIzBk9jMbXGn8brhd0T1/jEsGt8/PHHvsfpvnumdoWNH122bFnG47S/
+dCYahzl9+nTne7rzrjudOcvag1rzmYM0ljHK8xh2rOh50njJCS9McOZtK9PV
+3PF77rnHmQ+vtS41tzybcXtac1R5m8aSDh482PTp28f07NnTyS81r1vzsz9f
+9Xnk87nfpzJCtVGvs86rNm/avCnpsVu3bk35POS6Frt+1jM9x7t27crp3KJ9
+dKK8jqnmzAMAUAjkk+HIJwGAfBIAAAAAED/yyXDkkwBAPgkAAAAAiB/5ZDjy
+SQAgnwQAAAAAxI98Mhz5JACQTwIAAAAA4kc+GY58EgDIJwEAAAAA8SOfDEc+
+CQDkkwAAAACA+JFPhiOfBADySQAAAABA/Mgnw5FPAgD5JAAAAAAgfuST4cgn
+AYB8EgAAAAAQP/LJcKWeTx45csTs3bvXHDx4sNhNSUntU5UqPXdqn57LUnT0
+6NGSf4337dtX0q+x/tbwGtsp9XyS19ie+3t8/PjxYjcllPsaHz58uNhNCfXj
+jz867fvXv/5V7KaktH///pJ+jQ8dOsRrbInX2E55eo2PHTtW7KaEKvXXWM+b
+2nfgwIFiNyUlta2UX2O9trzGdniN7ZSn11jvK6XIfY31N7sUkU+GK/V88o03
+3nDa171H92I3JZR+H9U+Van+bvbo0cNp3+uvv17spoSaNXuW077rb7i+2E1J
+qWq1qk4b9Ttdinr16uW0b9q0acVuSqg///nPTvu6du1a7KakVOr55F133+W0
+b/LkycVuSqj33nvPad9VV19V7KakVKduHaeNu3fvLnZTQvXp08dp38SJE4vd
+lFALFixw2tf54s7FbkpKDcsaOm389ttvi92UUP0H9HfaN37C+GI3JdTChQud
+9l3Y6cJiNyUlt9+6efPmYjcl1ODBg532jR49uthNCbVk6RKnfb84/xfFbkpK
+jZs0dtq4YcOGYjcl1LDhw5z2jXpqVLGbEmrFihVO+9q1b1fspqTUomULp41r
+1qwpdlNCjXh0hNO+kSNHFrspoT5f9bnTvtZtWhe7KSm1OauN08aVn68sdlNC
+jfztSKd9j4x4pNhNCbV27Vqnfc2aNyt2U1Jq376908bly5cXuymhnnr6Kad9
+Q4cNLXZTQpFPhiOftEM+aY980h75pD3ySTvkk/bIJ+2RT9ohn7RHPmmPfNIO
++aQ98kl75JN2yCftkU8mI5+0Rz5pj3zSHvmkHfJJe+ST9sgn7ZBP2iOftEc+
+aYd80h75pD3ySTvkk/bIJ+2RT9ohnwxHPmmHfNIe+aQ98kl75JN2yCftkU/a
+I5+0Qz5pj3zSHvmkHfJJe+ST9sgn7ZBP2iOfTEY+aY980h75pD3ySTvkk/bI
+J+2RT9ohn7RHPmmPfNIO+aQ98kl75JN2yCftkU/aI5+0Qz4ZjnzSDvmkPfJJ
+e+ST9sgn7ZBP2iOftEc+aYd80h75pD3ySTvkk/bIJ+2RT9ohn7RHPpmMfNIe
++aQ98kl75JN2yCftkU/aI5+0Qz5pj3zSHvmkHfJJe+ST9sgn7ZBP2iOftEc+
+aYd8Mhz5pB3ySXvkk/bIJ+2RT9ohn7RHPmmPfNIO+aQ98kl75JN2yCftkU/a
+I5+0Qz5pj3wyGfmkPfJJe+ST9sgn7ZBP2iOftEc+aYd80h75pD3ySTvkk/bI
+J+2RT9ohn7RHPmmPfNIO+WQ48kk75JP2yCftkU/aI5+0Qz5pj3zSHvmkHfJJ
+e+ST9sgn7ZBP2iOftEc+aYd80h75ZDLySXvkk/bIJ+2RT9ohn7RHPmmPfNIO
++aQ98kl75JN2yCftkU/aI5+0Qz5pj3zSHvmkHfLJcOSTdsgn7ZFP2iOftEc+
+aYd80h75pD3ySTvkk/bIJ+2RT9ohn7RHPmmPfNIO+aQ98slk5JP2yCftkU/a
+I5+0Qz5pj3zSHvmkHfJJe+ST9sgn7ZBP2iOftEc+aYd80h75pD3ySTvkk+HI
+J+2QT9ojn7RHPmmPfNIO+aQ98kl75JN2yCftkU/aI5+0Qz5pj3zSHvmkHfJJ
+e+STycgn7ZFP2iOftEc+aYd80h75pD3ySTvkk/bIJ+2RT9ohn7RHPmmPfNIO
++aQ98kl75JN2yCfDkU/aIZ+0Rz5pj3zSHvmkHfJJe+ST9sgn7ZBP2iOftEc+
+aYd80h75pD3ySTvkk/bIJ5O5+aSqfoP6JVlu7qIMtVbtWiVXNWrUKOn2qdzX
+uNjtSFXVqlVz2qfnsthtCavqNas77dPPYrHbUt5f4+o1qhe9LaGvcY3//xpX
+5TXO+TWuXtq/xzVr1iw3v8c1a9UseltCX+MS/z2uUfOn9+Mq1aoUvS2pqkrV
+KiX9Glet/lOfS+97xW5Lute4lH+PS/01TvweVy/R17hW+XmNa9UqfltCX+Ma
+P73G+mex2xL6Grt/q6vytzrXcvutpfp7XLN2TV5jyyr132M9b06/tWrpfjap
+UuWn11h/c4rdlvL8Ghcrn6QoiqIoiqIoiqIoiqIoiipkPnn8+HGzZ8+eki7N
+gdIcmR07dpi9e/dSFEVVytq6dav55ptvit4OiqIoiqIoiqIoquLX/v37C5ZP
+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
+    "], {{0, 127.48406449193851`}, {989.8762654668167, 0}}, {0, 255},
+    ColorFunction->RGBColor,
+    ImageResolution->{96.012, 96.012},
+    SmoothingQuality->"High"],
+   BoxForm`ImageTag["Byte", ColorSpace -> "RGB", Interleaving -> True],
+   Selectable->False],
+  DefaultBaseStyle->"ImageGraphics",
+  ImageSize->{486.6262654668167, Automatic},
+  ImageSizeRaw->{989.8762654668167, 127.48406449193851`},
+  PlotRange->{{0, 989.8762654668167}, {0, 127.48406449193851`}}]], "Input",
+ TextAlignment->
+  Right,ExpressionUUID->"a9067e0c-2055-458d-9d36-8435172d4cdf"]], "Text",
+ CellChangeTimes->{{3.949578212646551*^9, 3.949578235792617*^9}, {
+  3.949578288545553*^9, 3.949578362031715*^9}, {3.949578480799941*^9, 
+  3.9495785205674667`*^9}, {3.949634113314533*^9, 3.949634120359829*^9}},
+ TextAlignment->Center,ExpressionUUID->"8509bd1f-6e00-4317-b6f8-06f2eb0f60b1"],
+
+Cell["\<\
+The IEEE754 32-bit single precision floating-point number is so-called \
+because of the 32-bits required to implement this standard. The bits are \
+assigned as the figure above. 1 bit for the sign, 8 bits for the exponent, \
+and 23 bits for the mantissa. 
+
+To jump into code right away. I have implemented a function that given a \
+number transforms it into IEEE754 32-bit single precision representation:\
+\>", "Text",
+ CellChangeTimes->{
+  3.94963412395092*^9},ExpressionUUID->"0466049d-b8d1-491b-b1d5-52178e29b2e9"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"IEEE754SinglePrecision", "[", "number_Real", "]"}], ":=", 
+  RowBox[{"Module", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{
+     "signBit", ",", "absNum", ",", "exponent", ",", "mantissa", ",", 
+      "exponentBits", ",", "mantissaBits", ",", "intPart", ",", "fracPart", 
+      ",", "normalizedMantissa", ",", "count"}], "}"}], ",", 
+    "\[IndentingNewLine]", "\[IndentingNewLine]", 
+    RowBox[{"(*", 
+     RowBox[{
+      RowBox[{"Step", " ", "1"}], ":", 
+      RowBox[{"Compute", " ", "the", " ", "sign", " ", "bit"}]}], "*)"}], 
+    "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"signBit", "=", 
+      RowBox[{"If", "[", 
+       RowBox[{
+        RowBox[{"number", "<", "0"}], ",", "\"\<1\>\"", ",", "\"\<0\>\""}], 
+       "]"}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"absNum", "=", 
+      RowBox[{"Abs", "[", "number", "]"}]}], ";", "\[IndentingNewLine]", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"Special", " ", "Cases"}], "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"Zero", " ", "case"}], "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"absNum", "==", "0"}], ",", 
+       RowBox[{
+       "Return", "[", "\"\<00000000000000000000000000000000\>\"", "]"}]}], 
+      "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"(*", "Infinity", "*)"}], 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"absNum", "==", "\[Infinity]"}], ",", 
+       RowBox[{"Return", "[", 
+        RowBox[{"signBit", "<>", "\"\<11111111000000000000000000000000\>\""}],
+         "]"}]}], "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"(*", "NaN", "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"If", "[", 
+      RowBox[{
+       RowBox[{"!", 
+        RowBox[{"NumericQ", "[", "absNum", "]"}]}], ",", 
+       "\[IndentingNewLine]", 
+       RowBox[{"Return", "[", 
+        RowBox[{"signBit", "<>", "\"\<11111111111111111111111111111111\>\""}],
+         "]"}]}], "]"}], ";", "\[IndentingNewLine]", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{"Step", " ", "2"}], ":", 
+       RowBox[{
+       "Convert", " ", "number", " ", "to", " ", "binary", " ", "scientific", 
+        " ", "notation"}]}], "*)"}], 
+     RowBox[{"exponent", "=", 
+      RowBox[{"Floor", "[", 
+       RowBox[{"Log2", "[", "absNum", "]"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"Get", " ", "exponent"}], "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"normalizedMantissa", "=", 
+      RowBox[{"absNum", "/", 
+       RowBox[{"2", "^", "exponent"}]}]}], ";", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{"Normalize", " ", "to", " ", "1.", "xxx", " ", "form"}], "*)"}],
+      "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{"Step", " ", "3"}], ":", 
+       RowBox[{"Compute", " ", "exponent", " ", "bits", " ", 
+        RowBox[{"(", 
+         RowBox[{"bias", " ", "127"}], ")"}]}]}], "*)"}], 
+     RowBox[{"exponentBits", "=", 
+      RowBox[{"IntegerString", "[", 
+       RowBox[{
+        RowBox[{"exponent", "+", "127"}], ",", "2", ",", "8"}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{"Step", " ", "4"}], ":", 
+       RowBox[{"Extract", " ", "mantissa", " ", "bits", " ", 
+        RowBox[{"(", 
+         RowBox[{"23", " ", "bits"}], ")"}]}]}], "*)"}], 
+     "\[IndentingNewLine]", 
+     RowBox[{"normalizedMantissa", "-=", "1"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{
+      "Remove", " ", "the", " ", "leading", " ", "1", " ", "in", " ", "1.", 
+       "xxx"}], "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"mantissaBits", "=", "\"\<\>\""}], ";", "\[IndentingNewLine]", 
+     RowBox[{"fracPart", "=", "normalizedMantissa"}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"count", "=", "0"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"While", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"fracPart", ">", "0"}], "&&", 
+        RowBox[{"count", "<", "23"}]}], ",", 
+       RowBox[{
+        RowBox[{"fracPart", "*=", "2"}], ";", "\[IndentingNewLine]", 
+        RowBox[{"mantissaBits", "=", 
+         RowBox[{"mantissaBits", "<>", 
+          RowBox[{"ToString", "[", 
+           RowBox[{"Floor", "[", "fracPart", "]"}], "]"}]}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"fracPart", "-=", 
+         RowBox[{"Floor", "[", "fracPart", "]"}]}], ";", 
+        "\[IndentingNewLine]", 
+        RowBox[{"count", "++"}], ";"}]}], "]"}], ";", "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{
+      "Ensure", " ", "mantissa", " ", "is", " ", "exactly", " ", "23", " ", 
+       "bits", " ", "long"}], "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"mantissaBits", "=", 
+      RowBox[{"StringPadRight", "[", 
+       RowBox[{"mantissaBits", ",", "23", ",", "\"\<0\>\""}], "]"}]}], ";", 
+     "\[IndentingNewLine]", 
+     RowBox[{"(*", 
+      RowBox[{
+       RowBox[{"Step", " ", "5"}], ":", 
+       RowBox[{
+       "Construct", " ", "the", " ", "final", " ", "IEEE754", " ", 
+        "representation"}]}], "*)"}], "\[IndentingNewLine]", 
+     RowBox[{"signBit", "<>", "exponentBits", "<>", "mantissaBits"}]}]}], 
+   "]"}]}]], "Input",
+ CellChangeTimes->{{3.949578522143598*^9, 3.949578622584528*^9}, 
+   3.949578982406711*^9},
+ CellLabel->"In[9]:=",ExpressionUUID->"ea9a8a47-ee7c-4b36-897f-057e55410ae8"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"IEEE754SinglePrecision", "[", "23.625", "]"}]], "Input",
+ CellChangeTimes->{{3.94957898643029*^9, 3.94957899166278*^9}, {
+  3.9496341956235228`*^9, 3.9496342009435062`*^9}, {3.94963424594208*^9, 
+  3.949634246229412*^9}},
+ CellLabel->"In[13]:=",ExpressionUUID->"e8a66540-a481-4ebe-a4df-9a955fe4dfcd"],
+
+Cell[BoxData["\<\"01000001101111010000000000000000\"\>"], "Output",
+ CellChangeTimes->{
+  3.949578992517376*^9, {3.949634173607792*^9, 3.949634201486924*^9}, 
+   3.949634247990164*^9},
+ CellLabel->"Out[13]=",ExpressionUUID->"81423b0f-992e-451a-9f0f-eb3ca625e3c2"]
 }, Open  ]],
 
-Cell["Limitations and Pitfalls", "Subsection",
- CellChangeTimes->{{3.949202560778516*^9, 
-  3.9492025648588448`*^9}},ExpressionUUID->"df9a49a6-a1ad-4e32-954a-\
-6dedfaa80382"],
+Cell[TextData[{
+ StyleBox["Exercise: ",
+  FontWeight->"Bold"],
+ "Convert 9.2  using the function, What is the percentage difference between \
+the actual stored value and 9.2? This is the ",
+ StyleBox["truncation error.",
+  FontWeight->"Bold"]
+}], "Item",
+ CellChangeTimes->{{3.949579037197184*^9, 3.949579085434478*^9}, {
+  3.949634480299244*^9, 
+  3.949634491021524*^9}},ExpressionUUID->"8675d63f-c7cf-4c0d-98dc-\
+f32f1907aa9b"],
 
-Cell["Best Practices", "Subsection",
- CellChangeTimes->{{3.949202570035594*^9, 
-  3.9492025809627953`*^9}},ExpressionUUID->"1a49b197-ae51-4389-bb7e-\
-350398fc8b56"]
+Cell[TextData[{
+ StyleBox["Exercise: ",
+  FontWeight->"Bold"],
+ "What is the possible range of numbers that we can encode using this \
+standard? (Notice the special cases as well)."
+}], "Item",
+ CellChangeTimes->{{3.949579037197184*^9, 3.949579085434478*^9}, {
+  3.949634480299244*^9, 3.9496345328290443`*^9}, {3.949634721418195*^9, 
+  3.9496347215301943`*^9}},ExpressionUUID->"f1118860-77ae-4253-9947-\
+78cf5c5b7959"],
+
+Cell[TextData[{
+ StyleBox["Exercise: ",
+  FontWeight->"Bold"],
+ "What are other standards, checkout IEEE754 64-bit Double, and Quadruple. "
+}], "Item",
+ CellChangeTimes->{{3.949579037197184*^9, 3.949579085434478*^9}, {
+  3.949634480299244*^9, 3.9496345328290443`*^9}, {3.949634721418195*^9, 
+  3.949634765858057*^9}},ExpressionUUID->"3ab2dc51-3f13-4e5f-80c9-\
+7a19d6079e65"]
+}, Closed]]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Floating-Point Arithmetic & \[LineSeparator]Error", "Section",
+ CellChangeTimes->{{3.949634816085524*^9, 3.9496348234618587`*^9}, {
+  3.949637741984219*^9, 
+  3.9496377453835917`*^9}},ExpressionUUID->"a6c2766e-79e3-4519-9f17-\
+c3b29b085c25"],
+
+Cell[CellGroupData[{
+
+Cell["Arithmetic", "Subsection",
+ CellChangeTimes->{{3.949637754938081*^9, 
+  3.949637756231489*^9}},ExpressionUUID->"b0dfcdc4-ccb5-46c7-855f-\
+54ef4c24daab"],
+
+Cell[TextData[{
+ "When working through theoretical calculation using our standard \
+mathematical toolset, we are used to applying the standard properties of \
+arithmetic (such as multiplicative and additive commutativity). But do these \
+properties still apply in the case of arithmetic performed on computers using \
+floating-point representation? Consider the expression ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{"-5", "+", "5", "+", "0.05"}], TraditionalForm], 
+     "errors" -> {}, "input" -> "-5 +5+ 0.05", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "a83747e5-597f-4ad1-811b-7c8087f0313b"],
+ ". Using the property of associativity we could calculate this using either ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         RowBox[{"(", 
+           RowBox[{"-5", "+", "5"}], ")"}], "+", "0.05"}], TraditionalForm], 
+     "errors" -> {}, "input" -> "(-5 + 5)+0.05", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "92facb67-0890-4abb-8938-6ef82a9410b1"],
+ " or ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{"-5", "+", 
+         RowBox[{"(", 
+           RowBox[{"5", "+", "0.05"}], ")"}]}], TraditionalForm], 
+     "errors" -> {}, "input" -> "-5 +(5+0.05)", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "b3252bab-a398-4c56-8685-710528089668"],
+ ". These are equivalent if we represent these numbers exactly, with no loss \
+of precision. \n\nThis is what doesn\[CloseCurlyQuote]t happen with our \
+representation in computers. For the first expression if we try to represent \
+5,-5 we would have no problems but for 0.05:"
+}], "Text",
+ CellChangeTimes->{{3.949634949285975*^9, 3.9496350224868193`*^9}, {
+  3.949635157973803*^9, 3.9496352242233562`*^9}, {3.949636597382773*^9, 
+  3.9496366871060534`*^9}},ExpressionUUID->"0c71f6b6-608b-46c4-bc94-\
+a880e269936c"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"ToBinary", "[", "0.05", "]"}]], "Input",
+ CellChangeTimes->{{3.949636689299563*^9, 3.94963674159544*^9}},
+ CellLabel->"In[17]:=",ExpressionUUID->"aae161e9-a246-49b7-8ae2-174d3fc8c9bd"],
+
+Cell[BoxData["\<\"0.0000110011\"\>"], "Output",
+ CellChangeTimes->{
+  3.94963669509664*^9, {3.949636727200471*^9, 3.949636742177137*^9}},
+ CellLabel->"Out[17]=",ExpressionUUID->"bd04385b-077a-4097-812d-1541d8dfb3d4"]
 }, Open  ]],
 
 Cell[CellGroupData[{
 
-Cell["Computational Errors", "Section",
- CellChangeTimes->{{3.948970051697424*^9, 
-  3.9489700548470707`*^9}},ExpressionUUID->"6a258f50-6f7a-43c6-a8e1-\
-3475f9860b44"],
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"%", " ", "//", " ", "ToDecimal"}], "//", "N"}]], "Input",
+ CellChangeTimes->{{3.949636743941896*^9, 3.949636752691373*^9}},
+ CellLabel->"In[19]:=",ExpressionUUID->"502e047c-9b45-4a84-91ad-d0fe394955f8"],
 
-Cell["Roundoff and Truncation Errors", "Subsection",
- CellChangeTimes->{{3.948970187180142*^9, 
-  3.948970195709861*^9}},ExpressionUUID->"892412bd-6639-4a87-a413-\
-8212d84bd500"],
-
-Cell["Error Propagation and Stability Analysis", "Subsection",
- CellChangeTimes->{{3.948970200273645*^9, 
-  3.948970211916644*^9}},ExpressionUUID->"738b2203-cd24-4e76-a68c-\
-5b3a8aa3f8e3"],
-
-Cell["Condition Numbers and Numerical Stability", "Subsection",
- CellChangeTimes->{{3.948970215948221*^9, 
-  3.948970224009684*^9}},ExpressionUUID->"784f8adb-4987-4b2e-9e6e-\
-3033f0eca63d"]
+Cell[BoxData[
+ RowBox[{"ToDecimal", "[", "0.0498046875`", "]"}]], "Output",
+ CellChangeTimes->{{3.949636748184188*^9, 3.949636752985074*^9}},
+ CellLabel->"Out[19]=",ExpressionUUID->"43445f36-e6be-498c-b527-c7ecba603f6d"]
 }, Open  ]],
+
+Cell["And for IEEE754 as well. The representation lacks precision.", "Text",
+ CellChangeTimes->{{3.949636762547531*^9, 
+  3.949636787658946*^9}},ExpressionUUID->"cd19e36d-1126-4beb-ab7b-\
+22cb7dc27377"],
 
 Cell[CellGroupData[{
 
-Cell["Scientific Notation and Unit Handling in Computation", "Section",
- CellChangeTimes->{{3.948970061162631*^9, 
-  3.948970081664688*^9}},ExpressionUUID->"61c00950-8768-42ba-9a23-\
-f64c1fe11a9f"],
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"IEEE754SinglePrecision", "[", "0.05", "]"}], " ", "==", " ", 
+  RowBox[{
+  "IEEE754SinglePrecision", "[", "0.050000000745058059692", "]"}]}]], "Input",\
 
-Cell["Scientific Notation Essentials", "Subsection",
- CellChangeTimes->{{3.94920260029142*^9, 
-  3.94920260546671*^9}},ExpressionUUID->"ac573cac-bad0-4172-96c1-\
-201ca7defcd0"],
+ CellChangeTimes->{{3.9496367908754807`*^9, 3.949636818746174*^9}},
+ CellLabel->"In[21]:=",ExpressionUUID->"b4db8b1a-1d3a-4c85-bcc3-529b909751ea"],
 
-Cell["Dimensional Consistency in Calculations", "Subsection",
- CellChangeTimes->{{3.948970230343211*^9, 
-  3.948970241297925*^9}},ExpressionUUID->"f890eae4-adcc-499e-b19d-\
-cc633c5d6c07"],
+Cell[BoxData["True"], "Output",
+ CellChangeTimes->{{3.949636801218253*^9, 3.949636819479803*^9}},
+ CellLabel->"Out[21]=",ExpressionUUID->"1594fe70-dfa1-4ab6-abf2-fab9bb30d8c4"]
+}, Open  ]],
 
-Cell["Real-world Applications", "Subsection",
- CellChangeTimes->{{3.948970245091761*^9, 3.948970249659999*^9}, {
-  3.9492026206116867`*^9, 
-  3.949202625339032*^9}},ExpressionUUID->"ede13768-c2c8-4a08-a28d-\
-cdfbbe1f1d19"]
+Cell["\<\
+The error we see is round-off/truncation error, due to limited precision.\
+\>", "Text",
+ CellChangeTimes->{{3.949636828635131*^9, 
+  3.9496368478840733`*^9}},ExpressionUUID->"d43fd84a-b78a-4c9b-8dd2-\
+3e8bc13eefd4"],
+
+Cell[TextData[{
+ StyleBox["Exercise: ",
+  FontWeight->"Bold"],
+ "Show that associativity doesn\[CloseCurlyQuote]t work! By changing the \
+order in which we add floating-point numbers together, we change the amount \
+of truncation error that occurs. This can\[CloseCurlyQuote]t be eliminated \
+entirely; all we can do is to try and perform operations on number of similar \
+magnitude first, in order to reduce the truncation error."
+}], "Item",
+ CellChangeTimes->{{3.949579037197184*^9, 3.949579085434478*^9}, {
+  3.949634480299244*^9, 3.9496345328290443`*^9}, {3.949634721418195*^9, 
+  3.949634765858057*^9}, {3.949637490086195*^9, 
+  3.949637638549959*^9}},ExpressionUUID->"01d64f25-7c49-4b2b-a79d-\
+dc4b3a7b81ca"],
+
+Cell["\<\
+Like associativity, the property of distributivity also does not always hold \
+for floating-point arithmetic, for example:\
+\>", "Text",
+ CellChangeTimes->{{3.9496376399190083`*^9, 
+  3.949637672982602*^9}},ExpressionUUID->"2dc04cc1-3088-4084-87ec-\
+843b5e904628"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[{
+ RowBox[{"analyticAnswer", " ", "=", " ", 
+  RowBox[{"0.1", "+", "0.1", "+", "0.1"}]}], "\[IndentingNewLine]", 
+ RowBox[{"binaryAnswer", " ", "=", " ", 
+  RowBox[{
+   RowBox[{
+    RowBox[{"ToDecimal", "[", 
+     RowBox[{"ToBinary", "[", "0.1", "]"}], "]"}], " ", "+", 
+    RowBox[{"ToDecimal", "[", 
+     RowBox[{"ToBinary", "[", "0.1", "]"}], "]"}], " ", "+", 
+    RowBox[{"ToDecimal", "[", 
+     RowBox[{"ToBinary", "[", "0.1", "]"}], "]"}]}], "//", "N"}]}]}], "Input",\
+
+ CellChangeTimes->{{3.9496376555188007`*^9, 3.9496377213832397`*^9}},
+ CellLabel->"In[25]:=",ExpressionUUID->"f806d77d-56b3-47c0-9460-0a65fd70844c"],
+
+Cell[BoxData["0.30000000000000004`"], "Output",
+ CellChangeTimes->{
+  3.949637682284399*^9, {3.94963771419388*^9, 3.949637721934046*^9}},
+ CellLabel->"Out[25]=",ExpressionUUID->"e4c11025-31b5-45ff-bf61-2903f542796c"],
+
+Cell[BoxData["0.298828125`"], "Output",
+ CellChangeTimes->{
+  3.949637682284399*^9, {3.94963771419388*^9, 3.94963772193528*^9}},
+ CellLabel->"Out[26]=",ExpressionUUID->"537ab291-6bfa-4dc2-8789-643cc49cad26"]
 }, Open  ]]
-}, Open  ]],
+}, Closed]],
 
 Cell[CellGroupData[{
 
-Cell["Basic Algorithm Design", "Chapter",
- CellChangeTimes->{{3.949202661004157*^9, 
-  3.949202665500288*^9}},ExpressionUUID->"8467aed9-eb38-4f5e-91bc-\
-dd841fdb557e"],
+Cell["Machine Epsilon", "Subsection",
+ CellChangeTimes->{{3.949637761703926*^9, 
+  3.949637764199622*^9}},ExpressionUUID->"7640052f-b33e-4b5b-9d14-\
+825e104a9c9f"],
+
+Cell["\<\
+In order to get a rough \[OpenCurlyQuote]upper-bound\[CloseCurlyQuote] on the \
+relative round-off error that occurs during floating-point arithmetic, it is \
+common to see standards, programming languages, and software packages quote \
+something called machine epsilon.\
+\>", "Text",
+ CellChangeTimes->{{3.9496377672480307`*^9, 
+  3.949637816176469*^9}},ExpressionUUID->"9f8542f4-71fd-419a-8ab2-\
+d6f7b42774ce"],
 
 Cell[CellGroupData[{
 
-Cell["Developing Pseudocode for Scientific Problems", "Section",
- CellChangeTimes->{{3.949202669973702*^9, 
-  3.949202678644969*^9}},ExpressionUUID->"fcd1501c-589e-44a4-a9ac-\
-6e79dbe4bf89"],
+Cell["Machine Epsilon and Round-Off Error", "Subsubsection",
+ CellChangeTimes->{{3.949637820840599*^9, 
+  3.9496378283627033`*^9}},ExpressionUUID->"6fe5b039-b2fd-4f9d-984b-\
+1ba0712abe2e"],
 
-Cell["Writing Clear and Concise Pseudocode", "Subsection",
- CellChangeTimes->{{3.949202681548999*^9, 
-  3.949202691765774*^9}},ExpressionUUID->"310ad2b3-a4fc-4003-a185-\
-25c58627d3be"],
-
-Cell["Case Studies", "Subsection",
- CellChangeTimes->{{3.949202694406375*^9, 
-  3.9492026972774763`*^9}},ExpressionUUID->"53b76a15-a51c-4703-b00d-\
-78489865b7cc"],
-
-Cell["Common Pitfalls", "Subsection",
- CellChangeTimes->{{3.949202699790278*^9, 
-  3.94920270342979*^9}},ExpressionUUID->"445c5c2b-8204-43da-87a0-\
-4771db3c9b9e"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell["Analyzing Algorithm Complexity and Efficiency", "Section",
- CellChangeTimes->{{3.949202706390169*^9, 
-  3.9492027159020367`*^9}},ExpressionUUID->"d9dcfc6c-cb3e-4ffd-859a-\
-11b8c4c2b178"],
-
-Cell["Introduction to Computational Complexity", "Subsection",
- CellChangeTimes->{{3.949202720046982*^9, 
-  3.949202725557838*^9}},ExpressionUUID->"4c0c17a8-87a3-47d5-bbd6-\
-5b9823f19c10"],
-
-Cell["Efficiency Considerations", "Subsection",
- CellChangeTimes->{{3.949202728111103*^9, 
-  3.949202732190484*^9}},ExpressionUUID->"569a4a25-f213-4364-ad14-\
-fa1aba968257"],
-
-Cell["Optimization Techniques", "Subsection",
- CellChangeTimes->{{3.949202734624385*^9, 
-  3.949202738871138*^9}},ExpressionUUID->"abbb1425-3d14-4bd0-b688-\
-5904f24ed894"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell["Implementing Structured Programming Practices", "Section",
- CellChangeTimes->{{3.949202742872065*^9, 
-  3.949202751455114*^9}},ExpressionUUID->"2806c9d6-fc14-4cd8-9263-\
-349c82ce2a5d"],
-
-Cell["Principles of Structured Programming", "Subsection",
- CellChangeTimes->{{3.9492027536558847`*^9, 
-  3.949202760343287*^9}},ExpressionUUID->"7596d7a4-0ef4-495c-996b-\
-fd9000ea8b45"],
-
-Cell["Error Handling and Debugging", "Subsection",
- CellChangeTimes->{{3.9492027630797853`*^9, 
-  3.949202767838879*^9}},ExpressionUUID->"3fd1dd6e-68c2-46bf-b107-\
-268d7733866a"],
-
-Cell["Case Examples", "Subsection",
- CellChangeTimes->{{3.9492027709042177`*^9, 
-  3.949202773128056*^9}},ExpressionUUID->"1bdf7fad-0e96-4272-b039-\
-677150a27119"]
-}, Open  ]]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell["Data Structures for Scientific Computing", "Chapter",
- CellChangeTimes->{{3.949202782720273*^9, 
-  3.949202788872319*^9}},ExpressionUUID->"bbb22d7f-af45-4b25-8cfb-\
-9348b6c24e83"],
-
-Cell[CellGroupData[{
-
-Cell["Arrays, Matrices and Tensors for Physical Quantities", "Section",
- CellChangeTimes->{{3.949202791624908*^9, 
-  3.949202809529838*^9}},ExpressionUUID->"ef662fb8-cf55-436b-ae54-\
-294af00f0eb5"],
-
-Cell["Fundamental Data Structures", "Subsection",
- CellChangeTimes->{{3.949202813809602*^9, 
-  3.949202817681175*^9}},ExpressionUUID->"0a18817b-043b-49e9-8023-\
-c8b28c71e82e"],
-
-Cell["Practical Examples", "Subsection",
- CellChangeTimes->{{3.949202819794016*^9, 
-  3.949202822705955*^9}},ExpressionUUID->"3cc25b01-49c6-43e3-81fe-\
-bfb6ea137c58"],
-
-Cell["Implementation Considerations", "Subsection",
- CellChangeTimes->{{3.9492028246819353`*^9, 
-  3.949202830370028*^9}},ExpressionUUID->"ab34eafd-38e9-46fd-8670-\
-910254b3a6eb"]
-}, Open  ]],
+Cell[TextData[{
+ "Machine epsilon is defined by the difference between the floating-point \
+representation of 1 and the next highest number. In Single precision, we know \
+that ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{"1", "\[Congruent]", 
+         SubscriptBox["1.00000000000000000000000", "2"]}], TraditionalForm], 
+     "errors" -> {}, "input" -> "1\\equiv 1.00000000000000000000000_2", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "bab478e5-266f-4f27-badc-7080b0645c7e"],
+ " and the next highest number is represented by changing the least \
+significant bit in the mantissa to 1, giving ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       SubscriptBox["1.00000000000000000000001", "2"], TraditionalForm], 
+     "errors" -> {}, "input" -> "1.00000000000000000000001_2", "state" -> 
+     "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "c766cb4e-fa23-404c-8fa7-38ba26ab859e"],
+ ". Therefore, in single precision IEEE754 floating-point representation:\n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{"\[Epsilon]", "\[LongEqual]", 
+         SuperscriptBox["2", "-23"]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\epsilon = 2^{-23}", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "c7a7460f-9ce7-43da-9142-318cf32e52da"],
+ "\n\nRepeating this process for double precision floating-point numbers \
+results in ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{"\[Epsilon]", "\[LongEqual]", 
+         SuperscriptBox["2", "-52"]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\epsilon = 2^{-52}", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "6cec115f-f365-4177-bb89-abfa3b0bce90"],
+ ". In general, if the mantissa is encoded using ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       StyleBox["M", "TI"], TraditionalForm], "errors" -> {}, "input" -> "M", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "27e2b78d-0470-4091-926d-164bda33ce6f"],
+ " bits resulting in ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         StyleBox["M", "TI"], "+", "1"}], TraditionalForm], "errors" -> {}, 
+     "input" -> "M+1", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "9ff0144e-d678-462e-8226-72175225341d"],
+ " significant figures the machine epsilon is ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{"\[Epsilon]", "\[LongEqual]", 
+         SuperscriptBox["2", 
+          RowBox[{"-", 
+            StyleBox["M", "TI"]}]]}], TraditionalForm], "errors" -> {}, 
+     "input" -> "\\epsilon = 2^{-M}", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "79d8b1d0-63bb-4675-93e4-0f46b254fe9c"]
+}], "Text",
+ CellChangeTimes->{{3.9496378311046543`*^9, 
+  3.949638077431446*^9}},ExpressionUUID->"3d6e204e-ffe2-488e-a9ab-\
+f9fa6bfd5392"]
+}, Closed]],
 
 Cell[CellGroupData[{
 
-Cell["Sparse Data Structures for Efficiency", "Section",
- CellChangeTimes->{{3.949202837610587*^9, 
-  3.949202844538282*^9}},ExpressionUUID->"c8d0a3f0-70ed-41dc-a783-\
-d5e9f72c7425"],
+Cell["Relative Error", "Subsubsection",
+ CellChangeTimes->{{3.9496381477731247`*^9, 
+  3.949638158213048*^9}},ExpressionUUID->"cf95c2d7-89eb-4e42-9464-\
+58f9b271abeb"],
 
-Cell["Need for Sparsity", "Subsection",
- CellChangeTimes->{{3.949202847482972*^9, 
-  3.949202850594359*^9}},ExpressionUUID->"c40d2050-63af-41c1-93c6-\
-c8b20986a8ca"],
+Cell[TextData[{
+ "The important take-away here is that this value represents the minimum \
+possible spacing between two floating point numbers, and as such provides an \
+upper bound on the relative truncation error introduced by floating point \
+numbers. To see how this works, lets consider a floating-point representation \
+of a number ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       StyleBox["x", "TI"], TraditionalForm], "errors" -> {}, "input" -> "x", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "60e04026-1ecf-484a-a09b-359210045784"],
+ "; we\[CloseCurlyQuote]ll denote this ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{
+         StyleBox["F", "TI"], "(", 
+         StyleBox["x", "TI"], ")"}], TraditionalForm], "errors" -> {}, 
+     "input" -> "F(x)", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "d4f1ac77-04e6-420c-a77f-b9ac3ea3f4b4"],
+ ". To calculate the relative error of the floating-point representation, we \
+subtract the original exact value ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       StyleBox["x", "TI"], TraditionalForm], "errors" -> {}, "input" -> "x", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "fce21192-a953-4a7f-a416-27e355b27eb6"],
+ ", and divide by ",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       StyleBox["x", "TI"], TraditionalForm], "errors" -> {}, "input" -> "x", 
+     "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "35ca48e4-c7d0-4cbf-972e-76832c07cb2d"],
+ ":\n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{"relative error", "\[LongEqual]", 
+         FractionBox[
+          RowBox[{
+            StyleBox["F", "TI"], 
+            RowBox[{"(", 
+              StyleBox["x", "TI"], ")"}], "-", 
+            StyleBox["x", "TI"]}], 
+          StyleBox["x", "TI"]]}], TraditionalForm], "errors" -> {}, "input" -> 
+     "\\text{relative error} =  \\frac{F(x) - x}{x}", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "f1c65837-e18d-4446-b238-5e274328881d"],
+ "\n\nNow, we know that the relative error must be bound by the machine \
+epsilon, so substituting this in to form an inequality:\n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       RowBox[{"-", "\[Epsilon]", "\[LessEqual]", 
+         FractionBox[
+          RowBox[{
+            StyleBox["F", "TI"], 
+            RowBox[{"(", 
+              StyleBox["x", "TI"], ")"}], "-", 
+            StyleBox["x", "TI"]}], 
+          StyleBox["x", "TI"]], "\[LessEqual]", "\[Epsilon]"}], 
+       TraditionalForm], "errors" -> {}, "input" -> 
+     "-\\epsilon \\leq \\frac{F(x) - x}{x}\\leq \\epsilon", "state" -> 
+     "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "739f30f5-2e21-4b56-acec-2bc46821261d"],
+ "\n\nby taking the absolute value and rearranging this equation, we also \
+come across an expression for and upper bound on the absolute error of the \
+floating-point representation:\n\n",
+ Cell[BoxData[
+  FormBox[
+   TemplateBox[<|"boxes" -> FormBox[
+       TemplateBox[{
+         RowBox[{
+           StyleBox["F", "TI"], 
+           RowBox[{"(", 
+             StyleBox["x", "TI"], ")"}], "-", 
+           StyleBox["x", "TI"], "|", "\[LessEqual]", "\[Epsilon]", "|", 
+           StyleBox["x", "TI"]}]}, "Abs"], TraditionalForm], "errors" -> {}, 
+     "input" -> "|F(x) - x| \\leq \\epsilon |x|", "state" -> "Boxes"|>,
+    "TeXAssistantTemplate"], TraditionalForm]],ExpressionUUID->
+  "9a89f913-6cf6-4409-993b-e7182977cd7e"]
+}], "Text",
+ CellChangeTimes->{{3.949638166557276*^9, 
+  3.949638415203167*^9}},ExpressionUUID->"55f9653e-e0d0-46a8-97e4-\
+965ca51c1d73"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
 
-Cell["Types of Sparse Representations", "Subsection",
- CellChangeTimes->{{3.949202852371538*^9, 
-  3.949202857915032*^9}},ExpressionUUID->"457e633d-c961-49c6-b5dd-\
-8f3ba23814b3"],
+Cell["", "Section",ExpressionUUID->"d96f7e7b-e70f-4397-aeee-c6817d49c6f4"]
+}, Closed]],
 
-Cell["Applications in Physics", "Subsection",
- CellChangeTimes->{{3.949202860826663*^9, 
-  3.949202863651507*^9}},ExpressionUUID->"0c62b4de-fe72-4156-811e-\
-72192371c015"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell["Trees and Graphs in Physical System Modeling", "Section",
- CellChangeTimes->{{3.949202869571661*^9, 
-  3.94920288678797*^9}},ExpressionUUID->"a130abcf-ae3f-4ec5-9757-\
-6c3c02b5cdd7"],
-
-Cell[" Introduction to Trees", "Subsection",
- CellChangeTimes->{{3.9492028886599197`*^9, 
-  3.949202892588406*^9}},ExpressionUUID->"a2ab74da-1194-4137-b0c0-\
-88d4d76d5635"],
-
-Cell[" Graph Theory Fundamentals", "Subsection",
- CellChangeTimes->{{3.949202894108622*^9, 
-  3.949202901477247*^9}},ExpressionUUID->"1e50d966-3b6e-4ba9-acc7-\
-00c2f793c2f0"],
-
-Cell["Algorithms on Graphs", "Subsection",
- CellChangeTimes->{{3.949202903221402*^9, 
-  3.949202908244896*^9}},ExpressionUUID->"e2078141-3441-45f7-9fde-\
-590a8d37dc26"]
-}, Open  ]]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell["Visualization Fundamentals", "Chapter",
- CellChangeTimes->{{3.9492029136215067`*^9, 
-  3.949202921941092*^9}},ExpressionUUID->"3b99792d-bd9d-4fa0-a96a-\
-37515176f0ce"],
-
-Cell[CellGroupData[{
-
-Cell["Crafting Meaningful Scientific Plots", "Section",
- CellChangeTimes->{{3.949202924629637*^9, 
-  3.949202930525218*^9}},ExpressionUUID->"b7fa9382-dfe5-4fb1-afa7-\
-a490d1c22a9b"],
-
-Cell["Essential Plot Components", "Subsection",
- CellChangeTimes->{{3.949202933029891*^9, 
-  3.94920293833401*^9}},ExpressionUUID->"5444fc82-be51-4003-bfa1-\
-cc41b553ad44"],
-
-Cell["Visualization Best Practices", "Subsection",
- CellChangeTimes->{{3.9492029401984043`*^9, 
-  3.9492029465186167`*^9}},ExpressionUUID->"d185091f-0464-4dfa-a581-\
-79869e187b5f"]
-}, Open  ]],
-
-Cell[CellGroupData[{
-
-Cell["Developing Animations for Time-Evolving Systems", "Section",
- CellChangeTimes->{{3.949202972968129*^9, 
-  3.949202981968219*^9}},ExpressionUUID->"a5f9a7a9-74e2-479a-b67d-\
-3d91583d6035"],
-
-Cell["Dynamic Visualization Techniques", "Subsection",
- CellChangeTimes->{{3.949202990047721*^9, 
-  3.9492029957197638`*^9}},ExpressionUUID->"2fe06aed-559d-4667-908c-\
-78f3559883b0"],
-
-Cell["Tools and Libraries", "Subsection",
- CellChangeTimes->{{3.949202998240646*^9, 
-  3.949203001289332*^9}},ExpressionUUID->"23732ff5-9eaa-4247-a5f6-\
-582e540ca514"],
-
-Cell["Mathematica", "Subsection",
- CellChangeTimes->{{3.949203004209303*^9, 
-  3.9492030052971487`*^9}},ExpressionUUID->"6ae288b7-4d42-4d92-ae9b-\
-f38a2d94311a"]
-}, Open  ]]
-}, Open  ]]
+Cell["Basic Algorithm", "Chapter",
+ CellChangeTimes->{{3.949638655164954*^9, 3.949638656483818*^9}, {
+  3.9496387512038813`*^9, 
+  3.949638753835081*^9}},ExpressionUUID->"60b3c9bd-3a7e-4bcf-8158-\
+ee5e922489fb"]
 }, Open  ]]
 },
-WindowSize->{720., 758.25},
-WindowMargins->{{Automatic, 0}, {Automatic, 0}},
+WindowSize->{1440., 758.25},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
 FrontEndVersion->"13.2 for Linux x86 (64-bit) (November 18, 2022)",
-StyleDefinitions->"Default.nb",
-ExpressionUUID->"3db8fdef-5496-443f-848b-c6b1f0fc288c"
+StyleDefinitions->FrontEnd`FileName[{
+   ParentDirectory[
+    ParentDirectory[
+     ParentDirectory[
+      ParentDirectory[]]]], "Wolfram Mathematica"}, "Qomp-Styles.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"ced12cc8-5658-4514-9208-1c4823a0c8cf"
 ]
 (* End of Notebook Content *)
 
@@ -821,134 +1847,134 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 271, 6, 85, "Abstract",ExpressionUUID->"257be0f1-6eeb-430b-ac16-0e1da00bf769"],
-Cell[832, 28, 1750, 46, 357, "Text",ExpressionUUID->"d6396b1a-1850-4a25-ba02-a3463c56d50a"],
+Cell[400, 13, 271, 6, 59, "Abstract",ExpressionUUID->"257be0f1-6eeb-430b-ac16-0e1da00bf769"],
 Cell[CellGroupData[{
-Cell[2607, 78, 199, 6, 160, "Title",ExpressionUUID->"743e1f8e-03fe-411e-a69c-2ed8330aa764"],
-Cell[2809, 86, 188, 3, 53, "Subtitle",ExpressionUUID->"5073b95b-2a8f-47d9-934c-5488a9ad1b86"],
+Cell[696, 23, 284, 8, 442, "Title",ExpressionUUID->"743e1f8e-03fe-411e-a69c-2ed8330aa764"],
+Cell[983, 33, 188, 3, 64, "Subtitle",ExpressionUUID->"5073b95b-2a8f-47d9-934c-5488a9ad1b86"],
 Cell[CellGroupData[{
-Cell[3022, 93, 153, 3, 69, "Chapter",ExpressionUUID->"a430617f-a5d5-47f3-b048-5608e5d484fd"],
-Cell[3178, 98, 1084, 19, 150, "Text",ExpressionUUID->"6ab1a650-0774-45cc-a4d1-b8325d364fca"],
+Cell[1196, 40, 249, 4, 89, "Chapter",ExpressionUUID->"a430617f-a5d5-47f3-b048-5608e5d484fd"],
+Cell[1448, 46, 1348, 25, 362, "Text",ExpressionUUID->"6ab1a650-0774-45cc-a4d1-b8325d364fca"]
+}, Closed]],
 Cell[CellGroupData[{
-Cell[4287, 121, 173, 3, 68, "Section",ExpressionUUID->"74156be7-62a9-4418-825b-053ecfd9d39f"],
-Cell[4463, 126, 1399, 27, 150, "Text",ExpressionUUID->"1713a228-e2ac-49df-9c4d-8c3bdef81167"]
-}, Open  ]],
+Cell[2833, 76, 163, 3, 78, "Chapter",ExpressionUUID->"0fca6162-8775-45cd-8cb5-8643a8fdb658"],
 Cell[CellGroupData[{
-Cell[5899, 158, 173, 3, 68, "Section",ExpressionUUID->"3fb27a95-0267-42eb-933b-09620cbfbec2"],
-Cell[6075, 163, 524, 9, 104, "Text",ExpressionUUID->"ba97c5a5-8a0f-4c8e-95c1-4ee53ff95d24"]
-}, Open  ]],
+Cell[3021, 83, 164, 3, 73, "Section",ExpressionUUID->"c28ce0ba-b7d1-47b8-8457-204a06d40982"],
+Cell[3188, 88, 2229, 34, 637, "Text",ExpressionUUID->"e9e70f81-bfab-4de2-a42f-5287875587b9"]
+}, Closed]],
 Cell[CellGroupData[{
-Cell[6636, 177, 169, 3, 68, "Section",ExpressionUUID->"02f512b3-7e5e-4f39-9274-1bafbc0efa76"],
-Cell[6808, 182, 804, 13, 173, "Text",ExpressionUUID->"ea6b8740-ae62-436c-a0fb-ea36b4cebee8"]
+Cell[5454, 127, 218, 4, 59, "Section",ExpressionUUID->"1850cb1e-c931-4422-b738-88ca527a5a0a"],
+Cell[CellGroupData[{
+Cell[5697, 135, 169, 3, 60, "Subsection",ExpressionUUID->"b2db6897-be82-4f1a-8b1f-b41697b59756"],
+Cell[5869, 140, 3424, 82, 269, "Text",ExpressionUUID->"8f5f30e2-9962-4e79-80ea-98ac37f7710e"],
+Cell[9296, 224, 4311, 110, 559, "Input",ExpressionUUID->"535d9d81-66ba-45ee-80ef-3db310c15258"],
+Cell[CellGroupData[{
+Cell[13632, 338, 252, 5, 30, "Input",ExpressionUUID->"978370a4-5ab1-44e9-89cf-c524b5f15305"],
+Cell[13887, 345, 206, 3, 70, "Output",ExpressionUUID->"3f27c93d-cf8a-4bb5-a625-8fd4a871165c"]
 }, Open  ]]
-}, Open  ]],
+}, Closed]],
 Cell[CellGroupData[{
-Cell[7661, 201, 180, 3, 69, "Chapter",ExpressionUUID->"bd8132c7-0e5e-46e5-a8e7-65e04896b155"],
+Cell[14142, 354, 167, 3, 44, "Subsection",ExpressionUUID->"1603247e-cc95-4926-928a-fa3c1694019f"],
+Cell[14312, 359, 5519, 129, 857, "Text",ExpressionUUID->"dce090ec-1162-473c-9f32-6ce766e65f60"],
+Cell[19834, 490, 3630, 88, 449, "Input",ExpressionUUID->"23a9493a-9886-4b21-b777-5e8f48c33362"],
 Cell[CellGroupData[{
-Cell[7866, 208, 172, 3, 68, "Section",ExpressionUUID->"dee97074-d0b3-4759-952c-cdb90925dc9e"],
-Cell[CellGroupData[{
-Cell[8063, 215, 195, 3, 54, "Subsection",ExpressionUUID->"e962b777-8bf4-4cd7-b075-ee94120a752d"],
-Cell[8261, 220, 1100, 20, 174, "Text",ExpressionUUID->"6f77b0c2-2714-49ec-96a1-21f8edebed85"],
-Cell[CellGroupData[{
-Cell[9386, 244, 220, 4, 45, "Subsubsection",ExpressionUUID->"667b31b7-4cb7-4c2c-b9ce-7c88800db3d9"],
-Cell[9609, 250, 2129, 55, 155, "Text",ExpressionUUID->"571aade8-4584-4245-ae00-e9e624394241"],
-Cell[11741, 307, 2379, 59, 285, "Input",ExpressionUUID->"c0e39a27-a764-4543-a52b-e7a65dc2635d"],
-Cell[14123, 368, 175, 3, 35, "Text",ExpressionUUID->"22077d74-df36-4f6c-846b-d48db0f789a0"],
-Cell[CellGroupData[{
-Cell[14323, 375, 464, 7, 92, "Input",ExpressionUUID->"1b4322a5-90f3-4199-bf42-f3acb97fb618"],
-Cell[14790, 384, 235, 4, 33, "Output",ExpressionUUID->"2414ad52-53cf-4ec4-9afe-5edfb088fa20"],
-Cell[15028, 390, 239, 4, 33, "Output",ExpressionUUID->"0517ad36-c75f-4e50-800b-393a6b4dedd1"],
-Cell[15270, 396, 234, 4, 33, "Output",ExpressionUUID->"7d35293d-5895-42d2-afb2-488a8c9c2794"],
-Cell[15507, 402, 233, 4, 33, "Output",ExpressionUUID->"13b4201f-be87-46fd-8981-08c611a11a97"]
-}, Open  ]],
-Cell[15755, 409, 358, 7, 58, "Text",ExpressionUUID->"941c6cb9-2374-4052-b003-a56aabdaeb81"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[16150, 421, 201, 3, 45, "Subsubsection",ExpressionUUID->"9f2b5900-8f22-4be6-b128-8112dcf26dbe"],
-Cell[16354, 426, 1516, 36, 130, "Text",ExpressionUUID->"3800f190-f95d-439d-a332-2cef2e6d3651"],
-Cell[CellGroupData[{
-Cell[17895, 466, 327, 8, 32, "Input",ExpressionUUID->"93ceb00a-5948-4c3f-8dba-6a950fbfac8a"],
-Cell[18225, 476, 152, 2, 33, "Output",ExpressionUUID->"47d9046f-4f26-4d4a-9d89-f4fa5473106b"]
-}, Open  ]],
-Cell[18392, 481, 651, 16, 59, "Text",ExpressionUUID->"06892f19-b8aa-421c-9629-8bd7e0f8e42d"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[19080, 502, 186, 3, 45, "Subsubsection",ExpressionUUID->"5afa303e-4ea8-42e1-9892-7a8b6e4d4ece"],
-Cell[19269, 507, 1359, 32, 240, "Text",ExpressionUUID->"291e1668-8f5a-494e-ac64-16ee1fae9d50"]
+Cell[23489, 582, 212, 3, 28, "Input",ExpressionUUID->"83ea396c-13a2-46e2-9d60-486bd7b6e6e0"],
+Cell[23704, 587, 185, 2, 70, "Output",ExpressionUUID->"f7ad94b8-91df-42c7-9092-11f61d41be58"]
 }, Open  ]]
-}, Open  ]],
-Cell[20655, 543, 174, 3, 54, "Subsection",ExpressionUUID->"df9a49a6-a1ad-4e32-954a-6dedfaa80382"],
-Cell[20832, 548, 164, 3, 38, "Subsection",ExpressionUUID->"1a49b197-ae51-4389-bb7e-350398fc8b56"]
-}, Open  ]],
+}, Closed]],
 Cell[CellGroupData[{
-Cell[21033, 556, 167, 3, 68, "Section",ExpressionUUID->"6a258f50-6f7a-43c6-a8e1-3475f9860b44"],
-Cell[21203, 561, 178, 3, 54, "Subsection",ExpressionUUID->"892412bd-6639-4a87-a413-8212d84bd500"],
-Cell[21384, 566, 188, 3, 38, "Subsection",ExpressionUUID->"738b2203-cd24-4e76-a68c-5b3a8aa3f8e3"],
-Cell[21575, 571, 189, 3, 38, "Subsection",ExpressionUUID->"784f8adb-4987-4b2e-9e6e-3033f0eca63d"]
-}, Open  ]],
+Cell[23938, 595, 206, 6, 77, "Subsection",ExpressionUUID->"84a89b64-c51b-45b4-94ff-0550440e67b8"],
+Cell[24147, 603, 810, 15, 237, "Text",ExpressionUUID->"a26b5d2a-666b-4102-b30f-151b2b9747ff"],
 Cell[CellGroupData[{
-Cell[21801, 579, 197, 3, 68, "Section",ExpressionUUID->"61c00950-8768-42ba-9a23-f64c1fe11a9f"],
-Cell[22001, 584, 176, 3, 54, "Subsection",ExpressionUUID->"ac573cac-bad0-4172-96c1-201ca7defcd0"],
-Cell[22180, 589, 187, 3, 38, "Subsection",ExpressionUUID->"f890eae4-adcc-499e-b19d-cc633c5d6c07"],
-Cell[22370, 594, 222, 4, 38, "Subsection",ExpressionUUID->"ede13768-c2c8-4a08-a28d-cdfbbe1f1d19"]
+Cell[24982, 622, 156, 3, 42, "Subsubsection",ExpressionUUID->"7dfd3598-182c-4aee-a7af-9b2ffb164c0a"],
+Cell[25141, 627, 252, 6, 62, "Text",ExpressionUUID->"24b73aee-e8fb-4536-bf41-9847954d6b29"],
+Cell[CellGroupData[{
+Cell[25418, 637, 209, 3, 28, "Input",ExpressionUUID->"2a79262e-344c-4dd8-ad5e-086829a4da51"],
+Cell[25630, 642, 186, 2, 70, "Output",ExpressionUUID->"ffaff99a-c268-4de7-89bd-8576ac530c1a"]
+}, Open  ]],
+Cell[25831, 647, 468, 13, 39, "Text",ExpressionUUID->"b5478632-6690-4ffa-b596-a06f2144713b"],
+Cell[CellGroupData[{
+Cell[26324, 664, 216, 3, 28, "Input",ExpressionUUID->"7d746656-69d2-47d5-bd3c-2423d961c43e"],
+Cell[26543, 669, 219, 3, 70, "Output",ExpressionUUID->"23b1b8e9-3ea7-4f93-9bcb-65c98b7d08f5"]
+}, Open  ]],
+Cell[26777, 675, 704, 16, 114, "Text",ExpressionUUID->"83f4a8a9-5819-43f2-9f8a-882928615f60"],
+Cell[CellGroupData[{
+Cell[27506, 695, 208, 3, 28, "Input",ExpressionUUID->"f8d80028-b2a4-49f5-8ff9-382bfbbc1667"],
+Cell[27717, 700, 184, 2, 70, "Output",ExpressionUUID->"0791a542-efdd-48a3-bce3-72b367f6f3cc"]
+}, Open  ]],
+Cell[27916, 705, 259, 6, 62, "Text",ExpressionUUID->"7bb87e64-887a-4e1f-850a-b4dc618fe8d9"]
 }, Open  ]]
-}, Open  ]],
+}, Closed]],
 Cell[CellGroupData[{
-Cell[22641, 604, 167, 3, 69, "Chapter",ExpressionUUID->"8467aed9-eb38-4f5e-91bc-dd841fdb557e"],
+Cell[28224, 717, 179, 3, 44, "Subsection",ExpressionUUID->"678ef242-9099-4dd4-b560-88b1b3ae117f"],
+Cell[28406, 722, 2867, 60, 322, "Text",ExpressionUUID->"9bac529d-7287-4424-8452-30ce47e5f253"],
 Cell[CellGroupData[{
-Cell[22833, 611, 190, 3, 68, "Section",ExpressionUUID->"fcd1501c-589e-44a4-a9ac-6e79dbe4bf89"],
-Cell[23026, 616, 184, 3, 54, "Subsection",ExpressionUUID->"310ad2b3-a4fc-4003-a185-25c58627d3be"],
-Cell[23213, 621, 162, 3, 38, "Subsection",ExpressionUUID->"53b76a15-a51c-4703-b00d-78489865b7cc"],
-Cell[23378, 626, 162, 3, 38, "Subsection",ExpressionUUID->"445c5c2b-8204-43da-87a0-4771db3c9b9e"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[23577, 634, 192, 3, 68, "Section",ExpressionUUID->"d9dcfc6c-cb3e-4ffd-859a-11b8c4c2b178"],
-Cell[23772, 639, 188, 3, 54, "Subsection",ExpressionUUID->"4c0c17a8-87a3-47d5-bbd6-5b9823f19c10"],
-Cell[23963, 644, 173, 3, 38, "Subsection",ExpressionUUID->"569a4a25-f213-4364-ad14-fa1aba968257"],
-Cell[24139, 649, 171, 3, 38, "Subsection",ExpressionUUID->"abbb1425-3d14-4bd0-b688-5904f24ed894"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[24347, 657, 190, 3, 68, "Section",ExpressionUUID->"2806c9d6-fc14-4cd8-9263-349c82ce2a5d"],
-Cell[24540, 662, 186, 3, 54, "Subsection",ExpressionUUID->"7596d7a4-0ef4-495c-996b-fd9000ea8b45"],
-Cell[24729, 667, 178, 3, 38, "Subsection",ExpressionUUID->"3fd1dd6e-68c2-46bf-b107-268d7733866a"],
-Cell[24910, 672, 163, 3, 38, "Subsection",ExpressionUUID->"1bdf7fad-0e96-4272-b039-677150a27119"]
+Cell[31298, 786, 169, 3, 42, "Subsubsection",ExpressionUUID->"7a446a07-3b3e-49f3-91f1-7df9a88bf6fb"],
+Cell[31470, 791, 1338, 34, 140, "Text",ExpressionUUID->"e9815b5e-6fef-4a37-98af-19aaeac04658"],
+Cell[32811, 827, 502, 12, 35, "Item",ExpressionUUID->"662cfdc6-43d1-4f5a-8d78-802272b3ccd9"],
+Cell[33316, 841, 595, 14, 35, "Item",ExpressionUUID->"a20326b0-af1f-4cba-9bec-4f421427b8e3"],
+Cell[33914, 857, 479, 12, 35, "Item",ExpressionUUID->"99624034-4626-4402-b5c7-6865aa76a321"],
+Cell[34396, 871, 575, 13, 35, "Item",ExpressionUUID->"3d25fbb3-073c-4459-b3a7-5906d3430a6e"],
+Cell[34974, 886, 499, 12, 35, "Item",ExpressionUUID->"9c1055ec-6632-4e49-9e3b-09e52ca37a94"],
+Cell[35476, 900, 589, 13, 62, "Text",ExpressionUUID->"4afb9e4d-d0e1-4b1b-95e6-f440c598c752"]
 }, Open  ]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[36114, 919, 178, 3, 44, "Subsection",ExpressionUUID->"ae81c94e-6d87-4914-9435-0b47e8f195d5"],
+Cell[36295, 924, 19656, 325, 77, "Text",ExpressionUUID->"8509bd1f-6e00-4317-b6f8-06f2eb0f60b1"],
+Cell[55954, 1251, 528, 10, 112, "Text",ExpressionUUID->"0466049d-b8d1-491b-b1d5-52178e29b2e9"],
+Cell[56485, 1263, 5380, 130, 667, "Input",ExpressionUUID->"ea9a8a47-ee7c-4b36-897f-057e55410ae8"],
+Cell[CellGroupData[{
+Cell[61890, 1397, 324, 5, 28, "Input",ExpressionUUID->"e8a66540-a481-4ebe-a4df-9a955fe4dfcd"],
+Cell[62217, 1404, 263, 4, 33, "Output",ExpressionUUID->"81423b0f-992e-451a-9f0f-eb3ca625e3c2"]
+}, Open  ]],
+Cell[62495, 1411, 429, 11, 34, "Item",ExpressionUUID->"8675d63f-c7cf-4c0d-98dc-f32f1907aa9b"],
+Cell[62927, 1424, 418, 9, 34, "Item",ExpressionUUID->"f1118860-77ae-4253-9947-78cf5c5b7959"],
+Cell[63348, 1435, 374, 8, 34, "Item",ExpressionUUID->"3ab2dc51-3f13-4e5f-80c9-7a19d6079e65"]
+}, Closed]]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[63771, 1449, 247, 4, 103, "Section",ExpressionUUID->"a6c2766e-79e3-4519-9f17-c3b29b085c25"],
+Cell[CellGroupData[{
+Cell[64043, 1457, 158, 3, 60, "Subsection",ExpressionUUID->"b0dfcdc4-ccb5-46c7-855f-54ef4c24daab"],
+Cell[64204, 1462, 2000, 41, 141, "Text",ExpressionUUID->"0c71f6b6-608b-46c4-bc94-a880e269936c"],
+Cell[CellGroupData[{
+Cell[66229, 1507, 208, 3, 28, "Input",ExpressionUUID->"aae161e9-a246-49b7-8ae2-174d3fc8c9bd"],
+Cell[66440, 1512, 216, 3, 33, "Output",ExpressionUUID->"bd04385b-077a-4097-812d-1541d8dfb3d4"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[25122, 681, 185, 3, 69, "Chapter",ExpressionUUID->"bbb22d7f-af45-4b25-8cfb-9348b6c24e83"],
-Cell[CellGroupData[{
-Cell[25332, 688, 197, 3, 68, "Section",ExpressionUUID->"ef662fb8-cf55-436b-ae54-294af00f0eb5"],
-Cell[25532, 693, 175, 3, 54, "Subsection",ExpressionUUID->"0a18817b-043b-49e9-8023-c8b28c71e82e"],
-Cell[25710, 698, 166, 3, 38, "Subsection",ExpressionUUID->"3cc25b01-49c6-43e3-81fe-bfb6ea137c58"],
-Cell[25879, 703, 179, 3, 38, "Subsection",ExpressionUUID->"ab34eafd-38e9-46fd-8670-910254b3a6eb"]
+Cell[66693, 1520, 237, 4, 30, "Input",ExpressionUUID->"502e047c-9b45-4a84-91ad-d0fe394955f8"],
+Cell[66933, 1526, 220, 3, 33, "Output",ExpressionUUID->"43445f36-e6be-498c-b527-c7ecba603f6d"]
 }, Open  ]],
+Cell[67168, 1532, 202, 3, 37, "Text",ExpressionUUID->"cd19e36d-1126-4beb-ab7b-22cb7dc27377"],
 Cell[CellGroupData[{
-Cell[26095, 711, 182, 3, 68, "Section",ExpressionUUID->"c8d0a3f0-70ed-41dc-a783-d5e9f72c7425"],
-Cell[26280, 716, 165, 3, 54, "Subsection",ExpressionUUID->"c40d2050-63af-41c1-93c6-c8b20986a8ca"],
-Cell[26448, 721, 179, 3, 38, "Subsection",ExpressionUUID->"457e633d-c961-49c6-b5dd-8f3ba23814b3"],
-Cell[26630, 726, 171, 3, 38, "Subsection",ExpressionUUID->"0c62b4de-fe72-4156-811e-72192371c015"]
+Cell[67395, 1539, 335, 7, 30, "Input",ExpressionUUID->"b4db8b1a-1d3a-4c85-bcc3-529b909751ea"],
+Cell[67733, 1548, 176, 2, 33, "Output",ExpressionUUID->"1594fe70-dfa1-4ab6-abf2-fab9bb30d8c4"]
 }, Open  ]],
+Cell[67924, 1553, 225, 5, 37, "Text",ExpressionUUID->"d43fd84a-b78a-4c9b-8dd2-3e8bc13eefd4"],
+Cell[68152, 1560, 715, 13, 57, "Item",ExpressionUUID->"01d64f25-7c49-4b2b-a79d-dc4b3a7b81ca"],
+Cell[68870, 1575, 274, 6, 37, "Text",ExpressionUUID->"2dc04cc1-3088-4084-87ec-843b5e904628"],
 Cell[CellGroupData[{
-Cell[26838, 734, 188, 3, 68, "Section",ExpressionUUID->"a130abcf-ae3f-4ec5-9757-6c3c02b5cdd7"],
-Cell[27029, 739, 172, 3, 54, "Subsection",ExpressionUUID->"a2ab74da-1194-4137-b0c0-88d4d76d5635"],
-Cell[27204, 744, 174, 3, 38, "Subsection",ExpressionUUID->"1e50d966-3b6e-4ba9-acc7-00c2f793c2f0"],
-Cell[27381, 749, 168, 3, 38, "Subsection",ExpressionUUID->"e2078141-3441-45f7-9fde-590a8d37dc26"]
+Cell[69169, 1585, 637, 14, 50, "Input",ExpressionUUID->"f806d77d-56b3-47c0-9460-0a65fd70844c"],
+Cell[69809, 1601, 216, 3, 33, "Output",ExpressionUUID->"e4c11025-31b5-45ff-bf61-2903f542796c"],
+Cell[70028, 1606, 207, 3, 33, "Output",ExpressionUUID->"537ab291-6bfa-4dc2-8789-643cc49cad26"]
 }, Open  ]]
-}, Open  ]],
+}, Closed]],
 Cell[CellGroupData[{
-Cell[27598, 758, 173, 3, 69, "Chapter",ExpressionUUID->"3b99792d-bd9d-4fa0-a96a-37515176f0ce"],
+Cell[70284, 1615, 163, 3, 44, "Subsection",ExpressionUUID->"7640052f-b33e-4b5b-9d14-825e104a9c9f"],
+Cell[70450, 1620, 422, 8, 62, "Text",ExpressionUUID->"9f8542f4-71fd-419a-8ab2-d6f7b42774ce"],
 Cell[CellGroupData[{
-Cell[27796, 765, 181, 3, 68, "Section",ExpressionUUID->"b7fa9382-dfe5-4fb1-afa7-a490d1c22a9b"],
-Cell[27980, 770, 172, 3, 54, "Subsection",ExpressionUUID->"5444fc82-be51-4003-bfa1-cc41b553ad44"],
-Cell[28155, 775, 180, 3, 38, "Subsection",ExpressionUUID->"d185091f-0464-4dfa-a581-79869e187b5f"]
-}, Open  ]],
+Cell[70897, 1632, 188, 3, 42, "Subsubsection",ExpressionUUID->"6fe5b039-b2fd-4f9d-984b-1ba0712abe2e"],
+Cell[71088, 1637, 3139, 73, 217, "Text",ExpressionUUID->"3d6e204e-ffe2-488e-a9ab-f9fa6bfd5392"]
+}, Closed]],
 Cell[CellGroupData[{
-Cell[28372, 783, 192, 3, 68, "Section",ExpressionUUID->"a5f9a7a9-74e2-479a-b67d-3d91583d6035"],
-Cell[28567, 788, 182, 3, 54, "Subsection",ExpressionUUID->"2fe06aed-559d-4667-908c-78f3559883b0"],
-Cell[28752, 793, 167, 3, 38, "Subsection",ExpressionUUID->"23732ff5-9eaa-4247-a5f6-582e540ca514"],
-Cell[28922, 798, 161, 3, 38, "Subsection",ExpressionUUID->"6ae288b7-4d42-4d92-ae9b-f38a2d94311a"]
-}, Open  ]]
-}, Open  ]]
+Cell[74264, 1715, 167, 3, 34, "Subsubsection",ExpressionUUID->"cf95c2d7-89eb-4e42-9464-58f9b271abeb"],
+Cell[74434, 1720, 3870, 92, 383, "Text",ExpressionUUID->"55f9653e-e0d0-46a8-97e4-965ca51c1d73"]
+}, Closed]]
+}, Closed]]
+}, Closed]],
+Cell[78343, 1817, 74, 0, 59, "Section",ExpressionUUID->"d96f7e7b-e70f-4397-aeee-c6817d49c6f4"]
+}, Closed]],
+Cell[78432, 1820, 211, 4, 78, "Chapter",ExpressionUUID->"60b3c9bd-3a7e-4bcf-8158-ee5e922489fb"]
 }, Open  ]]
 }
 ]
