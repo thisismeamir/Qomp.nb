@@ -1,0 +1,305 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     10905,        297]
+NotebookOptionsPosition[      6949,        228]
+NotebookOutlinePosition[      7477,        246]
+CellTagsIndexPosition[      7434,        243]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Computational Journey of Quantum Mechanics | Amir H. Ebrahimnezhad | Advisor: \
+Prf. Ebrahim | University of Tehran\
+\>", "Abstract",
+ CellChangeTimes->{{3.948969098320861*^9, 
+  3.9489691324978848`*^9}},ExpressionUUID->"7958248e-f4ef-4a30-a17f-\
+040bdcd7d440"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Advanced Topics 
+in Computational
+Linear Algebra\
+\>", "Title",
+ CellChangeTimes->{{3.950859223650449*^9, 
+  3.950859241712221*^9}},ExpressionUUID->"0f56d153-3dd9-46c2-aa76-\
+8b2f750df3cd"],
+
+Cell["Overview", "Chapter",
+ CellChangeTimes->{{3.950859295885721*^9, 
+  3.950859296741477*^9}},ExpressionUUID->"3541c651-97ee-40c9-b26f-\
+c3605f2a3b9c"],
+
+Cell[CellGroupData[{
+
+Cell["Matrix Decomposition", "Chapter",
+ CellChangeTimes->{{3.950859302997117*^9, 
+  3.950859306628764*^9}},ExpressionUUID->"84b20351-3ede-4342-860d-\
+985f789bd789"],
+
+Cell["Shur Decomposition", "Section",
+ CellChangeTimes->{{3.95085930977249*^9, 
+  3.950859313628483*^9}},ExpressionUUID->"fa2eb43f-8390-4518-a4b0-\
+18091a7ca493"],
+
+Cell["Jordan Canonical Form", "Section",
+ CellChangeTimes->{{3.95085931678092*^9, 
+  3.950859320379528*^9}},ExpressionUUID->"c77e38a5-85a0-4890-92c8-\
+0358687c269e"],
+
+Cell["Singular Value Decomposition", "Section",
+ CellChangeTimes->{{3.9508593241236773`*^9, 
+  3.950859328371711*^9}},ExpressionUUID->"bdadadb9-37f9-4db2-a143-\
+16e2fef93a5a"],
+
+Cell["Polar Decomposition", "Section",
+ CellChangeTimes->{{3.950859339586959*^9, 
+  3.950859342041935*^9}},ExpressionUUID->"8f86b030-a4ce-4955-8efd-\
+9bf26315099f"],
+
+Cell["Generalized Inverse (Moore-Penrose Inverse)", "Section",
+ CellChangeTimes->{{3.95085934847407*^9, 
+  3.950859361546915*^9}},ExpressionUUID->"7dda5873-350a-405a-8739-\
+f30df0be474e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Matrix Functions", "Chapter",
+ CellChangeTimes->{{3.950859371896798*^9, 
+  3.950859378728977*^9}},ExpressionUUID->"ed775efa-7503-470b-a0f5-\
+e04bb48c4f9d"],
+
+Cell["Matrix Exponential", "Section",
+ CellChangeTimes->{{3.9508593814726057`*^9, 
+  3.950859384416512*^9}},ExpressionUUID->"4dc1b099-9f13-4a8e-b90c-\
+7d41e99ec2a5"],
+
+Cell["Logarithms and Matrix Sparse Roots", "Section",
+ CellChangeTimes->{{3.950859387080112*^9, 
+  3.950859393983508*^9}},ExpressionUUID->"a3fd01f4-c4a8-4a66-8f8c-\
+114388323d0b"],
+
+Cell["Functional Calculus For Matrices", "Section",
+ CellChangeTimes->{{3.950859399494755*^9, 
+  3.9508594145115128`*^9}},ExpressionUUID->"31676777-513c-405f-80db-\
+ec2017946d21"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Structured & Sparse Matrices", "Chapter",
+ CellChangeTimes->{{3.950859421950943*^9, 3.950859428591344*^9}, {
+  3.950859503970462*^9, 
+  3.95085950717764*^9}},ExpressionUUID->"281f6298-59cf-4b62-93f3-\
+8ced5d2cf2ff"],
+
+Cell[CellGroupData[{
+
+Cell["Special Structures", "Section",
+ CellChangeTimes->{{3.950859512938692*^9, 
+  3.950859517562406*^9}},ExpressionUUID->"dc80fef6-e21c-4617-9fa8-\
+0abc9dc365b5"],
+
+Cell["Toeplitz", "Subsection",
+ CellChangeTimes->{{3.950859521586347*^9, 
+  3.9508595258018723`*^9}},ExpressionUUID->"cc4355e5-5164-496d-a5f1-\
+10d9c0006d06"],
+
+Cell["Hankel", "Subsection",
+ CellChangeTimes->{{3.950859528657901*^9, 
+  3.9508595305211477`*^9}},ExpressionUUID->"78d2a2a6-d6a4-4434-8d0d-\
+0f3ad15e7baf"],
+
+Cell["Circulant Matrices", "Subsection",
+ CellChangeTimes->{{3.950859534977693*^9, 
+  3.950859538833461*^9}},ExpressionUUID->"6c25b941-200a-4010-b562-\
+b6a26f72dba2"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Sparse", "Section",
+ CellChangeTimes->{{3.9508595443206387`*^9, 
+  3.9508595507289047`*^9}},ExpressionUUID->"da5cb4ec-7aeb-49e0-be06-\
+edd309aef157"],
+
+Cell["Definition", "Subsection",
+ CellChangeTimes->{{3.95085955369658*^9, 
+  3.9508595547125053`*^9}},ExpressionUUID->"20b8fd3c-a775-4822-8ebf-\
+dcbe35352c46"],
+
+Cell["Storage Schemes and Efficiency", "Subsection",
+ CellChangeTimes->{{3.950859557928978*^9, 
+  3.950859563872079*^9}},ExpressionUUID->"d5b1ed50-4ace-43be-83d1-\
+2a3a8cdb02d1"],
+
+Cell["Applications", "Subsection",
+ CellChangeTimes->{{3.950859570664218*^9, 
+  3.95085957206743*^9}},ExpressionUUID->"bbba0b74-3682-44e8-abaf-\
+3a9a80dd86eb"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Extensions to Infinite-Dimensional Spaces", "Chapter",
+ CellChangeTimes->{{3.95085958191187*^9, 
+  3.9508595935997553`*^9}},ExpressionUUID->"aea42353-de9c-4f3a-99ac-\
+3795a3837530"],
+
+Cell[CellGroupData[{
+
+Cell["Operators on Hilbert Spaces", "Section",
+ CellChangeTimes->{{3.950859597001337*^9, 
+  3.950859602606502*^9}},ExpressionUUID->"5019f83c-3223-47f2-b718-\
+52b786fde130"],
+
+Cell["Bounded Operators", "Subsection",
+ CellChangeTimes->{{3.950859611055007*^9, 
+  3.950859616526642*^9}},ExpressionUUID->"ff0fe28a-be9b-4946-b994-\
+dbc5931a58ee"],
+
+Cell["Unbounded Operators", "Subsection",
+ CellChangeTimes->{{3.950859617950973*^9, 
+  3.950859620798818*^9}},ExpressionUUID->"dff97b45-67d8-415f-898c-\
+886511095028"]
+}, Open  ]],
+
+Cell["Spectral Theorem for Unbounded Operators", "Section",
+ CellChangeTimes->{{3.950859631493516*^9, 
+  3.950859640015151*^9}},ExpressionUUID->"75faca01-6342-4863-96f6-\
+1a72f406366c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Random Matrix Theory and Bohemian Matrices", "Chapter",
+ CellChangeTimes->{{3.9508596472302*^9, 
+  3.950859654548278*^9}},ExpressionUUID->"0ac6aa25-6f36-4ddb-9b27-\
+95f033b02bc6"],
+
+Cell["Introduction to Random Matrix Theory", "Section",
+ CellChangeTimes->{{3.950859657125587*^9, 
+  3.950859669508305*^9}},ExpressionUUID->"f9ade692-c8b5-4ca8-9cf1-\
+6fc7520fe1d9"],
+
+Cell["Bohemian Matrices", "Section",
+ CellChangeTimes->{{3.95085967246807*^9, 
+  3.950859676421112*^9}},ExpressionUUID->"b6bb1554-11dc-46b4-af2e-\
+ffbc8a8be6e3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Tensor Decomposition and Multilinear Algebra", "Chapter",
+ CellChangeTimes->{{3.950859683347599*^9, 
+  3.95085969033123*^9}},ExpressionUUID->"7aa7d24b-de4b-4330-a5ca-\
+24bf6e0f4d14"],
+
+Cell["Basics of Tensor Vs. Matrices", "Section",
+ CellChangeTimes->{{3.950859698731195*^9, 
+  3.950859705267606*^9}},ExpressionUUID->"4257fd68-34d4-4caf-889b-\
+45278da8e616"],
+
+Cell["Canonical Polyadic and Tucker Decomposition", "Section",
+ CellChangeTimes->{{3.950859707555584*^9, 
+  3.95085971841108*^9}},ExpressionUUID->"3e30a8ea-5b3d-4cb4-9c02-\
+544a25dedcff"],
+
+Cell["Application", "Section",
+ CellChangeTimes->{{3.950859723362542*^9, 
+  3.950859724698761*^9}},ExpressionUUID->"2c3290ae-afb3-4377-8e4c-\
+d552e05b520e"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{1440., 758.25},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+FrontEndVersion->"13.2 for Linux x86 (64-bit) (November 18, 2022)",
+StyleDefinitions->FrontEnd`FileName[{$RootDirectory, "home", "kid-a", 
+   "Documents", "Wolfram Mathematica"}, "Qomp-Styles.nb", CharacterEncoding -> 
+  "UTF-8"],
+ExpressionUUID->"932bcca5-0e95-46dc-a1ae-3a0bbf87fc42"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 271, 6, 59, "Abstract",ExpressionUUID->"7958248e-f4ef-4a30-a17f-040bdcd7d440"],
+Cell[CellGroupData[{
+Cell[854, 30, 199, 7, 442, "Title",ExpressionUUID->"0f56d153-3dd9-46c2-aa76-8b2f750df3cd"],
+Cell[1056, 39, 153, 3, 89, "Chapter",ExpressionUUID->"3541c651-97ee-40c9-b26f-c3605f2a3b9c"],
+Cell[CellGroupData[{
+Cell[1234, 46, 165, 3, 78, "Chapter",ExpressionUUID->"84b20351-3ede-4342-860d-985f789bd789"],
+Cell[1402, 51, 162, 3, 73, "Section",ExpressionUUID->"fa2eb43f-8390-4518-a4b0-18091a7ca493"],
+Cell[1567, 56, 165, 3, 59, "Section",ExpressionUUID->"c77e38a5-85a0-4890-92c8-0358687c269e"],
+Cell[1735, 61, 175, 3, 59, "Section",ExpressionUUID->"bdadadb9-37f9-4db2-a143-16e2fef93a5a"],
+Cell[1913, 66, 164, 3, 59, "Section",ExpressionUUID->"8f86b030-a4ce-4955-8efd-9bf26315099f"],
+Cell[2080, 71, 187, 3, 59, "Section",ExpressionUUID->"7dda5873-350a-405a-8739-f30df0be474e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2304, 79, 161, 3, 89, "Chapter",ExpressionUUID->"ed775efa-7503-470b-a0f5-e04bb48c4f9d"],
+Cell[2468, 84, 165, 3, 73, "Section",ExpressionUUID->"4dc1b099-9f13-4a8e-b90c-7d41e99ec2a5"],
+Cell[2636, 89, 179, 3, 59, "Section",ExpressionUUID->"a3fd01f4-c4a8-4a66-8f8c-114388323d0b"],
+Cell[2818, 94, 179, 3, 59, "Section",ExpressionUUID->"31676777-513c-405f-80db-ec2017946d21"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3034, 102, 221, 4, 89, "Chapter",ExpressionUUID->"281f6298-59cf-4b62-93f3-8ced5d2cf2ff"],
+Cell[CellGroupData[{
+Cell[3280, 110, 163, 3, 73, "Section",ExpressionUUID->"dc80fef6-e21c-4617-9fa8-0abc9dc365b5"],
+Cell[3446, 115, 158, 3, 60, "Subsection",ExpressionUUID->"cc4355e5-5164-496d-a5f1-10d9c0006d06"],
+Cell[3607, 120, 156, 3, 44, "Subsection",ExpressionUUID->"78d2a2a6-d6a4-4434-8d0d-0f3ad15e7baf"],
+Cell[3766, 125, 166, 3, 44, "Subsection",ExpressionUUID->"6c25b941-200a-4010-b562-b6a26f72dba2"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3969, 133, 155, 3, 73, "Section",ExpressionUUID->"da5cb4ec-7aeb-49e0-be06-edd309aef157"],
+Cell[4127, 138, 159, 3, 60, "Subsection",ExpressionUUID->"20b8fd3c-a775-4822-8ebf-dcbe35352c46"],
+Cell[4289, 143, 178, 3, 44, "Subsection",ExpressionUUID->"d5b1ed50-4ace-43be-83d1-2a3a8cdb02d1"],
+Cell[4470, 148, 159, 3, 44, "Subsection",ExpressionUUID->"bbba0b74-3682-44e8-abaf-3a9a80dd86eb"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4678, 157, 187, 3, 89, "Chapter",ExpressionUUID->"aea42353-de9c-4f3a-99ac-3795a3837530"],
+Cell[CellGroupData[{
+Cell[4890, 164, 172, 3, 73, "Section",ExpressionUUID->"5019f83c-3223-47f2-b718-52b786fde130"],
+Cell[5065, 169, 165, 3, 60, "Subsection",ExpressionUUID->"ff0fe28a-be9b-4946-b994-dbc5931a58ee"],
+Cell[5233, 174, 167, 3, 44, "Subsection",ExpressionUUID->"dff97b45-67d8-415f-898c-886511095028"]
+}, Open  ]],
+Cell[5415, 180, 185, 3, 73, "Section",ExpressionUUID->"75faca01-6342-4863-96f6-1a72f406366c"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5637, 188, 185, 3, 89, "Chapter",ExpressionUUID->"0ac6aa25-6f36-4ddb-9b27-95f033b02bc6"],
+Cell[5825, 193, 181, 3, 73, "Section",ExpressionUUID->"f9ade692-c8b5-4ca8-9cf1-6fc7520fe1d9"],
+Cell[6009, 198, 161, 3, 59, "Section",ExpressionUUID->"b6bb1554-11dc-46b4-af2e-ffbc8a8be6e3"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6207, 206, 188, 3, 89, "Chapter",ExpressionUUID->"7aa7d24b-de4b-4330-a5ca-24bf6e0f4d14"],
+Cell[6398, 211, 174, 3, 73, "Section",ExpressionUUID->"4257fd68-34d4-4caf-889b-45278da8e616"],
+Cell[6575, 216, 187, 3, 59, "Section",ExpressionUUID->"3e30a8ea-5b3d-4cb4-9c02-544a25dedcff"],
+Cell[6765, 221, 156, 3, 59, "Section",ExpressionUUID->"2c3290ae-afb3-4377-8e4c-d552e05b520e"]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

@@ -1,0 +1,390 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     14356,        382]
+NotebookOptionsPosition[      9163,        294]
+NotebookOutlinePosition[      9691,        312]
+CellTagsIndexPosition[      9648,        309]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Computational Journey of Quantum Mechanics | Amir H. Ebrahimnezhad | Advisor: \
+Prf. Ebrahim | University of Tehran\
+\>", "Abstract",
+ CellChangeTimes->{{3.948969098320861*^9, 
+  3.9489691324978848`*^9}},ExpressionUUID->"a796645a-c09f-44bb-aa05-\
+213170c640ee"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Complementary
+Mathematical Topics
+Of Quantum Mechanics\
+\>", "Title",
+ CellChangeTimes->{{3.950859792417016*^9, 
+  3.9508598043219957`*^9}},ExpressionUUID->"3fa3a793-bd5f-4ed1-80f5-\
+484b86e42b92"],
+
+Cell["Overview", "Chapter",
+ CellChangeTimes->{{3.950859806551898*^9, 
+  3.950859807392187*^9}},ExpressionUUID->"ebcf4588-6a95-49a1-a7be-\
+0bc1fc3033b0"],
+
+Cell[CellGroupData[{
+
+Cell["Orthogonal Functions and Functional Analysis", "Chapter",
+ CellChangeTimes->{{3.950859894334343*^9, 
+  3.950859907289351*^9}},ExpressionUUID->"ebe31665-1e03-4206-a408-\
+580d158e7b8d"],
+
+Cell[CellGroupData[{
+
+Cell["Function Spaces", "Section",
+ CellChangeTimes->{{3.950859911397586*^9, 
+  3.950859915126272*^9}},ExpressionUUID->"c8247ffd-5041-442f-9285-\
+4ec9dd6a1a2b"],
+
+Cell["Hilbert Space and Their Properties", "Subsection",
+ CellChangeTimes->{{3.950859917965444*^9, 
+  3.950859925133548*^9}},ExpressionUUID->"b77368f3-8e2d-481e-b742-\
+6c649b1b80f1"],
+
+Cell["Completeness and Closure Relations", "Subsection",
+ CellChangeTimes->{{3.950859929477446*^9, 
+  3.9508599341893044`*^9}},ExpressionUUID->"eaafd629-aafb-4ec6-a72e-\
+6df3058c1744"],
+
+Cell["The Bra-Ket Notation from a Functional Perspective", "Subsection",
+ CellChangeTimes->{{3.9508599374856043`*^9, 
+  3.950859947072728*^9}},ExpressionUUID->"8a0e7da2-7e3f-42c1-bf71-\
+7ada32dd5125"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Orthogonal Functions and Series Expansions", "Section",
+ CellChangeTimes->{{3.950859956717524*^9, 
+  3.950859963072898*^9}},ExpressionUUID->"f8f8eaa6-12bf-4195-bf1d-\
+bb57bae3bead"],
+
+Cell["Orthogonality Conditions", "Subsection",
+ CellChangeTimes->{{3.9508599666766768`*^9, 
+  3.9508599712198668`*^9}},ExpressionUUID->"77ee1b86-dc88-48d7-ae33-\
+4cadc959a55e"],
+
+Cell["Completeness of Orthogonal Systems", "Subsection",
+ CellChangeTimes->{{3.9508599748692207`*^9, 
+  3.950859985109806*^9}},ExpressionUUID->"9866cb74-ad2a-432a-9272-\
+0bd2d50c35dd"],
+
+Cell["Fourier Series", "Subsection",
+ CellChangeTimes->{{3.950859988844124*^9, 
+  3.950859991219949*^9}},ExpressionUUID->"dc4f41a4-d2a6-4d24-89b0-\
+098ba90d146b"],
+
+Cell["Discrete Fourier Transformation", "Subsection",
+ CellChangeTimes->{{3.950859995316966*^9, 
+  3.950860004547591*^9}},ExpressionUUID->"9e96af70-b8ec-4190-9691-\
+3bea9281b378"],
+
+Cell["Fast Fourier Transformation", "Subsection",
+ CellChangeTimes->{{3.9508600065875263`*^9, 
+  3.950860010443803*^9}},ExpressionUUID->"b342f412-d166-444d-bf86-\
+3fa5de4e791a"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Special Functions in Quantum Mechanics", "Section",
+ CellChangeTimes->{{3.950860014683507*^9, 
+  3.950860032795273*^9}},ExpressionUUID->"eae774c8-d77b-445a-bccb-\
+a79f064b6f89"],
+
+Cell["Hermite Polynomials", "Subsection",
+ CellChangeTimes->{{3.9508600370996943`*^9, 
+  3.950860043419736*^9}},ExpressionUUID->"ba0f4f78-cfa5-4cbb-b62d-\
+569f61b35310"],
+
+Cell["Spherical Harmonics", "Subsection",
+ CellChangeTimes->{{3.950860048211424*^9, 
+  3.950860050626915*^9}},ExpressionUUID->"9e5b0966-f844-4a18-8a2a-\
+25d5ba941930"],
+
+Cell["Laguerre Polynomials", "Subsection",
+ CellChangeTimes->{{3.950860054034904*^9, 
+  3.950860067074971*^9}},ExpressionUUID->"2a107173-7e66-4e2a-8286-\
+220fbccfd170"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Complex Analysis", "Chapter",
+ CellChangeTimes->{{3.9508600919233637`*^9, 
+  3.950860095721683*^9}},ExpressionUUID->"197fb567-d275-46aa-85a6-\
+a424c3a0a14c"],
+
+Cell[CellGroupData[{
+
+Cell["Analytic Functions", "Section",
+ CellChangeTimes->{{3.950860101850904*^9, 
+  3.950860105089808*^9}},ExpressionUUID->"123cb4a8-6552-4be6-ac81-\
+f70b6e574f91"],
+
+Cell["Cauchy-Riemann Equations", "Subsection",
+ CellChangeTimes->{{3.95086010911444*^9, 
+  3.950860121501573*^9}},ExpressionUUID->"fc9ad156-3e71-4cd2-8645-\
+7c38476492d7"],
+
+Cell["Contour Integration Techniques", "Subsection",
+ CellChangeTimes->{{3.950860123994359*^9, 
+  3.950860130954118*^9}},ExpressionUUID->"b0641a03-6648-4f18-9fd5-\
+c6f551cb3e43"],
+
+Cell["Branch Cuts and Multi-Valued Functions", "Subsection",
+ CellChangeTimes->{{3.950860133801546*^9, 
+  3.950860145129204*^9}},ExpressionUUID->"183a4495-2417-4046-bedf-\
+9731f6b083b5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Residue Theory and Green\[CloseCurlyQuote]s Function", "Section",
+ CellChangeTimes->{{3.950860150114193*^9, 
+  3.950860156752501*^9}},ExpressionUUID->"b3b73e3f-d421-4b43-b332-\
+f2cccc3d9045"],
+
+Cell["Poles and Residues", "Subsection",
+ CellChangeTimes->{{3.9508601597845497`*^9, 
+  3.950860162889554*^9}},ExpressionUUID->"7ae6c628-c774-4533-af29-\
+ccc53238b6a9"],
+
+Cell["Green\[CloseCurlyQuote]s Functions", "Subsection",
+ CellChangeTimes->{{3.950860165609453*^9, 
+  3.950860170689415*^9}},ExpressionUUID->"5d8da848-6b84-41c8-90c5-\
+b0c45cdde13a"],
+
+Cell["Path Integrals and Complex Analysis", "Subsection",
+ CellChangeTimes->{{3.9508601728736277`*^9, 
+  3.9508601869932117`*^9}},ExpressionUUID->"788d60b3-5bbf-40e7-857c-\
+dbf0195904fb"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Group Theory", "Chapter",
+ CellChangeTimes->{{3.950860192969097*^9, 
+  3.950860197826083*^9}},ExpressionUUID->"15119e3e-f014-4ccb-8d11-\
+e83c18aa4a1d"],
+
+Cell[CellGroupData[{
+
+Cell["Groups and Their Representations", "Section",
+ CellChangeTimes->{{3.9508602014652157`*^9, 
+  3.950860211888599*^9}},ExpressionUUID->"a0eef85a-8b1f-4850-8b1b-\
+75ffd2ff3c81"],
+
+Cell["Lie Groups and Lie Algebras", "Subsection",
+ CellChangeTimes->{{3.950860216768736*^9, 
+  3.950860223840662*^9}},ExpressionUUID->"b42fa52e-3d5e-47e1-a876-\
+abd8abe30f87"],
+
+Cell["Representation Theory Fundamentals", "Subsection",
+ CellChangeTimes->{{3.9508602268881807`*^9, 
+  3.95086023316009*^9}},ExpressionUUID->"35be74b4-9692-4f95-85ad-\
+ff1468961a3e"],
+
+Cell["Character Tables and Selection Rules", "Subsection",
+ CellChangeTimes->{{3.950860235561092*^9, 
+  3.950860240600157*^9}},ExpressionUUID->"f7842287-6b1a-4bda-a04e-\
+0e4653207a7e"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Symmetry Operations in Quantum Mechanics", "Section",
+ CellChangeTimes->{{3.950860244448255*^9, 
+  3.9508602507124968`*^9}},ExpressionUUID->"1834289c-6d5f-4762-96f9-\
+6a6458113117"],
+
+Cell["Rotations and Angular Momentum", "Subsection",
+ CellChangeTimes->{{3.950860252928422*^9, 
+  3.950860258072042*^9}},ExpressionUUID->"a638b411-2ccc-4a0d-a8e8-\
+58a95133334c"],
+
+Cell["Parity and Discrete Symmetries", "Subsection",
+ CellChangeTimes->{{3.950860262272078*^9, 
+  3.950860269728098*^9}},ExpressionUUID->"4f1cdada-c72a-46c1-8409-\
+59f118181366"],
+
+Cell["Gauge Symmetry in Quantum Fields", "Subsection",
+ CellChangeTimes->{{3.950860271727935*^9, 
+  3.950860280872508*^9}},ExpressionUUID->"84d4fbf5-ba36-428e-afbb-\
+10c1ad39c1df"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Graph Theory", "Chapter",
+ CellChangeTimes->{{3.9508602834560413`*^9, 
+  3.9508602848881607`*^9}},ExpressionUUID->"2892450b-ec49-4316-8b89-\
+4d3a74618736"],
+
+Cell[CellGroupData[{
+
+Cell["Fundamentals", "Section",
+ CellChangeTimes->{{3.95086028728799*^9, 
+  3.950860291903253*^9}},ExpressionUUID->"1ca18ea8-bb33-4e17-907f-\
+0d3f1ac26922"],
+
+Cell["Quantum Walks on Graphs", "Subsection",
+ CellChangeTimes->{{3.950860294067047*^9, 
+  3.950860299846694*^9}},ExpressionUUID->"faf0264f-1c35-4bd9-aabb-\
+11cd164ff79c"],
+
+Cell["Graph Laplacians and Quantum Dynamics", "Subsection",
+ CellChangeTimes->{{3.9508603024469833`*^9, 
+  3.950860309031536*^9}},ExpressionUUID->"ae912a14-4992-4a58-9b04-\
+d3dafe625e65"],
+
+Cell["Adjacency Matrices and State Evolution", "Subsection",
+ CellChangeTimes->{{3.950860311902948*^9, 
+  3.950860325791801*^9}},ExpressionUUID->"58098e69-e25b-4fad-8a9b-\
+c9af34badf48"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Graphs for Quantum Mechanics", "Section",
+ CellChangeTimes->{{3.9508603639905443`*^9, 
+  3.95086037091061*^9}},ExpressionUUID->"c18b3361-8365-42d8-829a-\
+88fceb1b0df7"],
+
+Cell["Representations", "Subsection",
+ CellChangeTimes->{{3.950860375374749*^9, 
+  3.950860377230336*^9}},ExpressionUUID->"cb8be9ac-fefe-47f8-95c6-\
+4f914757c8c8"],
+
+Cell["Applications", "Subsection",
+ CellChangeTimes->{{3.95086037893431*^9, 
+  3.950860380294241*^9}},ExpressionUUID->"0c2a3db4-a69d-4e67-9956-\
+399ea726aa2f"]
+}, Open  ]]
+}, Open  ]],
+
+Cell["", "Chapter",
+ CellChangeTimes->{{3.9508598096801*^9, 
+  3.95085981148107*^9}},ExpressionUUID->"c18c23b5-2f44-4c5c-bd6f-\
+ea333a8197f4"]
+}, Open  ]]
+},
+WindowSize->{1440., 758.25},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+FrontEndVersion->"13.2 for Linux x86 (64-bit) (November 18, 2022)",
+StyleDefinitions->FrontEnd`FileName[{$RootDirectory, "home", "kid-a", 
+   "Documents", "Wolfram Mathematica"}, "Qomp-Styles.nb", CharacterEncoding -> 
+  "UTF-8"],
+ExpressionUUID->"8ea8ceed-4887-419d-9ff3-34b7f3c8cf76"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 271, 6, 59, "Abstract",ExpressionUUID->"a796645a-c09f-44bb-aa05-213170c640ee"],
+Cell[CellGroupData[{
+Cell[854, 30, 207, 7, 442, "Title",ExpressionUUID->"3fa3a793-bd5f-4ed1-80f5-484b86e42b92"],
+Cell[1064, 39, 153, 3, 89, "Chapter",ExpressionUUID->"ebcf4588-6a95-49a1-a7be-0bc1fc3033b0"],
+Cell[CellGroupData[{
+Cell[1242, 46, 189, 3, 78, "Chapter",ExpressionUUID->"ebe31665-1e03-4206-a408-580d158e7b8d"],
+Cell[CellGroupData[{
+Cell[1456, 53, 160, 3, 73, "Section",ExpressionUUID->"c8247ffd-5041-442f-9285-4ec9dd6a1a2b"],
+Cell[1619, 58, 182, 3, 60, "Subsection",ExpressionUUID->"b77368f3-8e2d-481e-b742-6c649b1b80f1"],
+Cell[1804, 63, 184, 3, 44, "Subsection",ExpressionUUID->"eaafd629-aafb-4ec6-a72e-6df3058c1744"],
+Cell[1991, 68, 200, 3, 44, "Subsection",ExpressionUUID->"8a0e7da2-7e3f-42c1-bf71-7ada32dd5125"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2228, 76, 187, 3, 73, "Section",ExpressionUUID->"f8f8eaa6-12bf-4195-bf1d-bb57bae3bead"],
+Cell[2418, 81, 176, 3, 60, "Subsection",ExpressionUUID->"77ee1b86-dc88-48d7-ae33-4cadc959a55e"],
+Cell[2597, 86, 184, 3, 44, "Subsection",ExpressionUUID->"9866cb74-ad2a-432a-9272-0bd2d50c35dd"],
+Cell[2784, 91, 162, 3, 44, "Subsection",ExpressionUUID->"dc4f41a4-d2a6-4d24-89b0-098ba90d146b"],
+Cell[2949, 96, 179, 3, 44, "Subsection",ExpressionUUID->"9e96af70-b8ec-4190-9691-3bea9281b378"],
+Cell[3131, 101, 177, 3, 44, "Subsection",ExpressionUUID->"b342f412-d166-444d-bf86-3fa5de4e791a"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3345, 109, 183, 3, 73, "Section",ExpressionUUID->"eae774c8-d77b-445a-bccb-a79f064b6f89"],
+Cell[3531, 114, 169, 3, 60, "Subsection",ExpressionUUID->"ba0f4f78-cfa5-4cbb-b62d-569f61b35310"],
+Cell[3703, 119, 167, 3, 44, "Subsection",ExpressionUUID->"9e5b0966-f844-4a18-8a2a-25d5ba941930"],
+Cell[3873, 124, 168, 3, 44, "Subsection",ExpressionUUID->"2a107173-7e66-4e2a-8286-220fbccfd170"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[4090, 133, 163, 3, 89, "Chapter",ExpressionUUID->"197fb567-d275-46aa-85a6-a424c3a0a14c"],
+Cell[CellGroupData[{
+Cell[4278, 140, 163, 3, 73, "Section",ExpressionUUID->"123cb4a8-6552-4be6-ac81-f70b6e574f91"],
+Cell[4444, 145, 171, 3, 60, "Subsection",ExpressionUUID->"fc9ad156-3e71-4cd2-8645-7c38476492d7"],
+Cell[4618, 150, 178, 3, 44, "Subsection",ExpressionUUID->"b0641a03-6648-4f18-9fd5-c6f551cb3e43"],
+Cell[4799, 155, 186, 3, 44, "Subsection",ExpressionUUID->"183a4495-2417-4046-bedf-9731f6b083b5"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5022, 163, 197, 3, 73, "Section",ExpressionUUID->"b3b73e3f-d421-4b43-b332-f2cccc3d9045"],
+Cell[5222, 168, 168, 3, 60, "Subsection",ExpressionUUID->"7ae6c628-c774-4533-af29-ccc53238b6a9"],
+Cell[5393, 173, 182, 3, 44, "Subsection",ExpressionUUID->"5d8da848-6b84-41c8-90c5-b0c45cdde13a"],
+Cell[5578, 178, 187, 3, 44, "Subsection",ExpressionUUID->"788d60b3-5bbf-40e7-857c-dbf0195904fb"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[5814, 187, 157, 3, 89, "Chapter",ExpressionUUID->"15119e3e-f014-4ccb-8d11-e83c18aa4a1d"],
+Cell[CellGroupData[{
+Cell[5996, 194, 179, 3, 73, "Section",ExpressionUUID->"a0eef85a-8b1f-4850-8b1b-75ffd2ff3c81"],
+Cell[6178, 199, 175, 3, 60, "Subsection",ExpressionUUID->"b42fa52e-3d5e-47e1-a876-abd8abe30f87"],
+Cell[6356, 204, 183, 3, 44, "Subsection",ExpressionUUID->"35be74b4-9692-4f95-85ad-ff1468961a3e"],
+Cell[6542, 209, 184, 3, 44, "Subsection",ExpressionUUID->"f7842287-6b1a-4bda-a04e-0e4653207a7e"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6763, 217, 187, 3, 73, "Section",ExpressionUUID->"1834289c-6d5f-4762-96f9-6a6458113117"],
+Cell[6953, 222, 178, 3, 60, "Subsection",ExpressionUUID->"a638b411-2ccc-4a0d-a8e8-58a95133334c"],
+Cell[7134, 227, 178, 3, 44, "Subsection",ExpressionUUID->"4f1cdada-c72a-46c1-8409-59f118181366"],
+Cell[7315, 232, 180, 3, 44, "Subsection",ExpressionUUID->"84d4fbf5-ba36-428e-afbb-10c1ad39c1df"]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7544, 241, 161, 3, 89, "Chapter",ExpressionUUID->"2892450b-ec49-4316-8b89-4d3a74618736"],
+Cell[CellGroupData[{
+Cell[7730, 248, 156, 3, 73, "Section",ExpressionUUID->"1ca18ea8-bb33-4e17-907f-0d3f1ac26922"],
+Cell[7889, 253, 171, 3, 60, "Subsection",ExpressionUUID->"faf0264f-1c35-4bd9-aabb-11cd164ff79c"],
+Cell[8063, 258, 187, 3, 44, "Subsection",ExpressionUUID->"ae912a14-4992-4a58-9b04-d3dafe625e65"],
+Cell[8253, 263, 186, 3, 44, "Subsection",ExpressionUUID->"58098e69-e25b-4fad-8a9b-c9af34badf48"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8476, 271, 174, 3, 73, "Section",ExpressionUUID->"c18b3361-8365-42d8-829a-88fceb1b0df7"],
+Cell[8653, 276, 163, 3, 60, "Subsection",ExpressionUUID->"cb8be9ac-fefe-47f8-95c6-4f914757c8c8"],
+Cell[8819, 281, 159, 3, 44, "Subsection",ExpressionUUID->"0c2a3db4-a69d-4e67-9956-399ea726aa2f"]
+}, Open  ]]
+}, Open  ]],
+Cell[9005, 288, 142, 3, 89, "Chapter",ExpressionUUID->"c18c23b5-2f44-4c5c-bd6f-ea333a8197f4"]
+}, Open  ]]
+}
+]
+*)
+

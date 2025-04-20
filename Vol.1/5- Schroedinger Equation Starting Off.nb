@@ -1,0 +1,93 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      2801,         83]
+NotebookOptionsPosition[      1819,         60]
+NotebookOutlinePosition[      2347,         78]
+CellTagsIndexPosition[      2304,         75]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Computational Journey of Quantum Mechanics | Amir H. Ebrahimnezhad | Advisor: \
+Prf. Ebrahim | University of Tehran\
+\>", "Abstract",
+ CellChangeTimes->{{3.948969098320861*^9, 
+  3.9489691324978848`*^9}},ExpressionUUID->"8957710b-ddb4-4f0e-86a0-\
+0e09dfce9432"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Schr\[ODoubleDot]dinger Equation
+Starting Off\
+\>", "Title",
+ CellChangeTimes->{{3.950860721027598*^9, 3.9508607499153748`*^9}, {
+  3.9508608110914288`*^9, 
+  3.950860815314597*^9}},ExpressionUUID->"57af73e3-d685-497e-9dd4-\
+ca5b028339d0"],
+
+Cell["Overview", "Chapter",
+ CellChangeTimes->{{3.9508607522914343`*^9, 
+  3.950860754323435*^9}},ExpressionUUID->"9bad5051-44be-4396-a12f-\
+dae920240de5"],
+
+Cell["Schr\[ODoubleDot]dinger Equation", "Chapter",
+ CellChangeTimes->{{3.950860760243699*^9, 
+  3.950860777691999*^9}},ExpressionUUID->"d1133772-be31-4b84-bcb1-\
+cbed5aba7cef"],
+
+Cell["Time-Independent Schr\[ODoubleDot]dinger Equation", "Chapter",
+ CellChangeTimes->{{3.950860780986931*^9, 
+  3.950860797243438*^9}},ExpressionUUID->"1df29fc4-0181-4ef8-bd3c-\
+b60e84d53052"],
+
+Cell["Simple Potentials", "Chapter",
+ CellChangeTimes->{{3.950860799986381*^9, 
+  3.950860803531062*^9}},ExpressionUUID->"2ec83db7-84c7-4b5d-ab9e-\
+1625ae638ef0"]
+}, Open  ]]
+},
+WindowSize->{1440., 758.25},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+FrontEndVersion->"13.2 for Linux x86 (64-bit) (November 18, 2022)",
+StyleDefinitions->FrontEnd`FileName[{$RootDirectory, "home", "kid-a", 
+   "Documents", "Wolfram Mathematica"}, "Qomp-Styles.nb", CharacterEncoding -> 
+  "UTF-8"],
+ExpressionUUID->"8cfe70b0-a372-4cae-bf74-c230288b95f9"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 271, 6, 59, "Abstract",ExpressionUUID->"8957710b-ddb4-4f0e-86a0-0e09dfce9432"],
+Cell[CellGroupData[{
+Cell[854, 30, 249, 7, 312, "Title",ExpressionUUID->"57af73e3-d685-497e-9dd4-ca5b028339d0"],
+Cell[1106, 39, 155, 3, 89, "Chapter",ExpressionUUID->"9bad5051-44be-4396-a12f-dae920240de5"],
+Cell[1264, 44, 177, 3, 78, "Chapter",ExpressionUUID->"d1133772-be31-4b84-bcb1-cbed5aba7cef"],
+Cell[1444, 49, 194, 3, 78, "Chapter",ExpressionUUID->"1df29fc4-0181-4ef8-bd3c-b60e84d53052"],
+Cell[1641, 54, 162, 3, 78, "Chapter",ExpressionUUID->"2ec83db7-84c7-4b5d-ab9e-1625ae638ef0"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+

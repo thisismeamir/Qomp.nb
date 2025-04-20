@@ -1,0 +1,140 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.2' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      4831,        130]
+NotebookOptionsPosition[      3097,         99]
+NotebookOutlinePosition[      3625,        117]
+CellTagsIndexPosition[      3582,        114]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell["\<\
+Computational Journey of Quantum Mechanics | Amir H. Ebrahimnezhad | Advisor: \
+Prf. Ebrahim | University of Tehran\
+\>", "Abstract",
+ CellChangeTimes->{{3.948969098320861*^9, 
+  3.9489691324978848`*^9}},ExpressionUUID->"d020f0be-b10f-4aed-a98f-\
+f0f52fbed612"],
+
+Cell[CellGroupData[{
+
+Cell["\<\
+Quantum Mechanics 
+Principles & Foundations\
+\>", "Title",
+ CellChangeTimes->{{3.950860528038074*^9, 
+  3.950860536429369*^9}},ExpressionUUID->"9a59df1c-4c64-4261-8915-\
+64e79ec2183d"],
+
+Cell["Overview", "Chapter",
+ CellChangeTimes->{{3.950860540212818*^9, 
+  3.9508605416048727`*^9}},ExpressionUUID->"7fd9045e-3f4c-47b1-a55c-\
+ef8995164678"],
+
+Cell["Foundations of Quantum Mechanics", "Chapter",
+ CellChangeTimes->{{3.950860543948913*^9, 
+  3.950860550965062*^9}},ExpressionUUID->"1876b0c9-20fc-47c0-809c-\
+1aeabd895d6a"],
+
+Cell["Wave Mechanics", "Chapter",
+ CellChangeTimes->{{3.950860553101338*^9, 
+  3.950860555709161*^9}},ExpressionUUID->"07e5b7e1-8e6e-47b5-9759-\
+1fce2b15551a"],
+
+Cell["Black Body Radiation", "Chapter",
+ CellChangeTimes->{{3.950860565349472*^9, 
+  3.950860574771739*^9}},ExpressionUUID->"746ba6fb-e029-4371-b42a-\
+8eb26e0d210a"],
+
+Cell["Photoelectric Effect", "Chapter",
+ CellChangeTimes->{{3.950860580380542*^9, 
+  3.9508605847889347`*^9}},ExpressionUUID->"7f2dbe65-64ce-4d9f-8552-\
+47040073468c"],
+
+Cell["Bohr\[CloseCurlyQuote]s Atom", "Chapter",
+ CellChangeTimes->{{3.9508605882609777`*^9, 
+  3.9508605963805437`*^9}},ExpressionUUID->"081ce5e2-1d9d-47bd-99f6-\
+b92590ffb6df"],
+
+Cell["d\[CloseCurlyQuote]Brouglie Wave ", "Chapter",
+ CellChangeTimes->{{3.950860602572468*^9, 
+  3.950860627045093*^9}},ExpressionUUID->"2ec886e8-9792-4986-9c5e-\
+d14d82f94a40"],
+
+Cell["Double Slit Experiment", "Chapter",
+ CellChangeTimes->{{3.950860634515774*^9, 
+  3.950860638340495*^9}},ExpressionUUID->"8659799b-b0d2-4d82-86a5-\
+3b914d212bed"],
+
+Cell["Measurement", "Chapter",
+ CellChangeTimes->{{3.9508606407883043`*^9, 
+  3.950860645588245*^9}},ExpressionUUID->"8131657e-a250-4aae-b12a-\
+67e8ef2b684f"],
+
+Cell["Principles of Quantum Mechanics", "Chapter",
+ CellChangeTimes->{{3.950860651212184*^9, 
+  3.950860655803652*^9}},ExpressionUUID->"bdd20add-332c-4a16-95b6-\
+2f550000371f"],
+
+Cell["Conclusion", "Chapter",
+ CellChangeTimes->{{3.950860662996188*^9, 
+  3.950860665692329*^9}},ExpressionUUID->"7e8d2a51-6bcf-4677-9ad1-\
+cda825c48b3f"],
+
+Cell["Further Contents", "Chapter",
+ CellChangeTimes->{{3.950860667915834*^9, 
+  3.9508606727078867`*^9}},ExpressionUUID->"a15bfec3-0add-4d88-a104-\
+d86b6bf12b7d"]
+}, Open  ]]
+},
+WindowSize->{1440., 758.25},
+WindowMargins->{{0, Automatic}, {0, Automatic}},
+FrontEndVersion->"13.2 for Linux x86 (64-bit) (November 18, 2022)",
+StyleDefinitions->FrontEnd`FileName[{$RootDirectory, "home", "kid-a", 
+   "Documents", "Wolfram Mathematica"}, "Qomp-Styles.nb", CharacterEncoding -> 
+  "UTF-8"],
+ExpressionUUID->"80eb72c0-1c6a-4f42-b911-772e90006504"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 271, 6, 59, "Abstract",ExpressionUUID->"d020f0be-b10f-4aed-a98f-f0f52fbed612"],
+Cell[CellGroupData[{
+Cell[854, 30, 194, 6, 312, "Title",ExpressionUUID->"9a59df1c-4c64-4261-8915-64e79ec2183d"],
+Cell[1051, 38, 155, 3, 89, "Chapter",ExpressionUUID->"7fd9045e-3f4c-47b1-a55c-ef8995164678"],
+Cell[1209, 43, 177, 3, 78, "Chapter",ExpressionUUID->"1876b0c9-20fc-47c0-809c-1aeabd895d6a"],
+Cell[1389, 48, 159, 3, 78, "Chapter",ExpressionUUID->"07e5b7e1-8e6e-47b5-9759-1fce2b15551a"],
+Cell[1551, 53, 165, 3, 78, "Chapter",ExpressionUUID->"746ba6fb-e029-4371-b42a-8eb26e0d210a"],
+Cell[1719, 58, 167, 3, 78, "Chapter",ExpressionUUID->"7f2dbe65-64ce-4d9f-8552-47040073468c"],
+Cell[1889, 63, 177, 3, 78, "Chapter",ExpressionUUID->"081ce5e2-1d9d-47bd-99f6-b92590ffb6df"],
+Cell[2069, 68, 178, 3, 78, "Chapter",ExpressionUUID->"2ec886e8-9792-4986-9c5e-d14d82f94a40"],
+Cell[2250, 73, 167, 3, 78, "Chapter",ExpressionUUID->"8659799b-b0d2-4d82-86a5-3b914d212bed"],
+Cell[2420, 78, 158, 3, 78, "Chapter",ExpressionUUID->"8131657e-a250-4aae-b12a-67e8ef2b684f"],
+Cell[2581, 83, 176, 3, 78, "Chapter",ExpressionUUID->"bdd20add-332c-4a16-95b6-2f550000371f"],
+Cell[2760, 88, 155, 3, 78, "Chapter",ExpressionUUID->"7e8d2a51-6bcf-4677-9ad1-cda825c48b3f"],
+Cell[2918, 93, 163, 3, 78, "Chapter",ExpressionUUID->"a15bfec3-0add-4d88-a104-d86b6bf12b7d"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
