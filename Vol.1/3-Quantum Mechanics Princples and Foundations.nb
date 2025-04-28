@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      4831,        130]
-NotebookOptionsPosition[      3097,         99]
-NotebookOutlinePosition[      3625,        117]
-CellTagsIndexPosition[      3582,        114]
+NotebookDataLength[      5870,        153]
+NotebookOptionsPosition[      4007,        119]
+NotebookOutlinePosition[      4535,        137]
+CellTagsIndexPosition[      4492,        134]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -36,10 +36,30 @@ Principles & Foundations\
   3.950860536429369*^9}},ExpressionUUID->"9a59df1c-4c64-4261-8915-\
 64e79ec2183d"],
 
+Cell[CellGroupData[{
+
 Cell["Overview", "Chapter",
  CellChangeTimes->{{3.950860540212818*^9, 
   3.9508605416048727`*^9}},ExpressionUUID->"7fd9045e-3f4c-47b1-a55c-\
 ef8995164678"],
+
+Cell["\<\
+Quantum Mechanics is our best theory of the fundamental behaviour of the \
+nature. This theory is based upon the mathematical structure called linear \
+algebra, therefore, learning the mathematics of it would be easier than other \
+respective theories (Field theory, General Relativity, etc). Despite that our \
+best understanding of the nature has its own beauty via mind puzzling aspects \
+that are of no example in our classical perspective of nature.
+
+In this notebook we shall discuss foundations of quantum mechanics, \
+principles, models, history, and some good visualization that would help us \
+be insightful for the next volumes and notebooks. But apart from it, no one \
+actually understands Quantum Mechanics.\
+\>", "Text",
+ CellChangeTimes->{{3.9548375000570927`*^9, 
+  3.954837731341688*^9}},ExpressionUUID->"a7e64c53-1126-4623-935f-\
+c16186023d6a"]
+}, Open  ]],
 
 Cell["Foundations of Quantum Mechanics", "Chapter",
  CellChangeTimes->{{3.950860543948913*^9, 
@@ -119,22 +139,23 @@ Notebook[{
 Cell[558, 20, 271, 6, 59, "Abstract",ExpressionUUID->"d020f0be-b10f-4aed-a98f-f0f52fbed612"],
 Cell[CellGroupData[{
 Cell[854, 30, 194, 6, 312, "Title",ExpressionUUID->"9a59df1c-4c64-4261-8915-64e79ec2183d"],
-Cell[1051, 38, 155, 3, 89, "Chapter",ExpressionUUID->"7fd9045e-3f4c-47b1-a55c-ef8995164678"],
-Cell[1209, 43, 177, 3, 78, "Chapter",ExpressionUUID->"1876b0c9-20fc-47c0-809c-1aeabd895d6a"],
-Cell[1389, 48, 159, 3, 78, "Chapter",ExpressionUUID->"07e5b7e1-8e6e-47b5-9759-1fce2b15551a"],
-Cell[1551, 53, 165, 3, 78, "Chapter",ExpressionUUID->"746ba6fb-e029-4371-b42a-8eb26e0d210a"],
-Cell[1719, 58, 167, 3, 78, "Chapter",ExpressionUUID->"7f2dbe65-64ce-4d9f-8552-47040073468c"],
-Cell[1889, 63, 177, 3, 78, "Chapter",ExpressionUUID->"081ce5e2-1d9d-47bd-99f6-b92590ffb6df"],
-Cell[2069, 68, 178, 3, 78, "Chapter",ExpressionUUID->"2ec886e8-9792-4986-9c5e-d14d82f94a40"],
-Cell[2250, 73, 167, 3, 78, "Chapter",ExpressionUUID->"8659799b-b0d2-4d82-86a5-3b914d212bed"],
-Cell[2420, 78, 158, 3, 78, "Chapter",ExpressionUUID->"8131657e-a250-4aae-b12a-67e8ef2b684f"],
-Cell[2581, 83, 176, 3, 78, "Chapter",ExpressionUUID->"bdd20add-332c-4a16-95b6-2f550000371f"],
-Cell[2760, 88, 155, 3, 78, "Chapter",ExpressionUUID->"7e8d2a51-6bcf-4677-9ad1-cda825c48b3f"],
-Cell[2918, 93, 163, 3, 78, "Chapter",ExpressionUUID->"a15bfec3-0add-4d88-a104-d86b6bf12b7d"]
+Cell[CellGroupData[{
+Cell[1073, 40, 155, 3, 89, "Chapter",ExpressionUUID->"7fd9045e-3f4c-47b1-a55c-ef8995164678"],
+Cell[1231, 45, 873, 15, 162, "Text",ExpressionUUID->"a7e64c53-1126-4623-935f-c16186023d6a"]
+}, Open  ]],
+Cell[2119, 63, 177, 3, 89, "Chapter",ExpressionUUID->"1876b0c9-20fc-47c0-809c-1aeabd895d6a"],
+Cell[2299, 68, 159, 3, 78, "Chapter",ExpressionUUID->"07e5b7e1-8e6e-47b5-9759-1fce2b15551a"],
+Cell[2461, 73, 165, 3, 78, "Chapter",ExpressionUUID->"746ba6fb-e029-4371-b42a-8eb26e0d210a"],
+Cell[2629, 78, 167, 3, 78, "Chapter",ExpressionUUID->"7f2dbe65-64ce-4d9f-8552-47040073468c"],
+Cell[2799, 83, 177, 3, 78, "Chapter",ExpressionUUID->"081ce5e2-1d9d-47bd-99f6-b92590ffb6df"],
+Cell[2979, 88, 178, 3, 78, "Chapter",ExpressionUUID->"2ec886e8-9792-4986-9c5e-d14d82f94a40"],
+Cell[3160, 93, 167, 3, 78, "Chapter",ExpressionUUID->"8659799b-b0d2-4d82-86a5-3b914d212bed"],
+Cell[3330, 98, 158, 3, 78, "Chapter",ExpressionUUID->"8131657e-a250-4aae-b12a-67e8ef2b684f"],
+Cell[3491, 103, 176, 3, 78, "Chapter",ExpressionUUID->"bdd20add-332c-4a16-95b6-2f550000371f"],
+Cell[3670, 108, 155, 3, 78, "Chapter",ExpressionUUID->"7e8d2a51-6bcf-4677-9ad1-cda825c48b3f"],
+Cell[3828, 113, 163, 3, 78, "Chapter",ExpressionUUID->"a15bfec3-0add-4d88-a104-d86b6bf12b7d"]
 }, Open  ]]
 }
 ]
 *)
-
-(* End of internal cache information *)
 
