@@ -10,17 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-<<<<<<< HEAD
-NotebookDataLength[     12394,        310]
-NotebookOptionsPosition[      8556,        247]
-NotebookOutlinePosition[      9084,        265]
-CellTagsIndexPosition[      9041,        262]
-=======
 NotebookDataLength[     53357,       1314]
 NotebookOptionsPosition[     44064,       1163]
 NotebookOutlinePosition[     44592,       1181]
 CellTagsIndexPosition[     44549,       1178]
->>>>>>> 2b9a315 (re initializing git due to broken object)
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -91,18 +84,13 @@ Cell["The Quantum Revolution: History", "Chapter",
   3.954844765493037*^9}},ExpressionUUID->"990c4332-b550-4d5d-abe6-\
 c26a5d11c65b"],
 
-<<<<<<< HEAD
-=======
 Cell[CellGroupData[{
 
->>>>>>> 2b9a315 (re initializing git due to broken object)
 Cell["The Crisis in Classical Physics (Late 19th Century)", "Section",
  CellChangeTimes->{
   3.954844781368582*^9},ExpressionUUID->"3f1dad15-d16b-435c-bda2-\
 67a5fd677d3c"],
 
-<<<<<<< HEAD
-=======
 Cell[TextData[{
  "In the second half of the nineteenth century it seemed that the laws of \
 classical mechanics, developed by works of Newton, Lagrange, Hamilton, Jacobi \
@@ -131,15 +119,12 @@ rich framework of Classical Mechanics (which back then wouldn\
 
 Cell[CellGroupData[{
 
->>>>>>> 2b9a315 (re initializing git due to broken object)
 Cell["Black Body Radiation and Planck\[CloseCurlyQuote]s Quantum Hypothesis", \
 "Section",
  CellChangeTimes->{
   3.9548447897032633`*^9},ExpressionUUID->"ec255421-cda2-4005-8b12-\
 c8c267472cde"],
 
-<<<<<<< HEAD
-=======
 Cell[TextData[{
  "A blackbody is an idealized physical object that perfectly absorbs and \
 emits electromagnetic radiation. The radiation it emits is called blackbody \
@@ -1026,7 +1011,6 @@ n6KeVxEEejYOT9v4MkFoeGNmnksgPVrPdTeDCf8CZVxUpg==
 }, Open  ]]
 }, Open  ]],
 
->>>>>>> 2b9a315 (re initializing git due to broken object)
 Cell["Einstein\[CloseCurlyQuote]s Explanation of the Photoelectric Effect", \
 "Section",
  CellChangeTimes->{
@@ -1178,11 +1162,7 @@ ac49323d8acf"]
 }, Open  ]]
 },
 WindowSize->{1440., 758.25},
-<<<<<<< HEAD
-WindowMargins->{{0, Automatic}, {0, Automatic}},
-=======
 WindowMargins->{{0, Automatic}, {Automatic, 0}},
->>>>>>> 2b9a315 (re initializing git due to broken object)
 FrontEndVersion->"13.2 for Linux x86 (64-bit) (November 18, 2022)",
 StyleDefinitions->FrontEnd`FileName[{$RootDirectory, "home", "kid-a", 
    "Documents", "Wolfram Mathematica"}, "Qomp-Styles.nb", CharacterEncoding -> 
@@ -1209,45 +1189,6 @@ Cell[1231, 45, 1896, 31, 312, "Text",ExpressionUUID->"a7e64c53-1126-4623-935f-c1
 }, Open  ]],
 Cell[CellGroupData[{
 Cell[3164, 81, 176, 3, 89, "Chapter",ExpressionUUID->"990c4332-b550-4d5d-abe6-c26a5d11c65b"],
-<<<<<<< HEAD
-Cell[3343, 86, 172, 3, 73, "Section",ExpressionUUID->"3f1dad15-d16b-435c-bda2-67a5fd677d3c"],
-Cell[3518, 91, 194, 4, 59, "Section",ExpressionUUID->"ec255421-cda2-4005-8b12-c8c267472cde"],
-Cell[3715, 97, 190, 4, 59, "Section",ExpressionUUID->"b1471e10-2c7d-4ebf-9267-db5f1e39bb70"],
-Cell[3908, 103, 147, 3, 59, "Section",ExpressionUUID->"574bafec-7c50-4def-8860-9d5ba5c2158e"],
-Cell[4058, 108, 165, 3, 59, "Section",ExpressionUUID->"f0d938f5-4762-4e68-9cd7-c02b20cd8e8d"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[4260, 116, 178, 3, 89, "Chapter",ExpressionUUID->"18cc490f-ced5-42f4-beeb-848304a81b27"],
-Cell[4441, 121, 174, 3, 73, "Section",ExpressionUUID->"895d24b3-8928-4014-bcf8-638328ff696b"],
-Cell[4618, 126, 167, 3, 59, "Section",ExpressionUUID->"2345ed51-80ff-4f38-bcf4-8edcfbbfab9d"],
-Cell[4788, 131, 168, 3, 59, "Section",ExpressionUUID->"f655cd8a-904d-4021-8f66-ccd24ee8307f"],
-Cell[4959, 136, 172, 3, 59, "Section",ExpressionUUID->"88bcf91f-ae6e-4eb3-b858-4cb11f3d68c7"],
-Cell[5134, 141, 180, 3, 59, "Section",ExpressionUUID->"763f699b-b580-4a10-be62-d635156838d1"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[5351, 149, 183, 3, 89, "Chapter",ExpressionUUID->"30e2fc74-fff9-4ef2-bda0-eb7209fd0693"],
-Cell[5537, 154, 150, 3, 73, "Section",ExpressionUUID->"23690e29-ae81-4b24-996d-e176f9fcd1fb"],
-Cell[5690, 159, 153, 3, 59, "Section",ExpressionUUID->"becfdb0e-5526-4035-9bdf-910f60d13000"],
-Cell[5846, 164, 160, 3, 59, "Section",ExpressionUUID->"41cb5d7b-7876-488b-bbce-09a831c07ce0"],
-Cell[6009, 169, 149, 3, 59, "Section",ExpressionUUID->"d0a67173-fa62-431a-be19-cda6b478354f"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[6195, 177, 163, 2, 89, "Chapter",ExpressionUUID->"13311cf3-2c97-45e6-8cf9-2fa4b6b5a4a4"],
-Cell[6361, 181, 153, 3, 73, "Section",ExpressionUUID->"3a18304c-ec34-44a6-9932-cf0829756bfe"],
-Cell[6517, 186, 150, 2, 59, "Section",ExpressionUUID->"7c1f5449-11fb-41d0-849c-4738dd107c9e"],
-Cell[6670, 190, 155, 3, 59, "Section",ExpressionUUID->"ef382f78-1c23-4c40-ad9c-88a76241b0ea"],
-Cell[6828, 195, 160, 3, 59, "Section",ExpressionUUID->"eafe8321-9d72-4c2a-af8b-e80abac3cbeb"],
-Cell[6991, 200, 195, 4, 59, "Section",ExpressionUUID->"678d9810-9ae2-4cd2-b826-bd07840ba3c6"],
-Cell[7189, 206, 164, 3, 59, "Section",ExpressionUUID->"15d7f7f4-30f5-4d82-ade5-0d08ec192853"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[7390, 214, 227, 4, 89, "Chapter",ExpressionUUID->"19c61977-4159-4783-aae8-d386c5cc55bb"],
-Cell[7620, 220, 174, 3, 73, "Section",ExpressionUUID->"abc3f782-dad9-4256-8a9f-9c79df114fcd"],
-Cell[7797, 225, 171, 3, 59, "Section",ExpressionUUID->"de8b2b28-bbc5-4777-b53e-6339acbed1fe"],
-Cell[7971, 230, 185, 3, 59, "Section",ExpressionUUID->"baf1aad7-25c6-4e7e-af2b-0cde4016b41c"],
-Cell[8159, 235, 172, 3, 59, "Section",ExpressionUUID->"4b647a2a-e226-44d0-aec5-a5a4e743db56"],
-Cell[8334, 240, 194, 3, 59, "Section",ExpressionUUID->"04e0e456-af10-4876-8f74-ac49323d8acf"]
-=======
 Cell[CellGroupData[{
 Cell[3365, 88, 172, 3, 73, "Section",ExpressionUUID->"3f1dad15-d16b-435c-bda2-67a5fd677d3c"],
 Cell[3540, 93, 1453, 23, 237, "Text",ExpressionUUID->"3c195691-12a2-4a38-9cff-063f1200ca56"]
@@ -1373,10 +1314,11 @@ Cell[43305, 1141, 171, 3, 59, "Section",ExpressionUUID->"de8b2b28-bbc5-4777-b53e
 Cell[43479, 1146, 185, 3, 59, "Section",ExpressionUUID->"baf1aad7-25c6-4e7e-af2b-0cde4016b41c"],
 Cell[43667, 1151, 172, 3, 59, "Section",ExpressionUUID->"4b647a2a-e226-44d0-aec5-a5a4e743db56"],
 Cell[43842, 1156, 194, 3, 59, "Section",ExpressionUUID->"04e0e456-af10-4876-8f74-ac49323d8acf"]
->>>>>>> 2b9a315 (re initializing git due to broken object)
 }, Open  ]]
 }, Open  ]]
 }
 ]
 *)
+
+(* End of internal cache information *)
 
